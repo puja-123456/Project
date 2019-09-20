@@ -1,0 +1,36 @@
+#result
+{
+background:   url('https://www.crestolympiads.com/assets/images/result_bg.jpg') no-repeat center  ;
+/*background-size: 800px 800px;*/
+height:900px;
+
+
+
+}
+
+ th {
+	font-size:20px;
+	color:#fff;
+	text-align:center;
+	padding: 50px 100px;
+	font-weight: bold;
+	}
+
+	tr
+	{
+		border-bottom: none;
+
+	}
+
+	td
+	{
+		font-size:18px;		
+		font-weight: bold;
+		padding-top:6%;
+		padding-left:20%;
+		padding-bottom: 5px;
+	}
+
+
+
+

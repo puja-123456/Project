@@ -1,0 +1,148 @@
+
+<div class="text-left feedback-form col-md-12 col-sm-12" id="feedback-form" tabIndex="-1">
+    <div class="form-group row">
+        <label class="control-label">On a scale of 1 – 10, how likely would you recommend this test to your friends?<span style="color:red">*</span></label>
+        <div class="show_on_desktop">
+	        <div class="notas">
+			  <label for="one">1</label>
+			  <label for="two">2</label>
+			  <label for="three">3</label>
+			  <label for="four">4</label>
+			  <label for="five">5</label>
+			  <label for="six">6</label>
+			  <label for="seven">7</label>
+			  <label for="eight">8</label>
+			  <label for="nine">9</label>
+			  <label for="ten">10</label>
+			</div>
+			<div class="radio-btns">
+	        	<label for="one">Very Unlikely</label>
+				<input type="radio" name="scale" value="1" id="one">
+				<input type="radio" name="scale" value="2" id="two">
+				<input type="radio" name="scale" value="3" id="three">
+				<input type="radio" name="scale" value="4" id="four">
+				<input type="radio" name="scale" value="5" id="five">
+				<input type="radio" name="scale" value="6" id="six">
+				<input type="radio" name="scale" value="7" id="seven">
+				<input type="radio" name="scale" value="8" id="eight">
+				<input type="radio" name="scale" value="9" id="nine">
+				<input type="radio" name="scale" value="10" id="ten">
+				<label class="" for="six">Very Likely</label>
+			</div>
+        </div>
+        <div class="show_on_phone">
+        	<label for="select">10 - Very Likely</label>	
+        	<label for="select">1 - Very Unlikely</label><br>	
+        	<select id="select_scale" class="form-control">
+        		<option value="10" selected="selected">10</option>
+        		<option value="9">9</option>
+        		<option value="8">8</option>
+        		<option value="7">7</option>
+        		<option value="6">6</option>
+        		<option value="5">5</option>
+        		<option value="4">4</option>
+        		<option value="3">3</option>
+        		<option value="2">2</option>
+        		<option value="1">1</option>
+        	</select>
+        </div>
+    </div>
+    <hr>
+    <div class="form-group row">
+        <label class="control-label">Please provide comments or suggestions to improve our platform.<span style="color:red">*</span> </label>
+        <textarea class="form-control" name="comment" id="comment" placeholder="Your comment will help us improve!" rows="2"></textarea>
+    </div>
+    <hr>
+    <div class="form-group row">
+        <label class="control-label">If you are happy with this initiative of conducting CREST Olympiads , please share a testimonial (we may publish the testimonial).</label>
+        <textarea class="form-control" name="testimonial" id="testimonial" placeholder="Your review is important to us!" rows="3"></textarea>
+    </div>
+    <hr>
+    <!-- <div class="form-group">
+    	<label for="control-label">If you want to upload a Video Testimonial, please upload video here...</label>
+    	<input type="file" name="testimonial_video" id="testimonial_video" class="checkbox_file" formenctype="multipart/form-data">    	
+    </div>
+    <hr> -->
+    <div class="form-group">
+    	<a href="https://www.facebook.com/groups/crestolympiads/" class="btn btn-default" target="_blank" style="background-color: #4267b2;border-bottom: 1px solid #29487d;color: #fff;">Join CREST Olympiads Group</a>
+    	<!-- <input type="checkbox" name="checkbox" class="checkbox_check">
+    	<label for="checkbox" style="font-size: 14px;font-weight: bold;">Please enrol us for the 'Privileged Parent Volunteer' (PPV) Program. </label> -->
+    </div>
+    <hr>
+    <p class="text">
+        Thank you so much for your valuable time!
+    </p>
+</div>
+<style type="text/css">
+textarea.form-control, select.form-control{
+    padding: 6px 12px !important;
+    background-color: #fff !important;
+    border-radius: 4px !important;
+    width: 90%;
+}
+.feedback-form *{
+	font-weight: 500;
+}
+@media only screen and (max-width: 768px){
+
+.show_on_desktop{
+	display: none !important;
+}
+.show_on_phone{
+	display: block !important;
+}
+	select#select_scale {
+     display: block !important; 
+}
+}
+@media only screen and (min-width: 768px){
+	.show_on_desktop{
+		display: block !important;
+	}
+	.show_on_phone{
+		display: none !important;
+	}
+	.notas{
+	    padding: 3px;
+	   /* padding-left: 18%;*/
+	}
+	.feedback-form div,.feedback-form form{
+		display: block;
+		clear: both;
+	}
+	.form-group.row{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	div.notas label{
+	   /* text-align: center;
+	    width: 28px;
+	    display: inline-block;
+    	margin-bottom: 5px;*/
+    	/* text-align: center; */
+    width: 32px;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-right: 33px;
+	}
+	.radio-btns input[type="radio"]{
+		display: block;
+		float: left;
+	/*	margin: 6px 10px;*/
+		 margin: 5px 12px;
+		opacity: unset;
+		position: unset;
+		pointer-events: unset;
+	}
+	.radio-btns label{
+		float: left;
+		margin: 0 16px;
+		font-size: 13px;
+	}
+
+}
+
+
+
+
+</style>

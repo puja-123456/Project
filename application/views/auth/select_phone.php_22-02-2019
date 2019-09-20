@@ -1,0 +1,223 @@
+
+<select class="" id="country" name="country">
+  <!-- Countries often selected by users can be moved to the top of the list. -->
+  <!-- Countries known to be subject to general US embargo are commented out by default. -->
+  <!-- The data-countryCode attribute is populated with ISO country code, and value is int'l calling code. -->
+
+
+  <option disabled="disabled" selected>Select Country</option>
+  <option value="India" data-value="+91">India (+91)</option>
+  <option value="Algeria" data-value="+213">Algeria (+213)</option>
+  <option value="Andorra" data-value="+376">Andorra (+376)</option>
+  <option value="Angola" data-value="+244">Angola (+244)</option>
+  <option value="Anguilla" data-value="+1264">Anguilla (+1264)</option>
+  <option value="Antigua &amp; Barbuda" data-value="+1268">Antigua &amp; Barbuda (+1268)</option>
+  <option value="Argentina" data-value="+54">Argentina (+54)</option>
+  <option value="Armenia" data-value="+374">Armenia (+374)</option>
+  <option value="Aruba" data-value="+297">Aruba (+297)</option>
+  <option value="Australia" data-value="+61">Australia (+61)</option>
+  <option value="Austria" data-value="+43">Austria (+43)</option>
+  <option value="Azerbaijan" data-value="+994">Azerbaijan (+994)</option>
+  <option value="Bahamas" data-value="+1242">Bahamas (+1242)</option>
+  <option value="Bahrain" data-value="+973">Bahrain (+973)</option>
+  <option value="Bangladesh" data-value="+880">Bangladesh (+880)</option>
+  <option value="Barbados" data-value="+1246">Barbados (+1246)</option>
+  <option value="Belarus" data-value="+375">Belarus (+375)</option>
+  <option value="Belgium" data-value="+32">Belgium (+32)</option>
+  <option value="Belize" data-value="+501">Belize (+501)</option>
+  <option value="Benin" data-value="+229">Benin (+229)</option>
+  <option value="Bermuda" data-value="+1441">Bermuda (+1441)</option>
+  <option value="Bhutan" data-value="+975">Bhutan (+975)</option>
+  <option value="Bolivia" data-value="+591">Bolivia (+591)</option>
+  <option value="Bosnia Herzegovina" data-value="+387">Bosnia Herzegovina (+387)</option>
+  <option value="Botswana" data-value="+267">Botswana (+267)</option>
+  <option value="Brazil" data-value="+55">Brazil (+55)</option>
+  <option value="Brunei" data-value="+673">Brunei (+673)</option>
+  <option value="Bulgaria" data-value="+359">Bulgaria (+359)</option>
+  <option value="Burkina Faso" data-value="+226">Burkina Faso (+226)</option>
+  <option value="Burundi" data-value="+257">Burundi (+257)</option>
+  <option value="Cambodia" data-value="+855">Cambodia (+855)</option>
+  <option value="Cameroon" data-value="+237">Cameroon (+237)</option>
+  <option value="Canada" data-value="+1">Canada (+1)</option>
+  <option value="Cape Verde Islands" data-value="+238">Cape Verde Islands (+238)</option>
+  <option value="Cayman Islands" data-value="+1345">Cayman Islands (+1345)</option>
+  <option value="Central African Republic" data-value="+236">Central African Republic (+236)</option>
+  <option value="Chile" data-value="+56">Chile (+56)</option>
+  <option value="China" data-value="+86">China (+86)</option>
+  <option value="Colombia" data-value="+57">Colombia (+57)</option>
+  <option value="Comoros" data-value="+269">Comoros (+269)</option>
+  <option value="Congo" data-value="+242">Congo (+242)</option>
+  <option value="Cook Islands" data-value="+682">Cook Islands (+682)</option>
+  <option value="Costa Rica" data-value="+506">Costa Rica (+506)</option>
+  <option value="Croatia" data-value="+385">Croatia (+385)</option>
+  <option value="Cuba" data-value="+53">Cuba (+53)</option>
+  <option value="Cyprus - North" data-value="+90">Cyprus - North (+90)</option>
+  <option value="Cyprus - South" data-value="+357">Cyprus - South (+357)</option>
+  <option value="Czech Republic" data-value="+420">Czech Republic (+420)</option>
+  <option value="Denmark" data-value="+45">Denmark (+45)</option>
+  <option value="Djibouti" data-value="+253">Djibouti (+253)</option>
+  <option value="Dominica" data-value="+1809">Dominica (+1809)</option>
+  <option value="Dominican Republic" data-value="+1809">Dominican Republic (+1809)</option>
+  <option value="Ecuador" data-value="+593">Ecuador (+593)</option>
+  <option value="Egypt" data-value="+20">Egypt (+20)</option>
+  <option value="El Salvador" data-value="+503">El Salvador (+503)</option>
+  <option value="Equatorial Guinea" data-value="+240">Equatorial Guinea (+240)</option>
+  <option value="Eritrea" data-value="+291">Eritrea (+291)</option>
+  <option value="Estonia" data-value="+372">Estonia (+372)</option>
+  <option value="Ethiopia" data-value="+251">Ethiopia (+251)</option>
+  <option value="Falkland Islands" data-value="+500">Falkland Islands (+500)</option>
+  <option value="Faroe Islands" data-value="+298">Faroe Islands (+298)</option>
+  <option value="Fiji" data-value="+679">Fiji (+679)</option>
+  <option value="Finland" data-value="+358">Finland (+358)</option>
+  <option value="France" data-value="+33">France (+33)</option>
+  <option value="French Guiana" data-value="+594">French Guiana (+594)</option>
+  <option value="French Polynesia" data-value="+689">French Polynesia (+689)</option>
+  <option value="Gabon" data-value="+241">Gabon (+241)</option>
+  <option value="Gambia" data-value="+220">Gambia (+220)</option>
+  <option value="Georgia" data-value="+7880">Georgia (+7880)</option>
+  <option value="Germany" data-value="+49">Germany (+49)</option>
+  <option value="Ghana" data-value="+233">Ghana (+233)</option>
+  <option value="Gibraltar" data-value="+350">Gibraltar (+350)</option>
+  <option value="Greece" data-value="+30">Greece (+30)</option>
+  <option value="Greenland" data-value="+299">Greenland (+299)</option>
+  <option value="Grenada" data-value="+1473">Grenada (+1473)</option>
+  <option value="Guadeloupe" data-value="+590">Guadeloupe (+590)</option>
+  <option value="Guam" data-value="+671">Guam (+671)</option>
+  <option value="Guatemala" data-value="+502">Guatemala (+502)</option>
+  <option value="Guinea" data-value="+224">Guinea (+224)</option>
+  <option value="Guinea - Bissau" data-value="+245">Guinea - Bissau (+245)</option>
+  <option value="Guyana" data-value="+592">Guyana (+592)</option>
+  <option value="Haiti" data-value="+509">Haiti (+509)</option>
+  <option value="Honduras" data-value="+504">Honduras (+504)</option>
+  <option value="Hong Kong" data-value="+852">Hong Kong (+852)</option>
+  <option value="Hungary" data-value="+36">Hungary (+36)</option>
+  <option value="Iceland" data-value="+354">Iceland (+354)</option>
+  <option value="Indonesia" data-value="+62">Indonesia (+62)</option>
+  <option value="Iraq" data-value="+964">Iraq (+964)</option>
+  <option value="Iran" data-value="+98">Iran (+98)</option>
+  <option value="Ireland" data-value="+353">Ireland (+353)</option>
+  <option value="Israel" data-value="+972">Israel (+972)</option>
+  <option value="Italy" data-value="+39">Italy (+39)</option>
+  <option value="Jamaica" data-value="+1876">Jamaica (+1876)</option>
+  <option value="Japan" data-value="+81">Japan (+81)</option>
+  <option value="Jordan" data-value="+962">Jordan (+962)</option>
+  <option value="Kazakhstan" data-value="+7">Kazakhstan (+7)</option>
+  <option value="Kenya" data-value="+254">Kenya (+254)</option>
+  <option value="Kiribati" data-value="+686">Kiribati (+686)</option>
+  <option value="Korea - North" data-value="+850">Korea - North (+850)</option>
+  <option value="Korea - South" data-value="+82">Korea - South (+82)</option>
+  <option value="Kuwait" data-value="+965">Kuwait (+965)</option>
+  <option value="Kyrgyzstan" data-value="+996">Kyrgyzstan (+996)</option>
+  <option value="Laos" data-value="+856">Laos (+856)</option>
+  <option value="Latvia" data-value="+371">Latvia (+371)</option>
+  <option value="Lebanon" data-value="+961">Lebanon (+961)</option>
+  <option value="Lesotho" data-value="+266">Lesotho (+266)</option>
+  <option value="Liberia" data-value="+231">Liberia (+231)</option>
+  <option value="Libya" data-value="+218">Libya (+218)</option>
+  <option value="Liechtenstein" data-value="+417">Liechtenstein (+417)</option>
+  <option value="Lithuania" data-value="+370">Lithuania (+370)</option>
+  <option value="Luxembourg" data-value="+352">Luxembourg (+352)</option>
+  <option value="Macao" data-value="+853">Macao (+853)</option>
+  <option value="Macedonia" data-value="+389">Macedonia (+389)</option>
+  <option value="Madagascar" data-value="+261">Madagascar (+261)</option>
+  <option value="Malawi" data-value="+265">Malawi (+265)</option>
+  <option value="Malaysia" data-value="+60">Malaysia (+60)</option>
+  <option value="Maldives" data-value="+960">Maldives (+960)</option>
+  <option value="Mali" data-value="+223">Mali (+223)</option>
+  <option value="Malta" data-value="+356">Malta (+356)</option>
+  <option value="Marshall Islands" data-value="+692">Marshall Islands (+692)</option>
+  <option value="Martinique" data-value="+596">Martinique (+596)</option>
+  <option value="Mauritania" data-value="+222">Mauritania (+222)</option>
+  <option value="Mayotte" data-value="+269">Mayotte (+269)</option>
+  <option value="Mexico" data-value="+52">Mexico (+52)</option>
+  <option value="Micronesia" data-value="+691">Micronesia (+691)</option>
+  <option value="Moldova" data-value="+373">Moldova (+373)</option>
+  <option value="Monaco" data-value="+377">Monaco (+377)</option>
+  <option value="Mongolia" data-value="+976">Mongolia (+976)</option>
+  <option value="Montserrat" data-value="+1664">Montserrat (+1664)</option>
+  <option value="Morocco" data-value="+212">Morocco (+212)</option>
+  <option value="Mozambique" data-value="+258">Mozambique (+258)</option>
+  <option value="Myanmar" data-value="+95">Myanmar (+95)</option>
+  <option value="Namibia" data-value="+264">Namibia (+264)</option>
+  <option value="Nauru" data-value="+674">Nauru (+674)</option>
+  <option value="Nepal" data-value="+977">Nepal (+977)</option>
+  <option value="Netherlands" data-value="+31">Netherlands (+31)</option>
+  <option value="New Caledonia" data-value="+687">New Caledonia (+687)</option>
+  <option value="New Zealand" data-value="+64">New Zealand (+64)</option>
+  <option value="Nicaragua" data-value="+505">Nicaragua (+505)</option>
+  <option value="Niger" data-value="+227">Niger (+227)</option>
+  <option value="Nigeria" data-value="+234">Nigeria (+234)</option>
+  <option value="Niue" data-value="+683">Niue (+683)</option>
+  <option value="Norfolk Islands" data-value="+672">Norfolk Islands (+672)</option>
+  <option value="Northern Marianas" data-value="+670">Northern Marianas (+670)</option>
+  <option value="Norway" data-value="+47">Norway (+47)</option>
+  <option value="Oman" data-value="+968">Oman (+968)</option>
+  <option value="Pakistan" data-value="+92">Pakistan (+92)</option>
+  <option value="Palau" data-value="+680">Palau (+680)</option>
+  <option value="Panama" data-value="+507">Panama (+507)</option>
+  <option value="Papua New Guinea" data-value="+675">Papua New Guinea (+675)</option>
+  <option value="Paraguay" data-value="+595">Paraguay (+595)</option>
+  <option value="Peru" data-value="+51">Peru (+51)</option>
+  <option value="Philippines" data-value="+63">Philippines (+63)</option>
+  <option value="Poland" data-value="+48">Poland (+48)</option>
+  <option value="Portugal" data-value="+351">Portugal (+351)</option>
+  <option value="Puerto Rico" data-value="+1787">Puerto Rico (+1787)</option>
+  <option value="Qatar" data-value="+974">Qatar (+974)</option>
+  <option value="Reunion" data-value="+262">Reunion (+262)</option>
+  <option value="Romania" data-value="+40">Romania (+40)</option>
+  <option value="Russia" data-value="+7">Russia (+7)</option>
+  <option value="Rwanda" data-value="+250">Rwanda (+250)</option>
+  <option value="San Marino" data-value="+378">San Marino (+378)</option>
+  <option value="Sao Tome &amp; Principe" data-value="+239">Sao Tome &amp; Principe (+239)</option>
+  <option value="Saudi Arabia" data-value="+966">Saudi Arabia (+966)</option>
+  <option value="Senegal" data-value="+221">Senegal (+221)</option>
+  <option value="Serbia" data-value="+381">Serbia (+381)</option>
+  <option value="Seychelles" data-value="+248">Seychelles (+248)</option>
+  <option value="Sierra Leone" data-value="+232">Sierra Leone (+232)</option>
+  <option value="Singapore" data-value="+65">Singapore (+65)</option>
+  <option value="Slovak Republic" data-value="+421">Slovak Republic (+421)</option>
+  <option value="Slovenia" data-value="+386">Slovenia (+386)</option>
+  <option value="Solomon Islands" data-value="+677">Solomon Islands (+677)</option>
+  <option value="Somalia" data-value="+252">Somalia (+252)</option>
+  <option value="South Africa" data-value="+27">South Africa (+27)</option>
+  <option value="Spain" data-value="+34">Spain (+34)</option>
+  <option value="Sri Lanka" data-value="+94">Sri Lanka (+94)</option>
+  <option value="St. Helena" data-value="+290">St. Helena (+290)</option>
+  <option value="St. Kitts" data-value="+1869">St. Kitts (+1869)</option>
+  <option value="St. Lucia" data-value="+1758">St. Lucia (+1758)</option>
+  <option value="Suriname" data-value="+597">Suriname (+597)</option>
+  <option value="Sudan" data-value="+249">Sudan (+249)</option>
+  <option value="Swaziland" data-value="+268">Swaziland (+268)</option>
+  <option value="Sweden" data-value="+46">Sweden (+46)</option>
+  <option value="Switzerland" data-value="+41">Switzerland (+41)</option>
+  <option value="Syria" data-value="+963">Syria (+963)</option>
+  <option value="Taiwan" data-value="+886">Taiwan (+886)</option>
+  <option value="Tajikistan" data-value="+992">Tajikistan (+992)</option>
+  <option value="Thailand" data-value="+66">Thailand (+66)</option>
+  <option value="Togo" data-value="+228">Togo (+228)</option>
+  <option value="Tonga" data-value="+676">Tonga (+676)</option>
+  <option value="Trinidad &amp; Tobago" data-value="+1868">Trinidad &amp; Tobago (+1868)</option>
+  <option value="Tunisia" data-value="+216">Tunisia (+216)</option>
+  <option value="Turkey" data-value="+90">Turkey (+90)</option>
+  <option value="Turkmenistan" data-value="+993">Turkmenistan (+993)</option>
+  <option value="Turks &amp; Caicos Islands" data-value="+1649">Turks &amp; Caicos Islands (+1649)</option>
+  <option value="Tuvalu" data-value="+688">Tuvalu (+688)</option>
+  <option value="Uganda" data-value="+256">Uganda (+256)</option>
+  <option value="United Kingdom" data-value="+44">United Kingdom (+44)</option>
+  <option value="Ukraine" data-value="+380">Ukraine (+380)</option>
+  <option value="United Arab Emirates" data-value="+971">United Arab Emirates (+971)</option>
+  <option value="United States of America" data-value="+1">United States of America (+1)</option>
+  <option value="Uruguay" data-value="+598">Uruguay (+598)</option>
+  <option value="Uzbekistan" data-value="+998">Uzbekistan (+998)</option>
+  <option value="Vanuatu" data-value="+678">Vanuatu (+678)</option>
+  <option value="Vatican City" data-value="+379">Vatican City (+379)</option>
+  <option value="Venezuela" data-value="+58">Venezuela (+58)</option>
+  <option value="Vietnam" data-value="+84">Vietnam (+84)</option>
+  <option value="Virgin Islands - British" data-value="+1">Virgin Islands - British (+1)</option>
+  <option value="Virgin Islands - US" data-value="+1">Virgin Islands - US (+1)</option>
+  <option value="Wallis &amp; Futuna" data-value="+681">Wallis &amp; Futuna (+681)</option>
+  <option value="Yemen" data-value="+969">Yemen (North)(+969)</option>
+  <option value="Yemen" data-value="+967">Yemen (South)(+967)</option>
+  <option value="Zambia" data-value="+260">Zambia (+260)</option>
+  <option value="Zimbabwe" data-value="+263">Zimbabwe (+263)</option>
+</select>

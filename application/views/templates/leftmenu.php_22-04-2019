@@ -1,0 +1,325 @@
+<!--	DON'T DELETE ANY DIV	-->
+
+
+<style>
+ul#menu li {
+  display:inline;
+}
+</style>
+<style>
+    .close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: transparent !important;
+  max-height: initial!important;
+  width: auto !important;
+
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+     -moz-transition:    -moz-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -22px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 20px; 
+  background: url("<?php echo base_url(); ?>assets/images/certificate_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 900px 500px;
+  height:500px;
+}
+.modal-footer {
+  padding: 19px 20px 20px;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  background-color:transparent !important;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.content
+{
+    text-align:center;margin-top:20%;font-size: 36px;font-family:Edwardian Script ITC;line-height: 35px
+}
+
+.content > span
+{
+
+    display: inline-block; overflow: hidden;margin-top:0%;text-align:center;font-size: 20px;font-family:Arial, Helvetica, sans-serif; font-weight:600;line-height: 35px;text-transform: uppercase; position: relative; top: 10px;
+   /* text-align:center;margin-top:20%;font-size: 20px;font-family:Arial, Helvetica, sans-serif; font-weight:600;line-height: 35px;text-transform: uppercase;*/
+}
+
+</style>
+
+<?php if($user_details[0]->school_id_proof =='' || $user_details[0]->previous_year_marksheet =='' || $user_details[0]->student_photograph =='' ) { ?>
+
+
+<style>
+
+#upload{
+    -webkit-animation: blink 700ms infinite alternate;
+    -moz-animation: blink 700ms infinite alternate;
+    -o-animation: blink 700ms infinite alternate;
+    animation: blink 700ms infinite alternate;
+}
+#upload a{
+  color:#FF0000 !important;
+}
+@-webkit-keyframes blink {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@-o-keyframes blink {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@-moz-keyframes blink {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+@keyframes blink {
+  from { opacity:1; }
+  to { opacity:0; }
+};
+</style>
+<?php } ?>
+<div class="col-md-2 padd" style="background:#fff; color:#000;">
+    <ul class=" sid-sub-menu" role="menu" id="menu">
+       <!--  <li class=" "><a href="<?php echo base_url(); ?>">Home</a></li> -->
+        <li class=" <?php if (isset($active_menu) && $active_menu == "profile") echo "active"; ?>"><a
+            href="<?php echo base_url(); ?>crest/profile">Profile</a>
+        </li>
+        |
+         <li class=" <?php if (isset($active_menu) && $active_menu == "subscribe") echo "active"; ?>"><a
+            href="<?php echo base_url(); ?>crest/reg_form">Subscriptions</a>
+        </li>
+        |
+          <li id="upload" class=" <?php if (isset($active_menu) && $active_menu == "upload_documents") echo "active"; ?>"><a
+            href="<?php echo base_url(); ?>crest/upload_documents">Upload Documents</a>
+        </li>
+        |
+        <li class=" <?php if (isset($active_menu) && $active_menu == "subcategories") echo "active"; ?>">
+            <a href id="preview" data-toggle="modal" data-target="#myModal">Preview Certificate</a>
+        </li>        
+        |                 
+         
+        <li class=" <?php if (isset($active_menu) && $active_menu == "reward_points") echo "active"; ?>">
+            <a href="<?php echo base_url()."crest/reward_points"; ?>">Rewards Points</a>
+        </li>
+        |
+        <li class=" <?php if (isset($active_menu) && $active_menu == "access_card") echo "active"; ?>">
+            <a href="<?php echo base_url()."crest/admit_card"; ?>">Access Card</a>
+        </li> 
+        |
+        <li class=" <?php if (isset($active_menu) && $active_menu == "invoice") echo "active"; ?>">
+            <a href="<?php echo base_url()."crest/invoice"; ?>">Invoice</a>
+        </li> 
+        |
+         <li class=" <?php if (isset($active_menu) && $active_menu == "update_password") echo "active"; ?>"><a
+            href="<?php echo base_url(); ?>crest/update_password">Update Password</a>
+        </li>        
+           
+       <!--  <hr> -->
+       
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<!-- <div class="col-md-10 content"> -->
+<!--	DON'T DELETE ANY DIV	-->
+
+<!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"style="text-align: center">Certificate Preview</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+            <div class="content">
+                This to certify that <span id="uname" style="width:30%"><?php echo $user_details[0]->username; ?> </span>  of class <span id="uclass"><?php echo $user_details[0]->class; ?></span>  <br/>
+                studying at <span id="uschool" style="width:40%"><?php echo $user_details[0]->school.",".$user_details[0]->city; ?></span> <br/>
+                has been awarded  _______________ in <br/>
+                <span id="exam"><?php echo "CREST Mathematics Olympiad";//echo rtrim($user_details[0]->prefered_subject,","); ?></span> <br/>
+                conducted on <span id="date">DD MMM, 2019</span> </div>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+      
+ $("#preview").click(function () {
+
+
+    
+    
+
+        //Get
+/*var uname = $('#name').val();
+var uclass = $('#class').val();
+var uschool = $('#school').val();
+// var uschool_address = $('#school_address').val();
+var ucity = $('#city').val();
+// var ustate = $('#state').val();
+// var upincode = $('#pincode').val();
+var uexam = $('.subjects:checkbox:checked').next().text();
+var exam = uexam.split(' ').slice(0,3).join(" ");
+
+
+
+//Set
+$('#uname').text(uname);
+$('#uclass').text(uclass);
+$('#uschool').text(uschool);
+// $('#uschool_address').text(uschool_address);
+$('#ucity').text(ucity);
+// $('#ustate').text(ustate);
+// $('#upincode').text(upincode);
+$('#exam').text(exam);*/
+
+});
+
+  </script>

@@ -1,0 +1,92 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+
+
+
+RewriteCond %{HTTP_HOST} ^www\.([^.]+\.[^.]+\.[^.]+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+RewriteCond %{HTTP_HOST} ^crestolympiads.com [NC]
+RewriteRule ^(.*)$ https://www.crestolympiads.com/$1 [L,R=301]
+
+
+RewriteBase /
+
+RewriteRule sample-questions-11 /cso-sample-papers-class-1 [R=301,L]
+RewriteRule sample-questions-12 /cso-sample-papers-class-2 [R=301,L]
+RewriteRule sample-questions-13 /cso-sample-papers-class-3 [R=301,L]
+RewriteRule sample-questions-14 /cso-sample-papers-class-4 [R=301,L]
+RewriteRule sample-questions-15 /cso-sample-papers-class-5 [R=301,L]
+RewriteRule sample-questions-16 /cso-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-17 /cso-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-18 /cso-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-19 /cso-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-20 /cso-sample-papers-class-10 [R=301,L]
+
+RewriteRule sample-questions-21 /cmo-sample-papers-class-1 [R=301,L]
+RewriteRule sample-questions-22 /cmo-sample-papers-class-2 [R=301,L]
+RewriteRule sample-questions-23 /cmo-sample-papers-class-3 [R=301,L]
+RewriteRule sample-questions-24 /cmo-sample-papers-class-4 [R=301,L]
+RewriteRule sample-questions-25 /cmo-sample-papers-class-5 [R=301,L]
+RewriteRule sample-questions-26 /cmo-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-27 /cmo-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-28 /cmo-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-29 /cmo-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-30 /cmo-sample-papers-class-10 [R=301,L]
+
+RewriteRule sample-questions-31 /ceo-sample-papers-class-1 [R=301,L]
+RewriteRule sample-questions-32 /ceo-sample-papers-class-2 [R=301,L]
+RewriteRule sample-questions-33 /ceo-sample-papers-class-3 [R=301,L]
+RewriteRule sample-questions-34 /ceo-sample-papers-class-4 [R=301,L]
+RewriteRule sample-questions-35 /ceo-sample-papers-class-5 [R=301,L]
+RewriteRule sample-questions-36 /ceo-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-37 /ceo-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-38 /ceo-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-39 /ceo-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-40 /ceo-sample-papers-class-10 [R=301,L]
+
+RewriteRule sample-questions-51 /cro-sample-papers-class-1 [R=301,L]
+RewriteRule sample-questions-52 /cro-sample-papers-class-2 [R=301,L]
+RewriteRule sample-questions-53 /cro-sample-papers-class-3 [R=301,L]
+RewriteRule sample-questions-54 /cro-sample-papers-class-4 [R=301,L]
+RewriteRule sample-questions-55 /cro-sample-papers-class-5 [R=301,L]
+RewriteRule sample-questions-56 /cro-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-57 /cro-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-58 /cro-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-59 /cro-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-60 /cro-sample-papers-class-10 [R=301,L]
+
+RewriteRule sample-questions-61 /cfo-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-62 /cfo-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-63 /cfo-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-64 /cfo-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-65 /cfo-sample-papers-class-10 [R=301,L]
+
+RewriteRule sample-questions-1 /cco-sample-papers-class-1 [R=301,L]
+RewriteRule sample-questions-2 /cco-sample-papers-class-2 [R=301,L]
+RewriteRule sample-questions-3 /cco-sample-papers-class-3 [R=301,L]
+RewriteRule sample-questions-4 /cco-sample-papers-class-4 [R=301,L]
+RewriteRule sample-questions-5 /cco-sample-papers-class-5 [R=301,L]
+RewriteRule sample-questions-6 /cco-sample-papers-class-6 [R=301,L]
+RewriteRule sample-questions-7 /cco-sample-papers-class-7 [R=301,L]
+RewriteRule sample-questions-8 /cco-sample-papers-class-8 [R=301,L]
+RewriteRule sample-questions-9 /cco-sample-papers-class-9 [R=301,L]
+RewriteRule sample-questions-10 /cco-sample-papers-class-10 [R=301,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php/$1 [L,QSA]
+
+# Permanent URL redirect
+#RewriteRule  /sample-questions-21 /cmo-sample-papers-class-1/ [L,R=301]
+
+
+</IfModule>

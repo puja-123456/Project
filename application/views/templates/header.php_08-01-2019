@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119742610-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	 
+	  gtag('config', 'UA-119742610-1');
+	</script>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords"
+	content="<?php if (isset($meta_keywords))
+	echo $meta_keywords;elseif (isset($site_data->site_keywords))
+	echo $site_data->site_keywords;else
+	echo "";?>">
+	<meta name="description"
+	content="<?php if (isset($meta_description))
+	echo $meta_description;elseif (isset($site_data->site_description))
+	echo $site_data->site_description;
+	else
+		echo "";?>">
+	<title><?php echo (isset($title)) ? $title : 'CREST Olympiads'; ?>
+	</title>
+	<?php
+	$version = "2.0";
+	?>
+
+	<meta property="og:url"           content="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
+	<meta property="og:type"          content="<?php echo (isset($slug) && $slug != '') ? 'website' : 'article'; ?>" />
+	<meta property="og:title"         content="<?php if(isset($og_title)) echo $og_title; else if(isset($title)) echo $title; else echo 'CREST Olympiads'; ?>" />
+	<meta property="og:description"   content="<?php echo (isset($meta_description)) ? $meta_description : 'CREST Olympiads'; ?>" />
+	<meta property="fb:app_id"      content="<?php echo $this->config->item('facebook_api_key'); ?>"/>
+	<meta property="og:image"         content="<?php echo (isset($og_image_url)) ? $og_image_url : base_url().'assets/images/favicon.ico'; ?>"/>
+
+	<!-- Bootstrap -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- <link href="<?php echo base_url(); ?>assets/css/materialize.min.css" rel="stylesheet"> -->
+
+    <!-- Compiled and minified JavaScript -->
+      
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/home2.css" /> -->
+
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.js"></script>
+	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+	<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script> -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+	<script type="text/javascript">
+      /* First CSS File */
+      var giftofspeed = document.createElement('link');
+      giftofspeed.rel = 'stylesheet';
+      giftofspeed.href = '<?php echo base_url(); ?>assets/css/font-awesome.css';
+      giftofspeed.type = 'text/css';
+      var godefer = document.getElementsByTagName('link')[0];
+      godefer.parentNode.insertBefore(giftofspeed, godefer);
+
+      /* Second CSS File */
+      var giftofspeed2 = document.createElement('link');
+      giftofspeed2.rel = 'stylesheet';
+      giftofspeed2.href = '<?php echo base_url(); ?>assets/css/theme.css';
+      giftofspeed2.type = 'text/css';
+      var godefer2 = document.getElementsByTagName('link')[0];
+      godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+
+
+      /* Second CSS File */
+      var giftofspeed3 = document.createElement('link');
+      giftofspeed3.rel = 'stylesheet';
+      giftofspeed3.href = '<?php echo base_url(); ?>assets/css/slices_and_all.css';
+      giftofspeed3.type = 'text/css';
+      var godefer3 = document.getElementsByTagName('link')[0];
+      godefer3.parentNode.insertBefore(giftofspeed3, godefer3);
+
+      /* Second CSS File */
+      var giftofspeed4 = document.createElement('link');
+      giftofspeed4.rel = 'stylesheet';
+      giftofspeed4.href = '<?php echo base_url(); ?>assets/css/homePageSlider.css';
+      giftofspeed4.type = 'text/css';
+      var godefer4 = document.getElementsByTagName('link')[0];
+      godefer4.parentNode.insertBefore(giftofspeed4, godefer4);
+
+	</script>
+
+	<noscript>
+		<link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/theme.css">
+		<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/homePageGenSlider.css" /> -->
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/slices_and_all.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/homePageSlider.css" />
+	</noscript>
+
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=" "></script>
+	<script>
+         var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "37848fa2-0ceb-4f3c-bbc5-8dd8d2b32742",
+    });
+  });
+	</script>
+
+	<?php
+	$is_home = ($this->router->fetch_class() === 'crest' && $this->router->fetch_method() === 'index') ? true : false;
+	
+	if ($is_home) {
+		?>
+		<link rel="canonical" href="<?php echo base_url(); ?>" />
+		<?php 
+	} else { 
+		?>
+		<link rel="canonical" href="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
+		<?php 
+	} ?>
+	
+	<style type="text/css">
+		body p, body span{
+			font-family: "Lato",sans-serif;
+			line-height: 29px;
+		}
+		strong{
+			font-weight: 700 !important;
+		}
+		.brand-logo{
+			/*background: #fff;*/
+			/*float:left;*/
+			padding-bottom: 5px;
+			padding-top: 5px;
+			padding-right: 10px;
+			/*width:12%;*/
+			max-height: 110px;
+		}
+		nav.nav-extended .brand-logo img{
+			max-height: 110px;
+			transition: all 0.5s ease;
+		}
+		nav.nav-extended.sticky .brand-logo img{
+			max-height: 70px;
+		}
+		@media only screen and (max-width:768px) {
+			.brand-logo{
+				width:20%;
+			}
+		}
+		.fixed-action-btn{
+			left:23px;
+			right: 100%;
+		}
+		nav.nav-extended {
+			z-index: 1000;
+			background: url('<?php echo base_url();?>assets/images/header_bk.jpg');
+			background-repeat: repeat-x;
+			transition: all 0.5s ease;
+		}
+		nav.nav-extended ul#nav-mobile li.active {
+		    background-color: #ff4a4a52;
+		}
+		nav.nav-extended ul#nav-mobile li a {
+			font-family: 'Melonheadz';
+			font-size: 22px;
+		}
+		nav.nav-extended ul#nav-mobile li a i {
+			font-size: 22px;
+		}
+		@media only screen and (min-width: 601px)
+		{
+			nav.nav-extended, nav.nav-extended .nav-wrapper i, nav.nav-extended a.sidenav-trigger, nav.nav-extended a.sidenav-trigger i {
+			    height: 110px;
+			    line-height: 110px;
+			}
+			nav.nav-extended.sticky, nav.nav-extended.sticky .nav-wrapper i, nav.nav-extended.sticky a.sidenav-trigger, nav.nav-extended.sticky a.sidenav-trigger i {
+			    height: 70px;
+			    line-height: 70px;
+			}
+		}
+		@media only screen and (min-width: 601px){
+			nav.nav-extended .nav-wrapper {
+			    min-height: 64px;
+			}
+			nav.nav-extended.sticky .nav-wrapper {
+			    min-height: 50px;
+			}
+		}
+		nav ul .register-li a:hover{
+			background-color: rgba(0,0,0,0);
+		}
+		nav ul .register-li a .btn{
+		    font-family: 'Melonheadz';
+    		font-size: 16px;
+		}
+		.dropdown-content li {
+			min-height: 35px;
+			line-height: 1rem;
+		}
+		.fixed-action-btn ul li a{
+			display: block;
+			width: 200px;
+			text-transform: none;
+		}
+		.hide_this_div{
+			position: absolute;
+			width: 100%;
+		    background: #fff;
+		    display: none;
+		    transition: all 0.5s ease;
+		}
+		.hide_this_div.active{
+			display: block !important;
+		}
+		.hide_this_div p{
+			padding-left: 20px;
+		}
+		.hide_this_div ul{
+			margin-bottom: 0px;
+		}
+		.hide_this_div a li{
+			display: inline-block;
+			height: 100px;
+			width: 100%;
+			margin: 1px;
+			float: left;
+			padding: 15px;
+			cursor: pointer;
+		}
+		.hide_this_div a.col.m2.l2{
+			color: #fff;
+			padding: 1px;
+		}
+		.hide_this_div a:hover li{
+			background-color: #1f5b7d;
+		}
+		.hidden_div.sticky{
+		    transform: translateY(70px);
+		}
+		.hidden_div{
+		    position: fixed;
+		    width: 100%;
+		    /*height: 200px;*/
+		    transform: translateY(110px);
+		    z-index: 1;
+		    /*display: none;*/
+		}
+		.hidden_div.active{
+			/*display: block !important;*/
+		}
+		#nav-mobile .home-tab, #mobile-menu .home-tab{
+			background-color: #3f51b533 !important;
+		}
+		#nav-mobile .cmo, #mobile-menu .cmo{
+			background-color: #e91e6333 !important;
+		}
+		#nav-mobile .cco, #mobile-menu .cco{
+			background-color: #673ab733 !important;
+		}
+		#nav-mobile .cso, #mobile-menu .cso{
+			background-color: #00bcd433 !important;
+		}
+		#nav-mobile .ceo, #mobile-menu .ceo{
+			background-color: #cddc3933 !important;
+		}
+		#nav-mobile .cgko, #mobile-menu .cgko{
+			background-color: #ffc10733 !important;
+		}
+		#nav-mobile .cro, #mobile-menu .cro{
+			background-color: #79554833 !important;
+		}
+		/*#nav-mobile .cfo, #mobile-menu .cfo{
+			background-color: #00968833 !important;
+		}*/
+		#nav-mobile .cfo, #mobile-menu .cfo{
+			background-color: #ffc10733 !important;
+		}
+
+.card .card-content{
+	padding: 20px;
+}
+	.fixediconstop{
+		position: fixed;
+		right: 1px;
+		top:20%;
+		z-index: 2;
+	}
+	.fixediconstop li{margin-bottom: 3px; background: #1a2432; color: #fff; width: 60px; overflow: hidden; text-align:center;padding:7px 7px 7px 9px;height:60px;border-radius: 3px;
+	}
+	.fixediconstop i.medium{
+		font-size: 3rem;
+	}
+	.fixediconstop ul li:nth-child(1){
+		background: #165d0bd9;
+	}
+	.fixediconstop ul li:nth-child(2){
+		background: #b1a32ad9;
+	}
+	.fixediconstop ul li:nth-child(3){
+		background: #0b1f8ed9;
+	}
+	.fixediconstop ul li:nth-child(4){
+		background: #f399b9d9;
+	}
+	.fixediconstop ul li:nth-child(5){
+		background: #33a093d9;
+		    /*background: #165d0bd9;*/
+	}
+	.fixediconstop li a{
+		color:#fff;
+		padding-top: 30px;
+	}
+	@media only screen and (max-width: 768px){
+		.fixediconstop li a i{
+			margin-top: 5px;
+		}
+	}
+
+	#mobile-menu .collapsible-body li{
+	    padding: 0 15px;
+	    color:#fff;
+	}
+	/*@media only screen and (min-width: 768px){*/
+		#mobile-menu .collapsible-body li i{
+		    margin-top: 10px;
+		}
+	/*}*/
+
+	</style>
+
+	
+
+		<script type="text/javascript">
+		$().ready(function(){
+			if($(window).width() > 768){
+				$(".fixediconstop li a i").addClass("medium");
+			}
+			$(".dropdown-trigger").dropdown();
+			if( !sessionStorage.getItem("showTaptarget")){
+				sessionStorage.setItem("showTaptarget", true);
+				$('.tap-target').tapTarget();
+	    		$(".tap-target").tapTarget('open');
+			}
+			// $().one(function(){
+				$('.fixed-action-btn').floatingActionButton({
+					direction: 'top',
+					hoverEnabled: false
+					// toolbarEnabled: true
+				});
+				 $('.tooltipped').tooltip();
+			// });
+			// document.addEventListener('DOMContentLoaded', function() {
+			//     var elems = document.querySelectorAll('.fixed-action-btn');
+			//     var instances = M.FloatingActionButton.init(elems, {
+			//     	toolbarEnabled: true
+			// 	});
+			// });
+			$("#other-menu").on("click",function(){
+				$(this).parent().toggleClass("active");
+			});
+			$('.sidenav').sidenav();
+			$('.tabs').tabs();
+			$('select').formSelect();
+			$('.collapsible').collapsible();
+
+			$("#nav-mobile li a").each(function(){
+				$(this).on("click",function(){
+					var parent = $(this).parent();
+
+					var target = $(this).data('target');
+					// $(".hide_this_div").hide('slow');
+					// $(target).toggle('slow');
+					// $(target).show('slow');
+
+					// $(".hidden_div").show();
+					if( $( target ).hasClass( "active" )){
+						$("#nav-mobile li").removeClass("active");
+						$(".hide_this_div").removeClass('active');
+					// 	$( ".hidden_div" ).addClass( "active" );
+					}else{
+						$("#nav-mobile li").removeClass("active");
+						parent.addClass("active");
+						$(".hide_this_div").removeClass('active');
+						$( target ).addClass( "active" );
+						// console.log('else');
+					// 	$( ".hidden_div" ).removeClass( "active" );
+					}
+					// console.log( $(this).data('target') );
+
+				});
+			});
+			$(".hidden_div a").on("click",function(){
+				$(".hide_this_div").removeClass('active');
+			});
+
+			$(document).ready(function(){
+				$('.datepicker').datepicker({
+					yearRange: [2000,2017],
+					format: 'yyyy-mm-dd',
+					defaultDate: new Date(2000, 0, 0)
+				});
+			});
+
+			$(document).ready(function () {
+			    $(window).scroll(function () {
+			        if ($(this).scrollTop() > 200) {
+			            $('nav.nav-extended').addClass("sticky");
+			            $('div.hidden_div').addClass("sticky");
+			        }
+			        else {
+			            $('nav.nav-extended').removeClass("sticky");
+			            $('div.hidden_div').removeClass("sticky");
+			        }
+			    });
+			});
+
+		});
+		</script>
+</head>
+<body>
+<div class="navbar-fixed">
+	<nav class="nav-extended">
+		<div class="nav-wrapper">
+		      <!-- <a href="#" class="brand-logo">Logo</a> -->
+			<a class="brand-logo col s1 right" href="<?php echo base_url(); ?>"><img class="responsive-img" src="<?php echo base_url(); ?>assets/images/logo/logo.png" style=""></a>
+			<a href="#" data-target="mobile-menu" class="sidenav-trigger teal-text darken-2"><i class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="col l1-offset hide-on-med-and-down z-depth-1">
+				<li class="tab home-tab">
+					<a href="<?=base_url()?>" class="black-text"><i class="material-icons">home</i></a>
+				</li>
+			<!-- <ul id="nav-mobile" class="hide-on-med-and-down collapsible collapsible-accordion"> -->
+		  	 	<?php 
+					$mainCategories = $this->config->item('main_categories');
+					foreach ($mainCategories as $key => $category) {
+						?>
+				       	<li class="tab col s2 <?php echo $category[0]; ?>">
+					 		<a class="dropdown-item black-text" href="javascript:void(0)" data-target="#dropdown-<?php echo $category[0]; ?>"><?php echo $category[1]; ?><i class="material-icons right">arrow_drop_down</i></a>
+					 	</li>
+					 	<?php
+					}
+		      	?>
+		      	<li class="register-li">
+					<a href="<?=base_url()?>pre-registration" class="white-text"><button class="btn red darken-4">Register</button></a>
+		      	</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="hidden_div">
+		<?php 
+			$mainCategories2 = $this->config->item('main_categories');
+			foreach ($mainCategories2 as $key => $category) {
+				?>
+				<div class="hide_this_div " id="dropdown-<?php echo $category[0]; ?>">
+					<p class="flow-text"><span><?php echo $category[2]; ?></span></p>
+					<ul id="" class="center-align row">
+						<a class="col m2 l2" href="<?php echo base_url().$category[0]; ?>"><li class=" lighten-1 <?php echo $category[3]; ?>"><i class="material-icons">blur_circular</i><br>About <?php echo $category[1]; ?></li></a>
+
+						<a class="col m2 l2" href="<?php echo base_url(); ?>marking-scheme#<?php echo $category[0]; ?>-marking-scheme-l1"><li class="<?php echo $category[3]; ?>"><i class="material-icons">content_copy</i><br>Marking Scheme of <?php echo $category[1]; ?></li></a>
+
+						<a class="col m2 l2" href="<?php echo base_url().$category[0]; ?>-syllabus"><li class="darken-1 <?php echo $category[3]; ?>"><i class="material-icons">dashboard</i><br>Syllabus of <?php echo $category[1]; ?></li></a>
+						
+						<a class="col m2 l2" href="<?php echo base_url(); ?>awards"><li class="darken-2 <?php echo $category[3]; ?>"><i class="material-icons">mood</i><br>Awards &amp; Recognition</li></a>
+
+						<a target="_blank" class="col m2 l2" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads"><li class="darken-3 <?php echo $category[3]; ?>"><i class="material-icons">devices</i><br>Olympiad Preparation</li></a>
+						
+						<a class="col m2 l2" href="<?php echo base_url().$category[0]; ?>-sample-papers"><li class="darken-4 <?php echo $category[3]; ?>"><i class="material-icons">file_download</i><br>Sample Papers</li></a>
+			 		</ul>
+			 	</div>
+			 	<?php
+			}
+      	?>
+	</div>
+</div>
+
+
+		<!-- 	
+
+	<div class="fixed-action-btn click-to-toggle hide-on-med-and-down">
+		<a id="other-menu" class="btn-floating btn-large teal pulse">
+			<i class="large material-icons">menu</i>
+		</a>
+		<ul>
+			<!- - <li><a class="waves-effect waves-light btn" href="<?php echo base_url(); ?>">Home</a></li> - ->
+			<li><a class="waves-effect waves-light btn btn-small" href="<?php echo base_url(); ?>co-ordinator">Co-ordinator</a></li>
+			<li><a class="waves-effect waves-light btn btn-small" href="<?php echo base_url(); ?>register-school">Schools</a></li> 
+			<!-- <li><a class="waves-effect waves-light btn btn-small" href="<?php echo base_url(); ?>downloads">Downloads</a></li>  - ->
+			<li><a class="waves-effect waves-light btn btn-small" href="#">Practice Zone</a></li> 
+			<li><a class="waves-effect waves-light btn btn-small" href="<?php echo base_url(); ?>faqs">FAQs</a></li> 
+			<li><a class="waves-effect waves-light btn btn-small" href="<?php echo base_url(); ?>contact-us">Contact</a></li>
+		</ul>
+	</div>
+	<div class="tap-target" data-target="other-menu">
+	    <div class="tap-target-content">
+	      <h5></h5>
+	      <p></p>
+	    </div>
+	</div>
+ -->
+  	<ul id="mobile-menu" class="sidenav hide-on-med-and-up">
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<?php 
+					$mainCategories = $this->config->item('main_categories');
+					foreach ($mainCategories as $key => $category) {
+						?>
+						<li class="<?php echo $category[0]; ?>">
+							<div class="collapsible-header"><?php echo $category[1]; ?><i class="material-icons right">arrow_drop_down</i></div>
+							<div class="collapsible-body">
+								<ul>
+									<a href="<?php echo base_url().$category[0]; ?>"><li class=" lighten-1 <?php echo $category[3]; ?>"><i class="material-icons right">blur_circular</i>About <?php echo $category[1]; ?></li></a>
+									<a href="<?php echo base_url(); ?>marking-scheme"><li class="<?php echo $category[3]; ?>"><i class="material-icons right">content_copy</i>Marking Scheme of <?php echo $category[1]; ?></li></a>
+									<a href="<?php echo base_url().$category[0]; ?>-syllabus"><li class="darken-1 <?php echo $category[3]; ?>"><i class="material-icons right">dashboard</i>Syllabus of <?php echo $category[1]; ?></li></a>
+									<a href="<?php echo base_url(); ?>awards"><li class="darken-2 <?php echo $category[3]; ?>"><i class="material-icons right">mood</i>Awards &amp; Recognition</li></a>
+									<a href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads"><li class="darken-3 <?php echo $category[3]; ?>"><i class="material-icons right">devices</i>Practice Online</li></a>
+									<a href="<?php echo base_url().$category[0]; ?>-sample-papers"><li class="darken-4 <?php echo $category[3]; ?>"><i class="material-icons right">file_download</i>Sample Papers</li></a>
+								</ul>
+				    		</div>
+						</li>
+						<?php
+					}
+					?>
+			</ul>
+		</li>
+		<li><div class="divider"></div></li>
+		<li><a href="<?php echo base_url(); ?>faqs">FAQs</a></li> 
+		<li><a href="<?php echo base_url(); ?>registration">Individual Registration</a></li>
+		<li><a href="<?php echo base_url(); ?>register-school">Register Your School</a></li> 
+		<li><a href="<?php echo base_url(); ?>co-ordinator">Become a Co-ordinator</a></li> 
+		<li><a href="<?php echo base_url(); ?>contact-us">Contact Us</a></li>
+    </ul>
+
+
+<div class="fixediconstop">
+	<ul class="list-unstyled">
+		<li>
+			<a class="tooltipped" href="<?php echo base_url(); ?>faqs" title="Frequently Asked Questions" data-position="left" data-tooltip="Frequently Asked Questions">
+				<i class="material-icons">info</i>
+			</a>
+		</li>
+		<li>
+			<a class="tooltipped" href="<?php echo base_url(); ?>registration" title="Individual Registration"  data-position="left" data-tooltip="Individual Registration">
+				<i class="material-icons">assignment_ind</i>
+			</a>
+		</li>
+		<li>
+			<a class="tooltipped" href="<?php echo base_url(); ?>register-school" title="School Registration"  data-position="left" data-tooltip="School Registration">
+				<i class="material-icons">account_balance</i>
+			</a>
+		</li>
+		<li>
+			<a class="tooltipped" href="<?php echo base_url(); ?>co-ordinator" title="Become a Co-ordinator"  data-position="left" data-tooltip="Become a Co-ordinator">
+				<i class="material-icons">link</i>
+			</a>
+		</li>
+		<li>
+			<a class="tooltipped" href="<?php echo base_url(); ?>contact-us" title="Contact Us"  data-position="left" data-tooltip="Contact Us">
+				<i class="material-icons">phone</i>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+
+<!-- 
+	<div class="header-container first-container">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<div class="pull-left" style="max-height: 30px;overflow: visible;">
+			      		<img class="img-responsive" src="<?php echo base_url(); ?>assets/images/logo/logo_tm.png">
+					</div>
+					<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand visible-xs-block text-center" style="float: none;" href="#">Crest Olympiads</a>
+
+				</div>
+				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+			      <ul class="nav navbar-nav">
+			        <li <?php if(isset($active_menu) && $active_menu == 'home') {?> class="active" <?php } ?> ><a data-toggle="modal" data-target="#login-modal" href="#<?php //echo base_url(); ?>">Login</a></li>
+			       
+			      </ul>
+			    </div>
+			</div>
+		</nav>
+	</div>
+ -->
+<!-- login modal -->
+	<div class="all-content">
+		<script type="text/javascript">
+
+		</script>

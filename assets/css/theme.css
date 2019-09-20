@@ -1,0 +1,86 @@
+/*main css: gives all the styling*/
+@font-face {
+	font-family: 'Melonheadz';
+	/*src: url('../fonts/KGMelonheadz.ttf');*/
+	src: url('../fonts/KGShakeitOff.ttf') format('truetype');
+}
+
+@media only screen and (min-width: 768px){
+	h1{
+		/*margin: 1em 0 0.5em 0;*/
+		color: #343434;
+		font-weight: normal;
+		font-family: 'Ultra', sans-serif;
+		line-height: 58px;
+		text-transform: unset;
+		/*text-shadow: 0 2px white, 0 3px #777;*/
+		font-size: 60px;
+	    padding-left: 20px;
+	    border-bottom-style: ridge;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	    padding-bottom: 15px;
+	    text-align: left;
+	}
+	h2{
+		margin: 1em 0 0.5em 0;
+		color: #343434;
+		font-weight: normal;
+		font-size: 48px;
+		line-height: 44px;
+		font-family: 'Orienta', sans-serif;
+	}
+	h3{
+		margin: 1em 0 0.5em 0;
+		color: #343434;
+		font-size: 22px;
+		line-height: 40px;
+		font-weight: normal;
+		text-transform: unser;
+		font-family: 'Orienta', sans-serif;
+		letter-spacing: 1px;
+		font-style: italic;
+	}
+}
+@media only screen and (max-width: 768px){
+	h1{
+		/*margin: 1em 0 0.5em 0;*/
+		color: #343434;
+		font-weight: normal;
+		font-family: 'Ultra', sans-serif;
+		line-height: 38px;
+		text-transform: unset;
+		/*text-shadow: 0 2px white, 0 3px #777;*/
+		font-size: 40px;
+	    padding-left: 10px;
+	    border-bottom-style: ridge;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	    padding-bottom: 15px;
+	}
+	h2{
+		margin: 1em 0 0.5em 0;
+		color: #343434;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 38px;
+		font-family: 'Orienta', sans-serif;
+	}
+	h3{
+		margin: 1em 0 0.5em 0;
+		color: #343434;
+		font-size: 18px;
+		line-height: 36px;
+		font-weight: normal;
+		text-transform: unset;
+		font-family: 'Orienta', sans-serif;
+		letter-spacing: 1px;
+		font-style: italic;
+	}
+	.syllabus-menu ul{
+		padding: 0px 50px 0px 15px;
+	}
+	.syllabus-menu ul li{
+		line-height: 25px;
+	}
+}

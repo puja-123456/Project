@@ -1,0 +1,170 @@
+
+  <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact_us.css"> -->
+
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.min.css">  -->
+
+<p>&nbsp;</p>
+
+<style>
+#result
+{
+background:   url('<?php echo base_url();?>assets/images/result_bg.jpg') no-repeat center  ;
+background-size: 700px 700px;
+height:800px;
+
+
+
+}
+
+ th {
+	font-size:20px;
+	color:#fff;
+	text-align:center;
+	padding: 35px;
+	font-weight: 600;
+	}
+
+	tr
+	{
+		border-bottom: none;
+
+	}
+
+	td
+	{
+		font-size:18px;		
+		font-weight: 600;
+		padding-top:1%;
+		padding-left:30%;
+		padding-bottom: 0px;
+	}
+
+
+
+</style>
+
+<div class="container">
+	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
+	<div class="row text-center">
+		<h1>Result</h1>
+	</div>
+	<div class="row contact">
+		<div class="col-md-12 text-center well" style="min-height:347px;">
+
+<?php 
+
+if(!empty($subjects) && !empty($results))
+{
+
+echo "<p>Please select the exam link given below to view the result.</p>";
+$i=1;
+
+$j=0;
+
+
+
+
+foreach ($subjects as $key => $value) {
+	// foreach ($user_subjects as $key1 => $value1) {
+	// echo $user_subjects[$j]->short_subject_name;
+	// echo $value;die;
+
+	//if (in_array(strtoupper($user_subjects[$j]->short_subject_name), $subjects))
+ if($user_subjects[$j]->short_subject_name==strtolower($value))
+{
+	echo $i." : "."<a href='".base_url()."crest/result/".strtolower($value)."'>$value</a>";
+	echo "<br/>";
+	$i++;
+	$j++;
+}
+// }
+}
+}
+
+
+else if(!empty($subject) && !empty($result))
+{
+?>
+		   
+					<div class="row" id="result">
+
+					<a style="float:left;" href="<?php echo base_url()."crest/result";  ?>"><img src="<?php echo base_url();?>assets/images/go-back-button.png" height="40" ></a>	
+					
+					<a style="float:right;" href="<?php echo base_url()."crest/download_result/".$user_subjects[0]->short_subject_name;  ?>"><img src="<?php echo base_url();?>assets/images/download.png" height="40" ></a>			
+						<table>
+							<thead>
+							<tr>
+								<th><?php echo $result[0]->exam_name;  ?> <br><?php echo $result[0]->subject;  ?> :: 2019-20</th>
+								</tr>							
+							</thead>
+							<tbody>
+							<tr>
+								<td>Student's Name : <span style="color:#B71C1C"><?php echo $user_details[0]->username; ?></span></td>
+								
+							</tr>
+							<tr>
+								<td>School Name : <span style="color:#B71C1C"><?php echo $user_details[0]->school;  ?></span></td>
+								
+							</tr>
+							<tr>
+								<td>Enrollment Number : <span style="color:#B71C1C"><?php echo $user_details[0]->id;  ?></span></td>
+								
+							</tr>
+							<!-- <tr>
+								<td>Exam Name : <span style="color:#B71C1C"><?php echo $result[0]->exam_name;  ?></span></td>
+								
+							</tr> -->
+							<tr>
+								<td>Class : <span style="color:#B71C1C"><?php echo $user_details[0]->class;  ?></span></td>
+								
+							</tr>
+							<tr>
+								<td>Marks Obtained : <span style="color:#B71C1C"><?php echo $result[0]->score;  ?></span></td>
+								
+							</tr>
+							<tr>
+								<td>Maximum Marks : <span style="color:#B71C1C"><?php echo $result[0]->max_score;  ?></span></td>
+								
+							</tr>
+							<tr>
+								<td>Recognition : <span style="color:#B71C1C"><?php echo $result[0]->recognition;  ?></span></td>
+							
+							</tr>
+						</tbody>
+						</table>
+					
+
+						
+						
+						
+					
+					</div>
+
+
+				<?php }
+				else
+{
+
+echo  "<p style='text-align:center'><strong>No results available.</strong></p>";
+
+}
+ ?>
+
+
+				
+					<br>			
+				
+				
+		    </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

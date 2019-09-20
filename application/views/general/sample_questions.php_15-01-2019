@@ -1,0 +1,210 @@
+<div class="row">
+<p>&nbsp;</p>
+	<h1 class="left-align flow-text"><?php echo $this_category->name." ".$this_syllabus->name; ?> Sample Questions</h1>
+	<div class="col s12">
+		<!-- <div class="row"> -->
+			<div class="row">
+				<div class="col s12 l8 m8">
+					<h2 class="flow-text">
+						
+					Syllabus:
+					</h2>
+					<p class="flow-text">
+						<?= $this_syllabus->description;?>
+					</p>
+				<table class="hide_on_phone table hoverable responsive-table question_no_table center-align"><tr>
+				<?php for ($i=1; $i < 11; $i++) { 
+					?>
+					<td>
+						<a href="javascript:void(0)" onclick="gotoq('<?php echo $i; ?>')" class=" btn go_to_ques go_to_question_<?php echo $i; ?>"><?php echo "Q.".$i; ?></a>
+					</td>
+					<?php
+				} ?>
+				</tr></table>
+				<div class="hide_on_desktop" style="display:none; padding:10px 5px;">
+					<a href="javascript:void(0)" id="left_question" class="pull-left courses-btn">&lt;&lt;</a>
+					<a href="javascript:void(0)" id="right_question" class="pull-right courses-btn">&gt;&gt;</a>
+				</div>
+				<?php 
+				$i =0;
+				foreach ($all_questions as $ques) {
+					$i++;
+					if($i>10)break;
+					?>
+					<table id="question_<?php echo $i; ?>" class="question table table-bordered table-responsive table-striped">
+						<tr>
+							<td width="10%"><p>Q.<?= $i; ?></p></td>
+							<td colspan="4">
+								<?php 
+								if(isset($ques->question_type))
+								{ 
+								?>
+								<p>
+								<?php echo $ques->question_type; ?>
+								</p>
+								<?php 
+								} 
+								if (isset($ques->questionImage) && $ques->questionImage != '') 
+								{ 
+								$question_image = '<img src="'.$this->config->item('image_site_link') . 'assets/uploads/' . $ques->questionImage .'" ><br>'; ?>
+								<p><?php echo htmlText($ques->question).'<br>'.$question_image ; ?></p>
+								<?php 
+								} 
+								else { 
+								?>
+								<p><?php echo htmlText($ques->question); ?></p>
+								<?php 
+			                    } ?>
+	                        </td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="row" colspan="2">
+								<button class="col s12 waves-effect waves-light btn ans <?php if($ques->correctanswer == 'a') echo 'c-answer';else echo 'w-answer';?> answer1">
+									a) <?php if(isset($ques->answer1Image) && $ques->answer1Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer1Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer1); ?>
+								</button>
+							</td>
+							<!-- <td>a)</td>
+							<td class="ans <?php if($ques->correctanswer == 'a') echo 'c-answer';else echo 'w-answer';?> answer1">
+								<?php if(isset($ques->answer1Image) && $ques->answer1Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer1Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer1); ?>
+							</td> -->
+							<td class="row" colspan="2">
+								<button class="col s12 waves-effect waves-light btn ans <?php if($ques->correctanswer == 'b') echo 'c-answer';else echo 'w-answer'; ?> answer2">
+									b) <?php if(isset($ques->answer2Image) && $ques->answer2Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer2Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer2); ?>
+								</button>
+							</td>
+							<!-- <td>b)</td>
+							<td class="ans <?php if($ques->correctanswer == 'b') echo 'c-answer';else echo 'w-answer'; ?> answer2">	<?php if(isset($ques->answer2Image) && $ques->answer2Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer2Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer2); ?>
+							</td> -->
+						</tr>
+						<tr>
+							<td></td>
+							<td class="row" colspan="2">
+								<button class="col s12 waves-effect waves-light btn ans <?php if($ques->correctanswer == 'c') echo 'c-answer';else echo 'w-answer'; ?> answer3">
+									c) <?php if(isset($ques->answer3Image) && $ques->answer3Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer3Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer3); ?>
+								</button>
+							</td>
+							<!-- <td>c)</td>
+							<td class="ans <?php if($ques->correctanswer == 'c') echo 'c-answer';else echo 'w-answer'; ?> answer3">	<?php if(isset($ques->answer3Image) && $ques->answer3Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer3Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer3); ?>
+							</td> -->
+
+							<td class="row" colspan="2">
+								<button class="col s12 waves-effect waves-light btn ans <?php if($ques->correctanswer == 'd') echo 'c-answer';else echo 'w-answer'; ?> answer4">
+									d) <?php if(isset($ques->answer4Image) && $ques->answer4Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer4Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer4); ?>
+								</button>
+							</td>
+							<!-- 
+							<td>d)</td>
+							<td class="ans <?php if($ques->correctanswer == 'd') echo 'c-answer';else echo 'w-answer'; ?> answer4">	<?php if(isset($ques->answer4Image) && $ques->answer4Image != ''){ ?><img src="<?php echo $this->config->item('image_site_link').'assets/uploads/'.$ques->answer4Image ?>" ><br><?php } ?><?php echo htmlText($ques->answer4); ?>
+							</td> -->
+						</tr>
+					</table>
+					<?php
+				} ?>
+				</div>
+			</div>
+
+			<p>Your Score: <span class="freepdfscore">0</span>/10</p>
+			<div class="afterquestionsareover animated "></div>
+
+		<!-- </div> -->
+	</div>
+</div>
+
+<style type="text/css">
+	
+.question .ans{
+	cursor: pointer;
+}
+
+.disable_click{
+	pointer-events:none;
+}
+button.col.s12.waves-effect.waves-light.btn.ans {
+	text-transform: unset; 
+    height: auto;
+    padding: 5px;
+}
+</style>
+
+
+
+<script type="text/javascript">
+
+	var i = 1;
+	function gotoq(q_id){
+		$( ".question" ).hide();
+		$('.go_to_ques').parent().removeClass("active");
+		$( "#question_"+q_id ).show();
+		$('.go_to_question_'+q_id).parent().addClass("active");
+		i = q_id;
+	}
+	$().ready(function(){
+		$(".disable_click").click(function(){
+			return false;
+		});
+
+		if($(window).width<768){
+			$(".hide_on_phone").hide();
+			$(".hide_on_desktop").show();
+			$(".pdf_file").css("height","400px"); 
+		};
+
+		if($(window).width>768){
+			$(".hide_on_desktop").hide();
+			$(".pdf_file").css("height","700px");
+		};
+
+		$('.go_to_question_1').parent().addClass("active");
+		$( ".question" ).hide();
+		$( "#question_"+i ).show();
+		$(".ans").click(function(){
+			setTimeout(function(){
+				$( "#question_"+i ).hide();
+				$('.go_to_ques').parent().removeClass("active");
+				i++;
+				$( "#question_"+i ).show();
+				$('.go_to_question_'+i).parent().addClass("active");
+			}, 5000);
+		});
+		$("#left_question").click(function(){
+			$( "#question_"+i ).hide();
+			i--;
+			$( "#question_"+i ).show();
+		});
+		$("#right_question").click(function(){
+			$( "#question_"+i ).hide();
+			i++;
+			$( "#question_"+i ).show();
+		});
+
+	});
+
+	function testAnim(x) {
+	    $('.freepdfscore').parent().removeClass().addClass('flip animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	      $(this).removeClass();
+	    });
+	  };
+
+   $().ready(function(){
+   	var freetotalscore = 0;
+	$(".c-answer").click(function(){
+		$('.freepdfscore').removeClass('animated flip');
+		freetotalscore++;
+		$(this).addClass("animated tada hover-bg");
+		$(this).parent().parent().siblings().children().children().addClass("disable_click");
+		$('.freepdfscore').text(freetotalscore);
+		testAnim();
+	});
+	$(".w-answer").click(function(){
+		var obj = $(this);
+		obj.parent().parent().siblings().children().children().addClass("disable_click");
+		$('.freepdfscore').removeClass('animated flip');
+		$(this).addClass("animated hinge red");
+		setTimeout(function(){
+			obj.parent().siblings().children(".c-answer").addClass("animated tada hover-bg");
+			obj.removeClass("hinge").addClass("zoomIn");
+		}, 2500);
+	});
+});
+</script>

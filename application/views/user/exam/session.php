@@ -1,0 +1,1 @@
+<?php  $this->session->set_userdata('question_id' ,$_POST['question_id'] )?>

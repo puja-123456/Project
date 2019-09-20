@@ -1,0 +1,439 @@
+<style type="text/css">
+	.home_page_reading_material .card-content img{
+		height: 150px;
+	}
+	.home_page_imp_links .card .card-image .card-title{
+		position: unset;
+	}
+	.home_page_imp_links .card .card-image img:hover{
+		padding: 20px 20px 0px 20px;
+	}
+	.home_page_imp_links .card .card-image img{
+		transition: all 0.2s ease;
+	}
+	.home_page_reading_material .card-content{
+		padding: 0px;
+	}
+	.home_page_reading_material .card-content a{
+		padding: 0px;
+		line-height: 1;
+	}
+	#student_form .input-field, #school_form .input-field {
+	    margin-top: 0.25rem;
+	    margin-bottom: 0.25em;
+	}
+	#student_form .dropdown-content li>a, .dropdown-content li>span{
+		padding: 8px 16px;
+	}
+</style>
+
+
+<div class="row">
+<p>&nbsp;</p>
+	<div class="col s12 m8 l8 hide-on-small-only">
+		<div class="row" style="height:75vh;">
+		<div class="container-slider slider-main">
+			<div id="slider" class="sl-slider-wrapper">
+				<div class="sl-slider">
+					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+								<img class="hide-on-small-only" src="<?php echo base_url(); ?>assets/images/original/banner1.jpg" width="100%">
+								<img class="hide-on-med-and-up" src="<?php echo base_url(); ?>assets/images/original/mobbanner1.jpg" width="100%">
+							<!-- <a href="">
+								<h2>Crest Olympiads</h2>
+							</a> -->
+						</div>
+					</div>
+					<div class="sl-slide bg-3" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<a href="<?php echo base_url();?>pre-registration" target="_blank">
+								<img class="hide-on-small-only" src="<?php echo base_url(); ?>assets/images/original/banner2.jpg" width="100%">
+								<img class="hide-on-med-and-up" src="<?php echo base_url(); ?>assets/images/original/mobbanner2.jpg" width="100%">
+							</a>
+						</div>
+					</div>
+					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<a href="<?php echo base_url();?>register-school" target="_blank">
+								<img class="hide-on-small-only" src="<?php echo base_url(); ?>assets/images/original/banner3.jpg" width="100%">
+								<img class="hide-on-med-and-up" src="<?php echo base_url(); ?>assets/images/original/mobbanner3.jpg" width="100%">
+							</a>
+						</div>
+					</div>
+					<div class="sl-slide bg-3" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+								<img class="hide-on-small-only" src="<?php echo base_url(); ?>assets/images/original/banner4.jpg" width="100%">
+								<img class="hide-on-med-and-up" src="<?php echo base_url(); ?>assets/images/original/mobbanner4.jpg" width="100%">
+						</div>
+					</div>
+				</div><!-- /sl-slider -->
+				<div id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</div>
+				<div id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div><!-- /slider-wrapper -->
+		</div>
+		</div>
+	</div>
+	<div class="col s12 m4 l4">
+		<div class="row">
+
+		      <ul class="tabs">
+		        <li class="tab col s6"><a class="active" href="#student_form">Individual Applicant</a></li>
+		        <li class="tab col s6"><a href="#school_form">School Registration</a></li>
+		      </ul>
+		    <div id="student_form" class="col s12">
+		    	
+					<?php 
+					$attributes = array('onsubmit' => 'return subject_d_func()','name'=>'pre_registration_form','id'=>'pre_registration_form');
+					echo form_open("crest/pre_registration_form",$attributes); ?>
+					
+					<div class="row">
+						<br>
+						<div class="col s12 input-field">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="name" name="name" type="text" required class="validate">
+		          			<label for="name">Student Name</label>
+							<?php echo form_error('name'); ?>
+						</div>
+						<div class="col s12 input-field">
+							<i class="material-icons prefix">account_balance</i>
+			                <input id="school" name="school" type="text" required class="validate">
+			                <label for="school">School Name</label>
+			                <?php echo form_error('school'); ?>
+						</div>
+						<div class="col s12 input-field">
+							<i class="material-icons prefix">email</i>
+							<input id="email" name="email" type="email" required class="validate">
+		          			<label for="email">Email</label>
+							<?php echo form_error('email'); ?>
+						</div>
+						<div class="col s12 input-field">
+							<i class="material-icons prefix">phone</i>
+							<input id="phone" name="phone" type="text" required class="validate onlyNumbers">
+		          			<label for="phone">Mobile Number</label>
+							<?php echo form_error('phone'); ?>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<i class="material-icons prefix">mode_edit</i>
+						    <select id="class" name="class" required>
+								<option value="" disabled selected>Select Class</option>
+								<option value="1">Class 1</option>
+								<option value="2">Class 2</option>
+								<option value="3">Class 3</option>
+								<option value="4">Class 4</option>
+								<option value="5">Class 5</option>
+								<option value="6">Class 6</option>
+								<option value="7">Class 7</option>
+								<option value="8">Class 8</option>
+								<option value="9">Class 9</option>
+								<option value="10">Class 10</option>
+							</select>
+							<label for="class">Class</label>
+							<?php echo form_error('class'); ?>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">mode_edit</i>
+							<select multiple id="subjects_d" name="subjects_d" >
+								<option value="" disabled selected>Select Subjects</option>
+								<option name="CMO" value="CMO">CREST Mathematics Olympiad</option>
+								<option name="CSO" value="CSO">CREST Science Olympiad</option>
+								<option name="CEO" value="CEO">CREST English Olympiad</option>
+								<option name="CCO" value="CCO">CREST Cyber Olympiad</option>
+								<!-- <option name="CGKO" value="CGKO">CREST General Knowledge Olympiad</option> -->
+								<option name="CRO" value="CRO">CREST Reasoning Olympiad</option>
+								<option name="CFO" value="CFO">CREST French Olympiad</option>
+							</select>
+							<label for="subjects_d">Preferred Subjects</label>
+							<?php echo form_error('subjects'); ?>
+							<input type="hidden" id="subjects" name="subjects" value="">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col s12 input-field">
+							<button class="btn col s6 offset-s3" type="submit">Submit<i class="material-icons right">send</i></button>
+						</div>
+					</div>
+					<?php echo form_close(); ?>
+		    </div>
+		    <div id="school_form" class="col s12">
+
+		        <?php echo form_open("school_reg/register",'name="principals"'); ?>
+		        <!-- <form class=""  method="POST" action= > -->
+		        <div class="row">
+		        	<br>
+		            <div class="col s12 input-field">
+		                <i class="material-icons prefix">account_balance</i>
+		                <input id="school" name="school" type="text" required class="validate">
+		                <label for="school">School Name</label>
+		                <?php echo form_error('school'); ?>
+		            </div>
+		            <div class="col s12 input-field">
+		                <i class="material-icons prefix">location_on</i>
+		                <input id="location" name="location" type="text" required class="validate">
+		                <label for="location">City/State</label>
+		                <?php echo form_error('location'); ?>
+		            </div>
+		            <div class="col s12 input-field">
+		                <i class="material-icons prefix">account_circle</i>
+		                <input id="name" name="name" type="text" required class="validate">
+		                <label for="name">Contact Person</label>
+		                <?php echo form_error('name'); ?>
+		            </div>
+		            <div class="col s12 input-field">
+		                <i class="material-icons prefix">phone</i>
+		                <input id="phone" name="phone" type="text" required class="validate onlyNumbers">
+		                <label for="phone">Phone Number</label>
+		                <?php echo form_error('phone'); ?>
+		            </div>
+
+		            <div class="col s12 input-field">
+		                <i class="material-icons prefix">email</i>
+		                <input id="email" name="email" type="email" required class="validate">
+		                <label for="email">Email</label>
+		                <?php echo form_error('email'); ?>
+		            </div>
+		            <div class="cl"></div>
+		        </div>
+		        <div class="row">
+		            <div class="col s12 input-field">
+		                <button class="btn col s6 offset-s3" type="submit" >Submit<i class="material-icons right">send</i></button>
+		            </div>
+		        </div>
+		        <?php echo form_close();?>
+		    </div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/slippry.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/slider.css">
+
+<style type="text/css">
+
+</style>
+
+
+<div class="row home_page_imp_links">
+	<div class="col s12">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h2>CREST Olympiads Are The Biggest Online Olympiads</h2>
+			</div>
+			<div class="col s10 offset-s1">
+				<p>The questions asked in CREST Olympiads focuses on the practical knowledge of the student rather than theoretical knowledge. CREST Olympiads are highly competitive and the major competitive exams across the world are going to be online in the coming years, therefore CREST Olympiads prove to be the foundations of preparation of students for exams like JEE, NEET, etc.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m3 l3">
+				<div class="card">
+					<div class="card-image">
+							<!-- <span class="card-title"> -->
+						<a href="<?=base_url();?>exam-schedule">
+								<img src="<?=base_url()?>assets/images/original/examschedule.jpg">
+						</a>
+							<!-- </span> -->
+					</div>
+					<div class="card-content">
+						<p>Check the Exam Schedule of CREST Olympiads</p>
+					</div>
+					<div class="card-action">
+						<a href="<?=base_url();?>exam-schedule">Read More..</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m3 l3">
+				<div class="card">
+					<div class="card-image">
+							<!-- <span class="card-title"> -->
+						<a href="<?=base_url();?>marking-scheme">
+								<img src="<?=base_url()?>assets/images/original/patternofquestions.jpg">
+						</a>
+							<!-- </span> -->
+					</div>
+					<div class="card-content">
+						<p>Check the Pattern of Questions and Marking Scheme of CREST Olympiads</p>
+					</div>
+					<div class="card-action">
+						<a href="<?=base_url();?>marking-scheme">Read More..</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m3 l3">
+				<div class="card">
+					<div class="card-image">
+						<a href="<?=base_url();?>cut-off-and-rankings">
+								<img src="<?=base_url()?>assets/images/original/ranking.jpg">
+						</a>
+							<!-- <span class="card-title"> -->
+							<!-- </span> -->
+					</div>
+					<div class="card-content">
+						<p>Check the Cut-off &amp; Ranking Criteria for Level 1 &amp; Level 2 Olympiads</p>
+					</div>
+					<div class="card-action">
+						<a href="<?=base_url();?>cut-off-and-rankings">Read More..</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m3 l3">
+				<div class="card">
+					<div class="card-image">
+							<!-- <span class="card-title"> -->
+						<a href="<?=base_url();?>awards">
+								<img src="<?=base_url()?>assets/images/original/awards.jpg">
+						</a>
+							<!-- </span> -->
+					</div>
+					<div class="card-content">
+						<p>Check all the Prizes and Awards of Level 1 and Level 2 Olympiads</p>
+					</div>
+					<div class="card-action">
+						<a href="<?=base_url();?>awards">Read More..</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<div class="row home_page_reading_material">
+	<div class="col s12">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h2>Olympiad Preparation Material</h2>
+			</div>
+		</div>
+		<div class="row">
+			<?php 
+			$mainCategories = $this->config->item('main_categories');
+			foreach ($mainCategories as $key => $category) {
+				?>
+				<div class="col s12 m3 l3s">
+					<div class="card horizontal">
+						<div class="card-stacked">
+							<div class="card-content center <?php echo $category[3]; ?> lighten-4">
+								<?php
+								$url = strtolower(str_replace(" ","-",$category[2]));
+								// echo $string;
+								?>
+								<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo $url; ?>" class="black-text col s12">
+									<!-- http://www.crestolympiads.com/assets/images/original/cgko-banner.jpg -->
+									<img class="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category[0]; ?>-banner.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php
+			}
+			?>
+		</div>
+	</div>
+</div>
+	<!-- 
+	<div class="container">
+
+		<div class="row ">
+			<div class="col-md-12 text-center">
+				<h2>Brain Development</h2>
+			</div>
+			<div class="col-md-8">
+			</div>
+		</div>
+
+	</div> -->
+
+	<?php
+	$this->load->view('general/contact_us');
+	?>
+	<br>
+
+
+<script src="<?php echo base_url(); ?>assets/js/slippry.min.js">
+</script>
+<script>
+	function subject_d_func() {
+		var elem = $('#subjects_d');
+		var subjects = '';
+		var instance = M.FormSelect.getInstance(elem);
+		var vals = instance.getSelectedValues();
+		if(vals.length < 1){
+			alert("Please choose at least 1 Subject");
+			return false;
+		}
+		for (var i = vals.length - 1; i >= 0; i--) {
+			subjects += vals[i]+ ',';
+
+		}
+		$("#subjects").val(subjects);
+		
+		console.log(subjects);
+		return true;		
+	}
+	$().ready(function(){
+
+		$("#class").on("change",function(){
+			$(".subjects_div").show(400);
+			if($("#class").val() > 5){
+				$("input:checkbox[name=CFO]").parent().parent().show(100);
+			}
+			if($("#class").val() < 6){
+				// console.log($("#class").val());
+				$("input:checkbox[name=CFO]").prop("checked", false);
+				$("input:checkbox[name=CFO]").parent().parent().hide(100);
+			}
+			// var select = M.FormSelect.getInstance($('#subjects_d'));
+			// select.destroy();
+			// select.updateTextFields();
+			// select.formSelect();
+		});
+
+		$("#subjects_d").on("blur",function(){
+			subject_d_func();
+			// $(this).each(function(){
+			// });
+		});
+	});
+	jQuery('#shop-demo').slippry({
+		// general elements & wrapper
+		slippryWrapper: '<div class="sy-box shop-slider" />', // wrapper to wrap everything, including pager
+		elements: 'article', // elments cointaining slide content
+
+		// options
+		adaptiveHeight: false, // height of the sliders adapts to current slide
+		start: 2, // num (starting from 1), random
+		loop: true, // first -> last & last -> first arrows
+		captionsSrc: 'article',
+		captions: 'custom', // Position: overlay, below, custom, false
+		captionsEl: '.product-name',
+
+		// pager
+		pager: false,
+
+		// transitions
+		slideMargin: 20, // spacing between slides (in %)
+		useCSS: true,
+		transition: 'horizontal',
+
+		// slideshow
+		auto: false
+	});
+
+
+</script>

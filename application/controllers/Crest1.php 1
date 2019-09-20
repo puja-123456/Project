@@ -1,0 +1,489 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Crest extends MY_Controller {
+
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+
+	function __construct() {
+		parent::__construct();
+		$this->load->model('base_model');
+
+	}
+
+	public function index()
+	{
+
+		$this->data['meta_description'] = 'CREST Olympiads';
+		$this->data['title'] = 'CREST Olympiads';
+		$this->data['active_menu'] = 'home';
+
+		$this->data['categories'] = $this->base_model->get_details('categories');
+
+		$this->data['content'] = "general/index";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+
+	//Fetch products from DB
+	public function category_page()
+	{
+		$slug = $this->uri->segment(1);
+
+		if($slug!=''){
+			$this->data['categories'] = $this->base_model->get_details('categories');
+		
+			$query = "SELECT * FROM `categories` WHERE `slug`='".$slug."'";
+			$category = $this->db->query($query)->result_array();
+			if (!$category){
+			var_dump($query);
+			exit();
+				redirect(base_url());
+			}
+
+			$this->data['category'] = $category[0];
+
+			$this->data['title'] = $category[0]['meta_title'];
+			$this->data['meta_description'] = $category[0]['meta_description'];
+
+			$this->data['content'] = "general/cat_page";
+			$this->_render_page('templates/template', $this->data);
+
+		}
+		else{
+			redirect(base_url());
+		}
+		
+	}
+	public function syllabus_pages()
+	{
+		$slug =  $this->uri->segment(1);
+
+
+		if($slug!=''){
+			$slug_array = explode('-', $slug);
+			if($slug_array[1] != 'syllabus'){
+				redirect(base_url());
+			}
+			$catslug = $slug_array[0];
+			// echo $catslug;
+			// exit();
+			$this->data['categories'] = $this->base_model->get_details('categories');
+		
+			$query = "SELECT * FROM `categories` WHERE `slug`='".$catslug."'";
+			$category = $this->db->query($query)->result_array();
+			if (!$category){
+				redirect(base_url());
+			}
+
+			$catid['catid'] = $category[0]['catid'];
+			// var_dump($category[0]);
+			// exit();
+
+			$all_syllabus = $this->base_model->fetch_records_from('syllabus',$catid);
+
+			$this->data['all_syllabus'] = $all_syllabus;
+			$this->data['category'] = $category[0];
+
+			$this->data['title'] = $category[0]['meta_title'];
+			$this->data['meta_description'] = $category[0]['meta_description'];
+
+			$this->data['title'] = $category[0]['name'].' - '.strtoupper($category[0]['short_cat']).' Syllabus for Classes 1 to 10';
+			$this->data['meta_description'] = 'Find complete syllabus for '.strtoupper($category[0]['short_cat']).' exams for classes 1, 2, 3, 4, 5, 6, 7, 8, 9, 10';
+
+			$this->data['content'] = "general/syllabus_page";
+			$this->_render_page('templates/template', $this->data);
+
+		}
+		else{
+			redirect(base_url());
+		}
+		# code...
+	}
+
+	public function sample_papers()
+	{
+		$slug =  $this->uri->segment(1);
+		if($slug!=''){
+			$slug_array = explode('-', $slug);
+			if($slug_array[1] != 'sample' && $slug_array[1] != 'papers'){
+				redirect(base_url());
+			}
+			$catslug = $slug_array[0];
+			// echo $catslug;
+			// exit();
+			$this->data['categories'] = $this->base_model->get_details('categories');
+		
+			$query = "SELECT * FROM `categories` WHERE `slug`='".$catslug."'";
+			$category = $this->db->query($query)->result_array();
+			if (!$category){
+				redirect(base_url());
+			}
+
+			$catid['catid'] = $category[0]['catid'];
+
+			$all_syllabus = $this->base_model->fetch_records_from('syllabus',$catid);
+			$query =   'SELECT s.worksheet_id, q.* FROM syllabus s INNER JOIN questions q ON s.worksheet_id = q.worksheet_id WHERE s.catid ='.$catid['catid'].' ORDER BY rand()';
+			$questions = $this->db->query($query)->result();
+			
+			$all_questions = $questions;
+
+			$this->data['all_syllabus'] = $all_syllabus;
+			$this->data['category'] = $category[0];
+
+			$this->data['title'] = $category[0]['short_cat'].' - '.strtoupper($category[0]['short_cat']).' Sample Papers, '.strtoupper($category[0]['short_cat']).' Question Papers';
+			$this->data['meta_description'] = 'Find complete preparation guide for '.strtoupper($category[0]['short_cat']).' exams through multiple sample papers, practice papers & mock test papers for classes 1, 2, 3, 4, 5, 6, 7, 8, 9, 10';
+
+			$this->data['content'] = "general/sample_paper";
+			$this->_render_page('templates/template', $this->data);
+
+		}
+		else{
+			redirect(base_url());
+		}
+		# code...
+	}
+	public function sample_questions()
+	{
+
+		$slug =  $this->uri->segment(1);
+		if($slug!=''){
+			$slug_array = explode('-', $slug);
+			if($slug_array[0] != 'sample' && $slug_array[1] != 'questions'){
+				redirect(base_url());
+			}
+			$classid = $slug_array[2];
+			// echo $catslug;
+			// exit();
+			// $this->data['categories'] = $this->base_model->get_details('categories');
+		
+			// $query = "SELECT * FROM `syllabus` WHERE `id`='".$classid."'";
+			// $this_syllabus = $this->db->query($query)->result_array();
+
+			$where['id'] = $classid;
+
+			$this_syllabus = $this->base_model->fetch_records_from('syllabus',$where);
+			if (!$this_syllabus){
+				redirect(base_url());
+			}
+			$where_cat['catid'] = $this_syllabus[0]->catid;
+			$this_category = $this->base_model->fetch_records_from('categories',$where_cat);
+
+			$query =   'SELECT q.* FROM syllabus s INNER JOIN questions q ON s.worksheet_id = q.worksheet_id WHERE s.id ='.$classid.' ORDER BY rand()';
+			$questions = $this->db->query($query)->result();
+			
+			$all_questions = $questions;
+
+			$this->data['this_category'] = $this_category[0];
+			$this->data['this_syllabus'] = $this_syllabus[0];
+			$this->data['all_questions'] = $all_questions;
+
+			$this->data['title'] = $this_category[0]->name.' Sample Questions for '.$this_syllabus[0]->name.' - CREST Olympiads';
+			$this->data['meta_description'] = 'Find complete preparation guide for '.strtoupper($this_category[0]->short_cat).' exams through multiple sample questions for '.$this_syllabus[0]->name;
+
+			$this->data['content'] = "general/sample_questions";
+			$this->_render_page('templates/template', $this->data);
+
+		}
+		else{
+			redirect(base_url());
+		}
+		# code...
+	}
+	public function cms_page()
+	{
+		
+		$slug =  $this->uri->segment(1);
+
+		// $route['exam-schedule'] = 'crest/cms_page';
+		// $route['marking-scheme'] = 'crest/cms_page';
+		// $route['cut-off-and-rankings'] = 'crest/cms_page';
+		// $route['awards'] = 'crest/cms_page';
+
+		if($slug!=''){
+			if($slug == 'exam-schedule'){
+				$this->data['title'] = 'Important Exam Dates & Schedule 2018-19 | CREST Olympiads';
+				$this->data['meta_description'] = 'Check important exam dates and schedule for CREST Olympiads 2018-19.';
+
+				$this->data['content'] = "cms_pages/exam_schedule";
+			}
+			else if($slug == 'marking-scheme'){
+				$this->data['title'] = 'Exam Pattern and Marking Scheme | CREST Olympiads';
+				$this->data['meta_description'] = 'CREST Olympiads has released the exam pattern and marking scheme for 2018-19 Olympiad exams.';
+
+				$this->data['content'] = "cms_pages/marking_scheme";
+			}
+			else if($slug == 'cut-off-and-rankings'){
+				$this->data['title'] = 'Cut Off and Ranking Criteria - CREST Olympiads';
+				$this->data['meta_description'] = 'Know about cut off and ranking criteria for qualification in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
+
+				$this->data['content'] = "cms_pages/cut_off_and_rankings";
+			}
+			else if($slug == 'awards'){
+				$this->data['title'] = 'Awards/Scholarships - CREST Olympiads';
+				$this->data['meta_description'] = 'Know about awards or prizes in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
+
+				$this->data['content'] = "cms_pages/awards";
+			}
+			else if($slug == 'sample-papers'){
+				$this->data['title'] = 'CREST Olympiads Sample Papers';
+				$this->data['meta_description'] = 'Get latest Sample question Papers for CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
+
+				$this->data['content'] = "cms_pages/sample_paper";
+			}
+			else{
+				redirect(base_url());
+			}
+
+			$this->_render_page('templates/template', $this->data);
+
+		}
+		else{
+			redirect(base_url());
+		}
+		# code...
+	}
+	public function contact(){
+
+		$this->data['title'] = 'Contact Us';
+		$this->data['active_menu'] = 'contact';
+
+		
+        // $vals = array(
+        //     'word' => $random_number,
+        //     'img_path' => './assets/captcha/',
+        //     'img_url' => base_url() . 'assets/captcha/',
+        //     'img_width' => 140,
+        //     'img_height' => 32,
+        //     'expiration' => 7200
+        // );
+        // $this->load->helper('captcha');
+        // $this->data['captcha'] = create_captcha($vals);
+        
+        // $this->load->model('general_model');
+        // $insert = array('page' => 'CONTACTUS', 'token' => $token, 'captcha_value' => $random_number, 
+        //     'ip_address' => $_SERVER['REMOTE_ADDR'], 'createtime' => date('Y-m-d H:i:s'));
+        // $this->general_model->saveCaptchaInDb($insert);
+        
+        
+        
+        // $this->session->set_userdata('captchaWord', $this->data['captcha']['word']);
+        
+		// $this->load->model('contact');
+		$this->load->model('Contact');
+
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_rules('name', 'Contact Person', 'required|min_length[3]|max_length[75]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[75]');
+		$this->form_validation->set_rules('phone', 'Phone', 'required|max_length[20]');
+		$this->form_validation->set_rules('message', 'Message', 'max_length[300]');
+
+
+		if ($this->form_validation->run()) {
+			if ($this->input->post()) {
+				$data = $this->input->post();
+				// $data['date'] = date('d-m-Y H:i:s');
+				$intLastInsertId = $this->Contact->add($data);
+
+				if(!empty($intLastInsertId)) {
+					$this->session->set_flashdata('success_message', 'Thanks! We\'ll get back to you as soon as possible.');
+				} else {
+					$this->session->set_flashdata('error_message', 'It seems some problem has occured, Please contact us at '.$this->config->item('support_phone').'.',1);
+				}
+			}
+		}
+
+		$this->data['content'] = "general/contact_us";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+	public function pre_registration_form(){
+
+		// $this->data['title'] = 'Contact Us';
+		// $this->data['active_menu'] = 'contact';
+
+		// // $this->load->model('contact');
+		// $this->load->model('Contact');
+
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_rules('name', 'Contact Person', 'required|min_length[3]|max_length[75]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[75]');
+		$this->form_validation->set_rules('phone', 'Phone', 'required|max_length[20]');
+		$this->form_validation->set_rules('school', 'School', 'required');
+		$this->form_validation->set_rules('class', 'Class', 'required');
+
+
+		if ($this->form_validation->run()) {
+			if ($this->input->post()) {
+				$data['username'] = $this->input->post('name');
+				$data['email'] = $this->input->post('email');
+				$data['class'] = $this->input->post('class');
+				$data['phone'] = $this->input->post('phone');
+				$data['school'] = $this->input->post('school');
+				$data['prefered_subject'] = $this->input->post('subjects');
+				// var_dump($subjects);
+				// exit();
+				// $data[''] = $this->input->post();
+				// $data['date'] = date('d-m-Y H:i:s');
+				$intLastInsertId = $this->base_model->insert_operation_id('users', $data);
+				// $intLastInsertId = $this->Contact->add($data);
+
+				if(!empty($intLastInsertId)) {
+					$this->session->set_flashdata('success_message', 'Thanks! We\'ll contact you soon.');
+				} else {
+					$this->session->set_flashdata('error_message', 'It seems some problem has occured, Please contact us at '.$this->config->item('support_phone'),1);
+				}
+			}
+		}
+		redirect(base_url());
+		// $this->data['content'] = "general/";
+		// $this->_render_page('templates/template', $this->data);
+	}
+
+	public function coordinator(){
+
+		$this->data['title'] = 'Become a Co-ordinator';
+		$this->data['active_menu'] = 'coord';
+
+		// $this->load->model('contact');
+		$this->load->model('Contact');
+
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_rules('name', 'Contact Person', 'required|min_length[3]|max_length[75]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[75]');
+		$this->form_validation->set_rules('message', 'Message', 'max_length[300]');
+
+
+		if ($this->form_validation->run()) {
+			if ($this->input->post()) {
+				$data = $this->input->post();
+				$data['date'] = date('d-m-Y H:i:s');
+				$intLastInsertId = $this->Contact->add($data);
+
+				if(!empty($intLastInsertId)) {
+					$this->session->set_flashdata('success_message', 'Thanks! We\'ll get back to you as soon as possible.');
+				} else {
+					$this->session->set_flashdata('error_message', 'It seems some problem has occured, Please contact us at .'.$this->config->item('support_phone'),1);
+				}
+			}
+		}
+
+		$this->data['content'] = "general/become_a_coord";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+	public function subscribe_email(){
+
+		// $product_table = $this->all_tables['products'];
+		// $cat_table = $this->all_tables['categories'];
+        $email = $this->input->post('email');
+        if(empty($email)) {
+            echo json_encode(array('success' => false, 'msg' => 'Please enter your email ID.'));
+            exit;
+        }
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo json_encode(array('success' => false, 'msg' => 'Please enter a valid email address.'));
+            exit;
+        }
+        $this->load->model('Contact');
+        
+        $this->Contact->NewsletterSubscribe($email);
+        echo json_encode(array('success' => true, 'msg' => 'Thank you for subscribing to the CREST Olympiads Newsletter!'));
+        exit;
+	}
+
+	public function about(){
+		
+		$this->data['title'] = 'About Us';
+		$this->data['active_menu'] = 'about';
+
+		$this->data['content'] = "general/about";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+	public function faqs(){
+		
+		$this->data['title'] = 'FAQs';
+		$this->data['active_menu'] = 'about';
+
+		$questions = $this->base_model->fetch_records_from('faqs');
+		$this->data['questions'] = $questions;
+
+		$this->data['content'] = "general/faqs";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+	public function downloads(){
+		
+		$this->data['title'] = 'Downloads';
+		$this->data['active_menu'] = 'downloads';
+
+		$this->data['meta_description'] = 'Downloads for CREST Olympiads';
+		$this->data['title'] = 'Downloads for CREST Olympiads';
+
+		$this->data['content'] = "general/downloads";
+		$this->_render_page('templates/template', $this->data);
+	}
+
+	
+
+	public function blog(){
+
+		$product_table = $this->all_tables['products'];
+		$cat_table = $this->all_tables['categories'];
+		$this->load->helper('text');
+		
+		// $this->data['navbar_products'] = $this->get_navbar_products();
+		$this->data['categories'] = $this->base_model->get_details($cat_table);
+
+		$this->data['navbar_products'] = $this->get_navbar_products();
+		$this->data['categories'] = $this->base_model->get_details($cat_table);
+
+
+		
+		$this->data['title'] = 'Blog';
+		$this->data['active_menu'] = 'blog';
+		$this->data['articles'] = $this->db->query("SELECT * FROM `blog`")->result_array();
+
+		$slug = $this->uri->segment(2);
+		if($slug != ''){
+			$article = $this->db->query("SELECT * FROM `blog` WHERE slug like '".$slug."'")->row_array();
+
+			if($article){
+				$this->data['article'] = $article;
+				$this->data['title'] = $article['title'];
+				$this->data['meta_title'] = $article['meta_keywords'];
+				$this->data['meta_description'] = $article['meta_description'];
+				$this->data['content'] = "blog/page";
+				$this->_render_page('templates/template', $this->data);
+				// exit();
+			}
+			else{
+				$this->data['content'] = "blog/index";
+				$this->_render_page('templates/template', $this->data);
+			}
+			// var_dump($article);
+			// exit();
+		}
+		else{
+			$this->data['content'] = "blog/index";
+			$this->_render_page('templates/template', $this->data);
+		}
+	}
+
+
+}
