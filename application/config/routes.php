@@ -72,7 +72,7 @@ $route['u(:any)/syllabus-class-(:num)'] = 'crest/syllabus_class_pages';
 // $route['class-(:num)'] = 'crest/all_pages';
 $route['u(:any)-sample-papers'] = 'crest/sample_papers';
 //$route['sample-questions-(:num)'] = 'crest/sample_questions';
-$route['u(:any)-sample-papers-class-(:num)'] = 'crest/sample_questions';
+$route['u(:any)/sample-papers-class-(:num)'] = 'crest/sample_questions';
 
 $route['c(:any)o-examples'] = 'breaktime/sample_questions';
 $route['ceo-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';

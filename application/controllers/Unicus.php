@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Crest extends MY_Controller {
+class Unicus extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
