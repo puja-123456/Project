@@ -50,29 +50,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 // $route['default_controller'] = 'landing';
-$route['default_controller'] = 'crest';
-$route['crest'] = 'crest';
-$route['umo'] = 'crest/category_page';
-$route['ugko'] = 'crest/category_page';
-$route['ufo'] = 'crest/category_page';
-$route['uro'] = 'crest/category_page';
-$route['uso'] = 'crest/category_page';
-$route['ueo'] = 'crest/category_page';
-$route['uco'] = 'crest/category_page';
+$route['default_controller'] = 'unicus';
+$route['crest'] = 'unicus';
+$route['umo'] = 'unicus/category_page';
+$route['ugko'] = 'unicus/category_page';
+$route['ufo'] = 'unicus/category_page';
+$route['uro'] = 'unicus/category_page';
+$route['uso'] = 'unicus/category_page';
+$route['ueo'] = 'unicus/category_page';
+$route['uco'] = 'unicus/category_page';
 
-$route['already_paid']= 'crest/already_paid';
-$route['pre-registration'] = 'crest/chk_reg';
-$route['registration'] = 'crest/reg_form';
-$route['pay/(:any)'] = 'crest/payment/$1';
-$route['payment_success'] = 'crest/payment_success';
-$route['payment_cancel'] = 'crest/payment_cancel';
-$route['u(:any)/syllabus'] = 'crest/syllabus_pages';
-$route['syllabus'] = 'crest/syllabuss_pages';
-$route['u(:any)/syllabus-class-(:num)'] = 'crest/syllabus_class_pages';
+$route['already_paid']= 'unicus/already_paid';
+$route['pre-registration'] = 'unicus/chk_reg';
+$route['registration'] = 'unicus/reg_form';
+$route['pay/(:any)'] = 'unicus/payment/$1';
+$route['payment_success'] = 'unicus/payment_success';
+$route['payment_cancel'] = 'unicus/payment_cancel';
+$route['u(:any)/syllabus'] = 'unicus/syllabus_pages';
+$route['syllabus'] = 'unicus/syllabuss_pages';
+$route['u(:any)/syllabus-class-(:num)'] = 'unicus/syllabus_class_pages';
 // $route['class-(:num)'] = 'crest/all_pages';
-$route['u(:any)-sample-papers'] = 'crest/sample_papers';
+$route['u(:any)-sample-papers'] = 'unicus/sample_papers';
 //$route['sample-questions-(:num)'] = 'crest/sample_questions';
-$route['u(:any)/sample-papers-class-(:num)'] = 'crest/sample_questions';
+$route['u(:any)/sample-papers-class-(:num)'] = 'unicus/sample_questions';
 
 $route['c(:any)o-examples'] = 'breaktime/sample_questions';
 $route['ceo-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';
@@ -83,20 +83,20 @@ $route['cro-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';
 $route['cgko-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';
 
 
-$route['exam-schedule'] = 'crest/cms_page';
-$route['u(:any)/marking-scheme'] = 'crest/cms_page';
-$route['marking-scheme'] = 'crest/cmss_page';
-$route['cut-off-and-rankings'] = 'crest/cms_page';
-$route['awards'] = 'crest/cms_page';
-$route['sample-papers'] = 'crest/cms_page';
-$route['terms-of-use'] = 'crest/cms_page';
-$route['privacy-policy'] = 'crest/cms_page';
+$route['exam-schedule'] = 'unicus/cms_page';
+$route['u(:any)/marking-scheme'] = 'unicus/cms_page';
+$route['marking-scheme'] = 'unicus/cmss_page';
+$route['cut-off-and-rankings'] = 'unicus/cms_page';
+$route['awards'] = 'unicus/cms_page';
+$route['sample-papers'] = 'unicus/cms_page';
+$route['terms-of-use'] = 'unicus/cms_page';
+$route['privacy-policy'] = 'unicus/cms_page';
 
-$route['co-ordinator'] = 'crest/coordinator';
-$route['contact-us'] = 'crest/contact';
-$route['downloads'] = 'crest/downloads';
-$route['faqs'] = 'crest/faqs';
-$route['about-us'] = 'crest/about';
+$route['co-ordinator'] = 'unicus/coordinator';
+$route['contact-us'] = 'unicus/contact';
+$route['downloads'] = 'unicus/downloads';
+$route['faqs'] = 'unicus/faqs';
+$route['about-us'] = 'unicus/about';
 
 $route['register-school'] = 'school_reg/register';
 
@@ -113,8 +113,8 @@ $route['daily-quiz/start/(:any)'] = "daily_quiz/get_questions/$1";
 
 $route['olympiad-exam'] = 'auth/olympiad_login';
 
-$route['brain-yoga'] = 'crest/brain_yoga';
-$route['brain-yoga/(:any)'] = "crest/brain_yoga";
+$route['brain-yoga'] = 'unicus/brain_yoga';
+$route['brain-yoga/(:any)'] = "unicus/brain_yoga";
 
 $route['blog'] = "blog/articles";
 $route['blog/(:any)'] = "blog/articles";
@@ -122,8 +122,8 @@ $route['blog/(:any)'] = "blog/articles";
 $route['schools'] = "school_reg/school_list";
 $route['schools/(:any)'] = "school_reg/articles";
 
-$route['cro-rankers'] = "crest/cro_rankers";
-$route['cro-cutoff'] = "crest/cro_cutoff";
+$route['cro-rankers'] = "unicus/cro_rankers";
+$route['cro-cutoff'] = "unicus/cro_cutoff";
 
 
 
