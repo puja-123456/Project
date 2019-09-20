@@ -13,15 +13,14 @@
 		  <ul class="nav nav-tabs nav-for-details">
 			<a href="<?php echo $current_url; ?>"><li class="active btn">About</li></a> 
 			<a href="<?php echo base_url().basename(base_url(uri_string())); ?>/marking-scheme"><li class="btn">Marking Scheme</li></a> 
-			<a href="<?php echo base_url().$category['slug']; ?>-syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
+			<a href="<?php echo base_url().$category['slug']; ?>/syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
 					 
-		    <a href="<?php echo base_url().$category['slug']; ?>-sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
-			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
+			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>" class="col s10 center-align">
-					<img class="responsive-img" id="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category['slug']; ?>-banner.jpg"><br><?=strtoupper($category['slug']); ?> Preparation Material
-		</a>
+		 
 	</div>
 </div> 
  

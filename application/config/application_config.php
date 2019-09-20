@@ -57,8 +57,6 @@ $config['main_examdates'] = array('1'=> array('umo','UMO','24 Sep','yellow light
 								);
 
 
-$config['slider'] = 'slider_small_bottom';
-
 // $config['backend_bgimage'] = 'http://www.olympiadsuccess.com/assets/designs/images/admin-bg.jpg';
 
 $config['image_src_url'] = 'https://www.crestolympiads.com/assets/uploads/';

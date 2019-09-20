@@ -204,8 +204,8 @@ public function syllabus_class_pages()
 			 //exit();
 
 			$all_syllabus = $this->base_model->fetch_records_from('syllabus',$catid);
-			$this->data['url'] = $slug_array[0].'-'.$slug_array[1].'-'.$slug_array[2];
-            $this->data['class_name'] = $slug_array[2].' '.$slug_array[3];
+			$this->data['url'] = $slug.'/'.$slug_array[0].'-'.$slug_array[1];
+            $this->data['class_name'] = $slug_array[1].' '.$slug_array[2];
             $this->data['class_static_name'] = "umo-syllabus-class";
              //print_r($all_syllabus);die;
 			$this->data['all_syllabus'] = $all_syllabus;
@@ -347,12 +347,13 @@ public function syllabuss_pages()
 	public function sample_papers()
 	{
 		$slug =  $this->uri->segment(1);
+		$slugs =  $this->uri->segment(2);
 		if($slug!=''){
-			$slug_array = explode('-', $slug);
+			$slug_array = explode('-', $slugs);
 			if($slug_array[1] != 'sample' && $slug_array[1] != 'papers'){
 				redirect(base_url());
 			}
-			$catslug = $slug_array[0];
+			$catslug = $slug;
 			// echo $catslug;
 			// exit();
 			$this->data['categories'] = $this->base_model->get_details('categories');
@@ -427,13 +428,14 @@ public function syllabuss_pages()
 	{
 
 		$slug =  $this->uri->segment(1);
-
+        $slugs =  $this->uri->segment(2);
+      //  echo $slugs;die;
 		if($slug!=''){
-			$slug_array = explode('-', $slug);
+			$slug_array = explode('-', $slugs);
 
 
-			$catslug = $slug_array[0];
-			$catname = strtoupper($slug_array[3])." ".$slug_array[4];
+			$catslug = $slug;
+			$catname = strtoupper($slug_array[2])." ".$slug_array[3];
 
 			$query = "SELECT * FROM `categories` WHERE `slug`='".$catslug."'";
 			$category = $this->db->query($query)->result_array();
@@ -635,12 +637,36 @@ public function cmss_page()
 
 		 } 
 	}
+
+public function cms_cut_off()
+{
+
+$slug = $this->uri->segment(1); 
+//echo $slug; die;
+if($slug!=''){ 
+		   
+		   if($slug == "cut-off-and-rankings"){ 
+                $this->data['subject'] = $slug;
+				$this->data['title'] = 'Olympiad Exam Cut Off and Ranking Criteria - CREST Olympiads';
+				$this->data['meta_description'] = 'Know about cut off and ranking criteria for qualification in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.'; 
+				$this->data['content'] = "cms_pages/cut_off_and_rankings";
+			}
+			  
+			$this->_render_page('templates/template', $this->data);
+
+		 }  
+
+}
+
+
+
 	public function cms_page()
 	{
 		
 		$slug =  $this->uri->segment(2);
 		$slugsubject =  $this->uri->segment(1);
-     //  echo $slugsubject;die;
+		//$slugsubject[0];
+       //echo $slugsubject;die;
 		// $route['exam-schedule'] = 'crest/cms_page';
 		// $route['marking-scheme'] = 'crest/cms_page';
 		// $route['cut-off-and-rankings'] = 'crest/cms_page';
@@ -942,11 +968,16 @@ public function cmss_page()
 			}
 
            
-			else if($slugsubject == 'cut-off-and-rankings'){
-				$this->data['title'] = 'Olympiad Exam Cut Off and Ranking Criteria - CREST Olympiads';
-				$this->data['meta_description'] = 'Know about cut off and ranking criteria for qualification in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
+			else if($slug == 'cut-off-and-rankings'){
+				if($slugsubject != '') 
 
+                {
+                $this->data['subject'] = $slugsubject;
+				$this->data['title'] = 'Olympiad Exam Cut Off and Ranking Criteria - CREST Olympiads';
+				$this->data['meta_description'] = 'Know about cut off and ranking criteria for qualification in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.'; 
 				$this->data['content'] = "cms_pages/cut_off_and_rankings";
+			    }
+			    
 			}
 			else if($slugsubject == 'awards'){
 				$this->data['title'] = 'Awards/Scholarships - CREST Olympiads';

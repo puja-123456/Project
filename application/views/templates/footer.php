@@ -1,3 +1,4 @@
+ 
 </div>
 <style>
 @media only screen and (min-width: 768px){
@@ -6,6 +7,16 @@
    /* margin-top: 15px;*/
 	}
 }
+.droopmenu>li i {
+    vertical-align: middle !important;
+}
+ul:not(.browser-default)>li
+  {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 5px 0px 5px 0px;
+    list-style-type: none;
+  }
 .footer-img{
 	background-color: white;
     padding: 8px 0px 0px 9px;

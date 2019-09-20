@@ -79,16 +79,7 @@
       <script defer src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script> 
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
-    <?php if($this->config->item('slider') != ''){ ?>
-<!-- <div>hello</div> -->
- <!-- <link href="<?php //echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">  -->
- <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-<!--  <script src="<?php //echo base_url(); ?>assets/js/bootstrap.js"></script> -->
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
- 
-
-
-    <?php } ?>
+    
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css">
  
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.min.css">
@@ -1074,12 +1065,12 @@ li.droopmenu-parent .material-icons {
                                                 	   <li><h5>Syllabus<hr></h5></li>
                                                 	<ul class="droopmenu-col droopmenu-col6"> 
                                                     <?php for($i=1;$i<=7;$i++) { ?>
-                                                    <li><a href="<?php echo base_url().$category[0].'-syllabus-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
+                                                    <li><a href="<?php echo base_url().$category[0].'/syllabus-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                    <ul class="droopmenu-col droopmenu-col6"> 
                                                     <?php for($i=8;$i<=10;$i++) { ?>
-                                                    <li><a href="<?php echo base_url().$category[0].'-syllabus-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
+                                                    <li><a href="<?php echo base_url().$category[0].'/syllabus-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                 </ul>
@@ -1089,12 +1080,12 @@ li.droopmenu-parent .material-icons {
 
                                                  <ul class="droopmenu-col droopmenu-col6"> 
                                                      <?php for($i=1;$i<=7;$i++) { ?>
-                                                    <li><a href="<?php echo base_url().$category[0].'-sample-papers'; ?>">Class <?php echo $i; ?></a></li>
+                                                    <li><a href="<?php echo base_url().$category[0].'/sample-papers-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                <ul class="droopmenu-col droopmenu-col6"> 
                                                      <?php for($i=8;$i<=10;$i++) { ?>
-                                                    <li><a href="<?php echo base_url().$category[0].'-sample-papers'; ?>">Class <?php echo $i; ?></a></li>
+                                                    <li><a href="<?php echo base_url().$category[0].'/sample-papers-class-'.$i; ?>">Class <?php echo $i; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                 </ul>
