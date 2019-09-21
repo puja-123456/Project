@@ -253,7 +253,7 @@ public function syllabuss_pages()
             //$all_syllabus = $this->base_model->fetch_records_from('syllabus',$catids[$i]);
             //$this->data['all_syllabus'] = $all_syllabus;
             //print_r($all_syllabus);
-			 $syabuss[] =$catid[$i].'-syllabus-class';
+			 $syabuss[] =$catid[$i].'/syllabus-class';
           }
           //die;
          // echo $catid[$i];die;
@@ -375,7 +375,7 @@ public function syllabuss_pages()
 
 			$this->data['all_syllabus'] = $all_syllabus;
 			$this->data['category'] = $category[0];
-
+            $this->data['url_sample_paper'] = $slug;
 			if($category[0]['short_cat']=='umo')
 			{
 				$this->data['title'] = 'CREST Mathematics Olympiad Sample Papers, Mock Test Papers, Question Papers for Classes 1 to 10';
@@ -959,9 +959,10 @@ if($slug!=''){
 				</tbody>
 			</table>';
              }
-                $this->data['slug'] == $slugsubject;
-				$this->data['title'] = 'Olympiad Exam Pattern and Marking Scheme 2019 | CREST Olympiads';
-				$this->data['meta_description'] = 'CREST Olympiads has released the exam pattern and marking scheme for 2019-20 Olympiad exams.';
+                $this->data['slugsubject'] = $slugsubject;
+                //echo $slugsubject;die;
+				$this->data['title'] = 'Olympiad Exam Pattern and Marking Scheme 2019 | Unicus Olympiads';
+				$this->data['meta_description'] = 'Unicus Olympiads has released the exam pattern and marking scheme for 2019-20 Olympiad exams.';
 
 				$this->data['content'] = "cms_pages/marking_scheme";
 
@@ -973,32 +974,32 @@ if($slug!=''){
 
                 {
                 $this->data['subject'] = $slugsubject;
-				$this->data['title'] = 'Olympiad Exam Cut Off and Ranking Criteria - CREST Olympiads';
+				$this->data['title'] = 'Olympiad Exam Cut Off and Ranking Criteria - Unicus Olympiads';
 				$this->data['meta_description'] = 'Know about cut off and ranking criteria for qualification in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.'; 
 				$this->data['content'] = "cms_pages/cut_off_and_rankings";
 			    }
 			    
 			}
 			else if($slugsubject == 'awards'){
-				$this->data['title'] = 'Awards/Scholarships - CREST Olympiads';
+				$this->data['title'] = 'Awards/Scholarships - Unicus Olympiads';
 				$this->data['meta_description'] = 'Know about awards or prizes in CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
 
 				$this->data['content'] = "cms_pages/awards";
 			}
 			else if($slugsubject == 'sample-papers'){
-				$this->data['title'] = 'CREST Olympiads Sample Papers, Practice Papers, Mock Tests';
+				$this->data['title'] = 'Unicus Olympiads Sample Papers, Practice Papers, Mock Tests';
 				$this->data['meta_description'] = 'Get latest Sample question Papers for CEO, CRO, CMO, CFO, CGKO, CSO, CCO.';
                 $this->data['categories'] = $this->base_model->get_details('categories');
 				$this->data['content'] = "cms_pages/sample_paper";
 			}
 			else if($slugsubject == 'terms-of-use'){
-				$this->data['title'] = 'CREST Olympiads Terms of Use';
+				$this->data['title'] = 'Unicus Olympiads Terms of Use';
 				$this->data['meta_description'] = 'Terms of Use of CREST Olympiads';
 
 				$this->data['content'] = "cms_pages/terms_of_use";
 			}
 			else if($slugsubject == 'privacy-policy'){
-				$this->data['title'] = 'CREST Olympiads Privacy Policy';
+				$this->data['title'] = 'Unicus Olympiads Privacy Policy';
 				$this->data['meta_description'] = 'Privacy Policy of CREST Olympiads';
 
 				$this->data['content'] = "cms_pages/privacy_policy";

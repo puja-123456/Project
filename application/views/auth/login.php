@@ -1,7 +1,7 @@
 
 <!-- Slider-->
 <!-- Middle Content-->
-<div class="row">
+<div class="row" style="margin-top:80px">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="bradcome-menu">
             <ol class="breadcrumb inner-breadcrumb">
@@ -46,7 +46,7 @@
                                 </a>
 
                                     </div>
-                                    <p style="text-align: center">New to CREST Olympiads?                                   
+                                    <p style="text-align: center">New to Unicus Olympiads?                                   
                                     <a href="<?php echo base_url().'registration';?>" style="color: #428bca;text-decoration: none;">
                                     Register Now</a>                               
                                 </p>
@@ -109,4 +109,10 @@
     })(jQuery, window, document);
 
 </script>
+<style>
+.butt{
+    color: #000 !important;
+}
+</style>
+
 

@@ -1096,7 +1096,7 @@ li.droopmenu-parent .material-icons {
                                                    
                                                 </ul>
                                                  <ul class="droopmenu-col droopmenu-col3"> 
-                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>" style="font-size: 16px">Exam Dates</a></li> 
+                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>" style="font-size: 16px"><b>Exam Dates:</b></a></li> 
                                                       <?php 
 			                                       $mainexamdates = $this->config->item('main_examdates'); 
 			                                       foreach ($mainexamdates as $key => $examdate) { 
@@ -1107,9 +1107,9 @@ li.droopmenu-parent .material-icons {
                                                     <li><a href="<?php echo base_url().'exam-schedule'; ?>"><?php echo $examdate[2]; ?></a></li>
                                                         <?php }}?>
                                                    <!--  <li><a href="<?php //echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l2'; ?>">Final</a></li> -->
-                                                    <li><a href="<?php echo base_url(); ?>" style="font-size: 16px">Awards</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>awards" style="font-size: 16px">Awards</a></li>
                                                     <li><a href="<?php echo base_url(); ?>" style="font-size: 16px">How to Participate</a></li> 
-                                                    <li><a href="<?php echo base_url(); ?>" style="font-size: 16px">Exam Prepration</a></li> 
+                                                    <li><a href="https://www.olympiadsuccess.com/"  target="_blank" style="font-size: 16px">Exam Prepration</a></li> 
                                                     <li><a href="<?php echo base_url().'faqs'; ?>">FAQs</a></li>
                                                   </a>
                                                 </ul>

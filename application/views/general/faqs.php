@@ -12,7 +12,7 @@
     transform: rotate(90deg);
 }
 .center-align{
-	margin-top: 70px;
+	margin-top: 80px;
 }	
 	/*@media only screen and (max-width: 768px){*/
 

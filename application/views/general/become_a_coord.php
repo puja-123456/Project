@@ -29,7 +29,7 @@
 <script type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact_us.css">
 <p>&nbsp;</p>
-<div class="container">
+<div class="container" style="margin-top:90px">
 	<div class="row text-center">
 		<h1>Become a Co-ordinator</h1>
 	</div>
@@ -46,7 +46,8 @@
 
 			<?php echo form_open("crest/coordinator"); ?>
 				<div class="row inner content">
-				<p>For all the teachers, principals, mentors, educationists, or any other people, you can join us to become our coordinator for your specified location.</p>
+				<p>Are you looking to become a Coordinator with Unicus Olympiads?</p>
+				<p>If yes, then you can join us to become our coordinator for your specified location. All the educators i.e. teachers, principals, mentors, tutors, or any other people, can become a coordinator with us.</p>
 				<div class="col s12 m6  input-field">
 					<input class="form-control" id="name" name="name" type="text" required>
 					<label for="name">Your Name</label><br>
@@ -107,6 +108,9 @@
 
 
 <style type="text/css">
+.right {
+    color: #000;
+}
 form input, form textarea, form button{
 	margin: 3px 0px;
 }

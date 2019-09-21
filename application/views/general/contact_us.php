@@ -65,14 +65,7 @@
   <div class="ribbon ribbon-top-left"><span>ribbon</span></div>
   </div>
  -->
-<div class="container" > 
-	 
-		<!-- <div class="col-s8" style="background-color: #43cec9 !important; border-radius: 8em;
-
-border: none;"> -->
-
- 
-
+<div class="container" style="margin-top:80px;margin-bottom: 30px">   
 <div class="row">
   
   

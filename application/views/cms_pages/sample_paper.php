@@ -8,17 +8,16 @@
 	<div class="col-md-12 col-sm-12 inner-menu-school">
 		 <p class="pull-right inner-hed appear-after-scroll" id="headingid" style="display:none"><?php echo $schoolname[0]; ?> </p>
 		  <ul class="nav nav-tabs nav-for-details">
-			<a href="<?php echo base_url(); ?>umo"><li class="active btn">About</li></a> 
+			<!-- <a href="<?php //echo $current_url; ?>"><li class="active btn">About</li></a>  -->
 			<a href="<?php echo base_url(); ?>marking-scheme"><li class="btn">Marking Scheme</li></a> 
 			<a href="<?php echo base_url(); ?>syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
 					 
 		    <a href="<?php echo base_url(); ?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>" class="col s10 center-align">
-					<img class="responsive-img" id="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category['slug']; ?>-banner.jpg"><br><?=strtoupper($category['slug']); ?> Preparation Material
-		</a> 
+		 
     </div>  
 		</div>
 	</div>
@@ -36,7 +35,7 @@
 					Sample Questions of <?php //echo $category[1]; ?> -->
 				<!-- <p>&nbsp;</p> -->
 				</a> 
-              <a href="<?php echo base_url().$category[0]; ?>-sample-papers"><div class="col m1 s12 alllink">All</div></a>
+              <a href="<?php echo base_url().$category[0]; ?>/sample-papers"><div class="col m1 s12 alllink">All</div></a>
               <?php 
 
 					 
@@ -47,7 +46,7 @@
 					 //if($syllabus->name != ucfirst($class_name)) {
 					?>
 					
-                  <a href="<?php echo base_url().$category[0].'-sample-papers-class-'.$i; ?>"><div class="col m1 s12" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
+                  <a href="<?php echo base_url().$category[0].'/sample-papers-class-'.$i; ?>"><div class="col m1 s12" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
 					<?php 
 				   //}
 				 

@@ -13,7 +13,7 @@
 ul:not(.browser-default)>li
   {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 18px;
     padding: 5px 0px 5px 0px;
     list-style-type: none;
   }

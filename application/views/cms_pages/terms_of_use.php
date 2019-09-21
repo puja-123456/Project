@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="margin-top: 70px">
 	<p>&nbsp;</p>
 	<h1 class=""><?=$title;?></h1>
 	<div class="col s12 m12">

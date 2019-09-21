@@ -3,7 +3,7 @@
 	<h1 class="left-align"><?php echo $category['name']; ?></h1>
 	<div class="col m3 s12">
 		<div class="syllabus-menu">
-			<!-- <p><?php echo $category['name']; ?></p> -->
+			<!-- <p><?php// echo $category['name']; ?></p> -->
 			<!-- <p class="flow-text">Explore</p> -->
           <div class="row">
 	 

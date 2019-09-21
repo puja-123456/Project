@@ -1,9 +1,9 @@
 
-<div class="row">
+<div class="row" style="margin-top:60px">
 	<p>&nbsp;</p>
 	<div class="col s12">
 		<div class="row center-align">
-			<h1>About CREST</h1>
+			<h1>About Unicus</h1>
 		</div>
 		<div class="row ">
 			<div class="col m10 offset-m1 s12">

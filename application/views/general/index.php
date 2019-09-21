@@ -25,6 +25,9 @@ function autoplay() {
   });
 </script>
 <style type="text/css">
+.solid{
+	margin-top: -60px !important;
+}
 	.home_page_reading_material .card-content img{
 		height: 150px;
 	}
@@ -1233,7 +1236,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		 </div>
 			<div class="service__details">
 			<h6><a href="<?php echo base_url(); ?>exam-schedule">Fees and Exam Schedule</a></h6>
-			<p>The fee per subject per student is Rs. 225 for students studying and residing in India.</p>
+			<p>The fee per subject per student is Rs. 225 for students studying</p>
 			<div class="service__btn">
 			<a class="dcare__btn" href="<?php echo base_url().'exam-schedule'; ?>">Read More</a>
 			</div></div>  
@@ -1292,7 +1295,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		 </div>
 			<div class="service__details">
 			<h6><a href="<?php echo base_url(); ?>cut-off-and-rankings">Ranking Criteria</a></h6>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round </p>
+			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO </p>
 			<div class="service__btn">
 			<a class="dcare__btn" href="<?php echo base_url(); ?>cut-off-and-rankings">Read More</a>
 			</div></div>  
@@ -1306,7 +1309,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		 </div>
 			<div class="service__details">
 			<h6><a href="<?php echo base_url(); ?>awards">Awards</a></h6>
-			<p>For students appearing for UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO</p>
+			<p>For students appearing for UGKO, UCO and UCTO (classes 1 to 10)</p>
 			<div class="service__btn">
 			<a class="dcare__btn" href="<?php echo base_url(); ?>awards">Read More</a>
 			</div></div>  
@@ -1368,7 +1371,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 <style type="text/css">
 @media only screen and (min-width: 768px){
 .image-slider{
-	margin-left: 100px;
+	margin-left: 147px;
 }
 .carousel{
 	height:340px; 
@@ -1592,10 +1595,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
  
 
 
-
+ 
 	<?php
 	$this->load->view('general/contact_us');
 	?>
+ 
 <br><br/>
  
 

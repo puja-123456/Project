@@ -352,6 +352,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 
 		    <a href="<?php echo base_url(); ?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+			
 			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
@@ -380,7 +381,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 			     if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
                   <h5 style="color: #000;line-height: 40px;" class="col s12 m12 l12"><?php echo $syllabus['name']; ?></h5><br/>
-					 <a href="<?php echo base_url().$syllabus['slug'].'-syllabus'; ?>"><div class="col m1 s12 alllink">All</div></a>
+					 <a href="<?php echo base_url().$syllabus['slug'].'/syllabus'; ?>"><div class="col m1 s12 alllink">All</div></a>
 
 				  <?php 
 				     for ($i=1; $i <= 10; $i++) { 
@@ -389,7 +390,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 //print_r($syllabuss);die;
 					 //if($syllabus->name != ucfirst($class_name)) {
 					?>
-
+                <!--  <?php //print_r($url);die; ?> -->
                   <a href="<?php echo base_url().$url[$j].'-'.$i; ?>"><div class="col m1 s12" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
 					<?php 
 				   //}

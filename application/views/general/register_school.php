@@ -17,24 +17,28 @@
 	font-size: 16px;
 	color: #272528;
 }
+#ssbtn{
+	color:#000;
+}
 </style>
 
 <div class="container">
 	<p>&nbsp;</p>
-	<div class="row">
+	<div class="row" style="margin-top:50px">
 		
 		<div class="col s12">
-			<h1 style="text-align:left;">Registration Form For Schools</h1>
+			<h1 style="text-align:left;">School Registration Form for Unicus Olympiads</h1>
 			<p>
-				The school Olympiad coordinators looking for registration form can fill the below form. And for students looking for individual registrations, please fill the form on <a href="http://www.crestolympiads.com/" target="_blank">Home Page</a>. If you have any query, then please email at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>
+              If your school is looking for Unicus Olympiads registration then the school Olympiad coordinators can fill the below form. Our representative will contact you within 48 working hours. 
 			</p>
 			<p>
-				Registration Fee for Indian Schools: A charge of Rs. 225 towards cost of examination is payable by each participating student for Schools in India.
+				The students who are looking for individual registrations, please fill the form on <a href="http://www.crestolympiads.com/" target="_blank">Home Page</a>. If you have any query, then please email at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>
 			</p>
+			<p>Kindly note that we have different fees for Indian schools and International (outside India) schools. </p>
 			<p>
-				Registration fee for International Schools (outside India): A charge of $10 towards cost of examination is payable by each participating student for international schools.
-
+				The Registration Fee for Indian Schools: A charge of Rs. 225 towards the cost of the examination is payable by each participating student for Schools in India. 
 			</p>
+			<p>The Registration fee for International Schools (outside India): A charge of $10 towards the cost of the examination is payable by each participating student for international schools.</p>
 		</div>
 		<div class="col l12 m12 s12">
 			
@@ -157,7 +161,7 @@
 			</div>
 			<div class="row">
 				<div class="col s12 form-group">
-					<button class="btn col s6 offset-s3" type="submit">Submit<i class="material-icons right">send</i></button>
+					<button class="btn col s6 offset-s3" type="submit" id="ssbtn">Submit<i class="material-icons right">send</i></button>
 				</div>
 			</div>
 			<?php echo form_close();?>

@@ -425,21 +425,17 @@ else
 
   </style>
 
-<div class="container">
-    <p class="blink-two">
-    <a href="https://www.crestolympiads.com/cisro">Please click here to register for CREST Inter-school Reasoning Olympiad (CISRO)</a>
-    </p>
-
+<div class="container"> 
+    
 	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
 	<div class="row text-center">
 		<h1><?php if ($this->ion_auth->logged_in()){ echo "Subscription to Olympiad Exam/s"; } else {?>Individual Registration Form <?php } ?></h1>
 	</div>
 	<?php if (!$this->ion_auth->logged_in()){ ?> 
 	<ol> 
-<li>Information once submitted can't be edited.</li>
-<li>Home address should be correct since certificate would be sent at this address, if applicable.</li>
+<li>You cannot edit the information after submitting it.</li>
+<li>School Name & Student Name will be printed on the certificate. So they must be mentioned as you would like them to appear on the certificate.</li>
 <li>School Name & Student Name should be mentioned as you would like them to appear on the certificate.</li>
-<li>If you have a referral code of the student who shared information about CREST Olympiads with you, please mention. Otherwise, leave it blank.</li>
 </ol>
 
 <?php  } ?>
@@ -930,33 +926,33 @@ else
 
 					<ul class="list">
 						<li>
-						CREST Olympiads will be conducted online and the students will have to take the exams from their residence or any other place where they have access to computer with good Internet connectivity. Schools, subscribing to these exams, may decide to conduct these exams using their computer lab. The exam can't be taken using Mobile device. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.
+						Unicus Olympiads will be conducted online and the students will have to take the exams from their residence or any other place where they have access to computer with good Internet connectivity. The schools who have subscribed to these exams, may decide to conduct these exams using their computer lab. The exam can't be taken using Mobile device. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.
 					</li> 
 					<br>
 					<li>
-						CREST Olympiads brings progressive thinking and hence, is quite different from traditional Olympiad exams. Click <a href="<?=base_url();?>about-us#traditional-vs-crest-olympiads" target="_blank">here</a> to know more.
+						Unicus Olympiads brings progressive thinking and hence, is quite different from traditional Olympiad exams. Click <a href="<?=base_url();?>about-us#traditional-vs-unicus-olympiads" target="_blank">here</a> to know more.
 
 					</li>
 					<br>
 					<li>
-						It’s in the best interest of students not to use any unfair means while attempting these exams. These exams are just a first step for a much bigger goal of appearing for competitive exams that are being conducted online these days.
+						It’s in the best interest of students not to use any unfair means while attempting these exams. These exams are just a first step for a much bigger goal of appearing for competitive exams that are being conducted online these days. Although all the exams will require the students to have access to the webcam.
 				    </li>
 				    <br>
 				    <li>
-						Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a>. We will provide flexibility to the students to select preferred dates for Level 1 exam.
+						Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a>. We will provide flexibility to the students to select preferred dates for Preliminary Round exam.
 					</li>
 					<br>
 					<li>
-						We take preparation seriously. Hence, there would be two (2) practice exams, provided complimentary as per <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a> mentioned.
-					</li>
+						We take preparation seriously. Hence, there would be one mock test, provided complimentary. The student can appear for the test 3 times. He/she can view the performance too on his/her dashboard.
+          </li>
 					<br>
 					<li>
 						Do read the <a href="https://www.crestolympiads.com/faqs" target="_blank">Frequently Asked Questions (FAQs)</a> thoroughly.
 					</li>
 					<br>
 					<li>
-						Please make payment only after reading the above statements. The fees once paid is non-refundable. For any queries or suggestions, do write to us at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>.					
-					</li>
+            Kindly make payment only after reading the above statements. The fees once paid is non-refundable. For any queries or suggestions,  do write to us at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>.
+						</li>
 					</ul>
 					 
 					<label> <input class="instructions" type="checkbox"  onclick="" value="" required><span>I acknowledge that I have read and agree to the above Instructions.</span></label>

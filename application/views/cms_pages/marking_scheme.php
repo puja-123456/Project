@@ -10,17 +10,16 @@
 	<div class="col-md-12 col-sm-12 inner-menu-school">
 		 <p class="pull-right inner-hed appear-after-scroll" id="headingid" style="display:none"><?php echo $schoolname[0]; ?> </p>
 		  <ul class="nav nav-tabs nav-for-details">
-			<a href="<?php echo base_url(); ?>umo"><li class="active btn">About</li></a> 
+			<!-- <a href="<?php //echo base_url(); ?>umo"><li class="active btn">About</li></a>  -->
 			<a href="<?php echo base_url().basename(base_url(uri_string())); ?>"><li class="btn">Marking Scheme</li></a> 
 			<a href="<?php echo base_url(); ?>syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
 					 
 		    <a href="<?php echo base_url();?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>" class="col s10 center-align">
-					<img class="responsive-img" id="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category['slug']; ?>-banner.jpg"><br><?=strtoupper($category['slug']); ?> Preparation Material
-		</a>
+	 
 	</div>
 </div> 
  
@@ -42,7 +41,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-21">Class 1</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>umo/marking-scheme"><h5>UNICUS Mathematics Olympiad<br/>
+							<a class="card-title" href="<?php echo base_url(); ?>umo/marking-scheme"><h5>Unicus Mathematics Olympiad<br/>
 							(UMO)</h5></a>
 						</div>
 					</div>
@@ -53,7 +52,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-22">Class 2</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>uso/marking-scheme"><h5>UNICUS Science Olympiad<br/>
+							<a class="card-title" href="<?php echo base_url(); ?>uso/marking-scheme"><h5>Unicus Science Olympiad<br/>
 							(USO)</h5></a>
 						</div>
 					</div>
@@ -64,7 +63,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-23">Class 3</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>ueo/marking-scheme"><h5>UNICUS English Olympiad<br/>
+							<a class="card-title" href="<?php echo base_url(); ?>ueo/marking-scheme"><h5>Unicus English Olympiad<br/>
 							(UEO)</h5></a>
 						</div>
 					</div>
@@ -75,7 +74,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-24">Class 4</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>uco/marking-scheme"><h5>UNICUS Cyber Olympiad<br/>(UCO)</h5></a>
+							<a class="card-title" href="<?php echo base_url(); ?>uco/marking-scheme"><h5>Unicus Cyber Olympiad<br/>(UCO)</h5></a>
 						</div>
 					</div>
 				</div>
@@ -85,7 +84,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-25">Class 5</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>ugko/marking-scheme"><h5>UNICUS General Knowledge Olympiad<br/>(UGKO)</h5></a>
+							<a class="card-title" href="<?php echo base_url(); ?>ugko/marking-scheme"><h5>Unicus General Knowledge Olympiad<br/>(UGKO)</h5></a>
 						</div>
 					</div>
 				</div>
@@ -95,7 +94,7 @@
 							<!-- <span>Card Title</span> -->
 
 					<!-- <a class="card-title" href="http://localhost/crest_new/sample-questions-26">Class 6</a> -->
-							<a class="card-title" href="<?php echo base_url(); ?>ucto/marking-scheme"><h5>UNICUS Critical Thinking Olympiad<br/>(UCTO)</h5></a>
+							<a class="card-title" href="<?php echo base_url(); ?>ucto/marking-scheme"><h5>Unicus Critical Thinking Olympiad<br/>(UCTO)</h5></a>
 						</div>
 					</div>
 				</div>
@@ -282,17 +281,16 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 	<div class="col-md-12 col-sm-12 inner-menu-school">
 		 <p class="pull-right inner-hed appear-after-scroll" id="headingid" style="display:none"><?php echo $schoolname[0]; ?> </p>
 		  <ul class="nav nav-tabs nav-for-details">
-			<a href="<?php echo base_url(); ?>umo"><li class="active btn">About</li></a> 
-			<a href="<?php echo base_url().basename(base_url(uri_string())); ?>"><li class="btn">Marking Scheme</li></a> 
-			<a href="<?php echo base_url(); ?>syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
+			<a href="<?php echo $current_url; ?>"><li class="active btn">About</li></a> 
+			<a href="<?php echo base_url().$slugsubject; ?>/marking-scheme"><li class="btn">Marking Scheme</li></a> 
+			<a href="<?php echo base_url().$slugsubject; ?>/syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
 					 
-		    <a href="<?php echo base_url();?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
-			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+		    <a href="<?php echo base_url().$slugsubject; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
+			<a href="<?php echo base_url().$slugsubject; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>" class="col s10 center-align">
-					<img class="responsive-img" id="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category['slug']; ?>-banner.jpg"><br><?=strtoupper($category['slug']); ?> Preparation Material
-		</a>
+		
 	</div>
 </div> 
  

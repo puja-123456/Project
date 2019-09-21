@@ -3,26 +3,21 @@
 	<div class="row">
 	<h1 class="left-align"><?php echo $category['name']; ?> Sample Papers</h1>
         <div class="col m3 s12">
-		<div class="syllabus-menu">
-			<!-- <p><?php echo $category['name']; ?></p> -->
-			<!-- <p class="flow-text">Explore</p> -->
-          <div class="row">
-	 
-	<!-- <p class="hidden-sm">&nbsp;</p> -->
+		<div class="syllabus-menu"> 
+          <div class="row"> 
 	<div class="col-md-12 col-sm-12 inner-menu-school">
 		 <p class="pull-right inner-hed appear-after-scroll" id="headingid" style="display:none"><?php echo $schoolname[0]; ?> </p>
 		  <ul class="nav nav-tabs nav-for-details">
 			<a href="<?php echo base_url(); ?>umo"><li class="active btn">About</li></a> 
-			<a href="<?php echo base_url(); ?>marking-scheme"><li class="btn">Marking Scheme</li></a> 
-			<a href="<?php echo base_url(); ?>syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
+			<a href="<?php echo base_url().$url_sample_paper; ?>/marking-scheme"><li class="btn">Marking Scheme</li></a> 
+			<a href="<?php echo base_url().$url_sample_paper; ?>/syllabus"><li class="btn">Syllabus<!-- <i class="right material-icons">format_align_left</i> --></li></a>
 					 
-		    <a href="<?php echo base_url(); ?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
-			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+		    <a href="<?php echo base_url().$url_sample_paper; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
+			<a href="<?php echo base_url().$url_sample_paper; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>" class="col s10 center-align">
-					<img class="responsive-img" id="responsive-img" src="<?=base_url()?>assets/images/original/<?=$category['slug']; ?>-banner.jpg"><br><?=strtoupper($category['slug']); ?> Preparation Material
-		</a>
+		 
 	</div>
 </div> 
  
@@ -42,7 +37,7 @@
 				foreach ($categories as $syllabus) {
 					 if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
-             <a href="<?php echo base_url().$syllabus['slug'].'-sample-papers'; ?>"><div class="col s12 m2"><?php echo $syllabus['name'].' Sample Papers'; ?>
+             <a href="<?php echo base_url().$syllabus['slug'].'/sample-papers'; ?>"><div class="col s12 m2"><?php echo $syllabus['name'].' Sample Papers'; ?>
              	
 
              </div></a> 
