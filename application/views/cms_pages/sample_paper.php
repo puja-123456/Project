@@ -107,7 +107,9 @@ ul:not(.browser-default)>li {
 	margin: 0px !important;
 }
 @media only screen and (max-width: 768px){
-
+.syllabus-menu ul {
+    padding: 0px !important;
+}
 .syllabus-menu ul li {
      padding: 17px;
     line-height: 2px;
@@ -119,36 +121,7 @@ ul:not(.browser-default)>li {
      padding: 17px;
      line-height: 2px;
      margin: 3px;
-}
-.droopmenu-header, .droopmenu-mclose, .droopmenu-navbar, .droopmenu-offcanvas .droopmenu-nav {
-    background: #fff;
-}
-.droopmenu-toggle 
-  {
-  background-color: #000 !important;
-  }
-li.droopmenu-parent .material-icons {
-    display: none;
-}
-.droopmenu .droopmenu-tabheader {
-    background-color: #26a69a;
-}
-.droopmenu .droopmenu-tabheader.droopmenu-tab-active {
-    background: #ffd223;
-    color: #000;
-}
-.droopmenu .dm-block-title, .droopmenu .droopmenu-content p, .droopmenu li li:hover>a, .droopmenu li ul li a, .droopmenu-col h4 {
-    font-weight: 400 !important;
-    font-size: 1em !important;
-    color: #000;
-    margin-bottom: 6px;
-}
-ul.droopmenu-col.droopmenu-col3 h5 {
-    font-size: 20px;
-    color: #8a8585;
-    font-weight: 600;
-    line-height: inherit;
-}
+} 
 .left-align{
 	margin-top: 20px;
 }

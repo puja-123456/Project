@@ -659,6 +659,7 @@ ul:not(.browser-default)>li
     font-family: sans-serif;
 }
 @media only screen and (min-width: 768px){
+
 .droopmenu .droopmenu-tabnav a { 
     height: 46px; 
 }
@@ -708,7 +709,6 @@ ul:not(.browser-default)>li
 h5 {
     font-size: 16px;
     /*text-transform: uppercase;*/
-    font-size: 16px;
     font-weight: 600;
     font-family: 'Oswald',sans-serif;
 }
@@ -718,7 +718,9 @@ h5 {
     font-weight: 500;
 }
 }
-@media only screen and (max-width: 767px){
+ 
+@media screen and (max-width: 767px){
+
  li.droopmenu-parent .material-icons {
     display: none;
 } 
@@ -741,14 +743,14 @@ li.droopmenu-parent .material-icons {
 }
  
 
-/*.droopmenu .droopmenu-tabheader.droopmenu-tab-active {
+.droopmenu .droopmenu-tabheader.droopmenu-tab-active {
     background: #ffd223;
 }
 .droopmenu .droopmenu-tabheader {
     background: #ffd223 !important;
     color: #000 !important;
     border-bottom-color: #BB9D7D;
-}*/
+}
 }
 .droopmenu-boxed, .droopmenu-inner {
     max-width: 1240px;
@@ -791,7 +793,9 @@ li.droopmenu-parent .material-icons {
     font-weight: 600;
     font-family: 'Oswald',sans-serif;
 }*/
-
+.headermh{
+  margin-top: -13px;line-height: 30px;font-weight: 600;font-size: 18px;
+}
 </style>
 <body> 
 
@@ -1059,7 +1063,7 @@ li.droopmenu-parent .material-icons {
                                         <a class="droopmenu-tabheader"><?php echo $category[1]; ?></a>
                                         <div class="droopmenu-tabcontent">
                                             <div class="droopmenu-row">
-                                            	<h5 style="margin-top: -13px;line-height: 18px;font-weight: 600;"><center><?php echo $category[2]; ?></center></h5>
+                                            	<h5 class="headermh"><center><?php echo $category[2]; ?></center></h5>
                                                 <ul class="droopmenu-col droopmenu-col3">
 
                                                 	   <li><h5>Syllabus<hr></h5></li>
@@ -1076,7 +1080,7 @@ li.droopmenu-parent .material-icons {
                                                 </ul>
                                                 
                                                 <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h5>Sample Papers<hr></h5></li>
+                                                    <li class="headermh"><h5>Sample Papers<hr></h5></li>
 
                                                  <ul class="droopmenu-col droopmenu-col6"> 
                                                      <?php for($i=1;$i<=7;$i++) { ?>
@@ -1090,7 +1094,7 @@ li.droopmenu-parent .material-icons {
                                                 </ul>
                                                 </ul>
                                                 <ul class="droopmenu-col droopmenu-col3"> 
-                                                    <li><h5>Marking Scheme<hr></h5></li> 
+                                                    <li class="headermh"><h5>Marking Scheme<hr></h5></li> 
                                                     <li><a href="<?php echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l1'; ?>">Preliminary</a></li>
                                                     <li><a href="<?php echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l2'; ?>">Final</a></li>
                                                    

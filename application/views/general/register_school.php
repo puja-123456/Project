@@ -20,11 +20,19 @@
 #ssbtn{
 	color:#000;
 }
+#srf{;
+	margin-top:50px
+}
+@media only screen and (max-width: 768px){
+	#srf{
+	margin-top:-60px;
+}
+}
 </style>
 
 <div class="container">
 	<p>&nbsp;</p>
-	<div class="row" style="margin-top:50px">
+	<div class="row" id="srf" >
 		
 		<div class="col s12">
 			<h1 style="text-align:left;">School Registration Form for Unicus Olympiads</h1>

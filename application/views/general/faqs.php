@@ -21,23 +21,7 @@
  padding:1rem !important;
 }
 @media only screen and (max-width: 767px){
-li.droopmenu-parent.dmtoggle-open .material-icons {
-    display: none;
-}
-li.droopmenu-parent .material-icons {
-    display: none;
-}
-.dm-nav-brand a img, .droopmenu-brand img {
-    height:auto;
-    position: relative;
-    top: -5px;
-}
-.droopmenu-header, .droopmenu-mclose, .droopmenu-navbar, .droopmenu-offcanvas .droopmenu-nav {
-    background: #ffffff !important;
-}
-.droopmenu-toggle i:after, .droopmenu-toggle i:before {
-    background: #342f2f;
-}
+ 
 .center-align{
 	margin-top: -30px;
 }	 
@@ -67,14 +51,7 @@ li.droopmenu-parent .material-icons {
 		</ul>
 	</div>
 </div>
-<!-- 
-<script type="text/javascript">
-	$().ready(function(){
-		$(".collapsible-header").click(function(){
-			$(this).children('.material-icons').toggleClass("down");
-		})
-	});
-</script> -->
+ 
 
 <script>
 	document.addEventListener('DOMContentLoaded', function() {

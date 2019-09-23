@@ -1,89 +1,66 @@
 
-<div class="row" style="margin-top:60px">
+<div class="row" id="aboutid">
 	<p>&nbsp;</p>
 	<div class="col s12">
-		<div class="row center-align">
+		<div class="center-align">
 			<h1>About Unicus</h1>
 		</div>
 		<div class="row ">
 			<div class="col m10 offset-m1 s12">
-			<blockquote>
-				<p class="flow-text">I am building a bridge</p>
-				<!-- <h5>&nbsp;</h5> -->
-			</blockquote>
-			<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-			<span class="funky-text"><em>T</em></span>he expression not merely focuses on the fact that the guy is creating something, but also talks about his way of expressing his knowledge through practical application. He is exercising what he learnt through books in a real-world scenario. No matter how many lessons he might have taken or how many assignments he may have aced, what mattered at that moment is how accurately he could apply his learning of so many years. Here arises the question of practical knowledge.
-			The <strong>Centre for Research and Exams in Science and Technology (CREST)</strong> is established by some of the prominent names in education industry. This initiative aims to assess the practical knowledge that would help students to apply their learning in different areas and excel in the same.
+			<!-- <blockquote>
+			<p class="flow-text">I am building a bridge</p>  
+			</blockquote> -->
+			<p> 
+			In the time, when law of gravitation was not discovered, almost everyone must have observed things falling down but did not understand the theory behind it. It was only Isaac Newton who considered this phenomenon UNIQUE and came up with the Theory of Gravity. But have you ever thought what made him find this phenomenon unique? It was his Questioning Curiosity i.e. why, what, how, when and where.
 			</p>
 			</div>
 		</div>
-		<div class="divider"></div>
+		<!-- <div class="divider"></div> -->
 		<div class="row ">
 			<!-- <div class="col s12 m4"> -->
 				
 			<div class="col m10 offset-m1 s12">
-				<img src="<?=base_url()?>assets/images/original/mission_page.png" class="left responsive-img" style="max-width: 40%;padding:10px;">
-				<h2>CREST Mission</h2>
+				<!-- <img src="<?php //echo base_url(); ?>assets/images/original/mission_page.png" class="left responsive-img" style="max-width: 40%;padding:10px;"> -->
+				<!-- <h2>CREST Mission</h2> -->
 				<!-- </div> -->
 				<!-- <p>&nbsp;</p> -->
 				<p>
-					We need to understand that a child’s personal mode of learning is in fact through experiencing what is happening and recognising things through practical questions or application of the knowledge that they have gathered by learning, through schools, parents, peers, etc. This makes the child enhance their speculative knowledge and they are able to judge in accordance to the facts.
-					The child’s practical knowledge paves the way of knowing about different subjects and letting them dig deeper into the subject which is difficult to go through theoretical knowledge. <br>
-					<strong>CREST strives to:</strong>
+				   That knowledge is incomplete which does not incorporate the factors why, what, how, when and where. Keeping in mind these factors Unicus Olympiads was established by distinguished personalities. Unicus is a Latin word which means Unique. Hence, Unicus Olympiads aims at increasing the questioning curiosity of the child and making them stand out among the crowd. This is only due to the fact that the choicest exam content which Unicus provides enhances the competitive spirit among the children and makes them future ready. 
+				</p><p>In today’s ever-changing dynamic world the society must understand that the children need a platform where they</p>
+				<!-- <br>
+					<strong>CREST strives to:</strong> -->
 					<ul>
-					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Ask questions that will force the students to think deeper for the answers and the question will expose their practical knowledge.</li>
-					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Build competitive spirit among students so that they always try to achieve better.</li>
-					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Embrace the power of digital technology for writing exams.</li>
-					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Encourage students to go for practical knowledge in Olympiads rather than rote learning in school.</li>
-					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Build a foundation for different competitive exams like JEE, NEET, etc.</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Dig deeper into what and why they are studying</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Get a proper understanding and be prepared for the future examinations.</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Enhance their pragmatic approach to solve problems.</li>
+					 
 					</ul>
 
 				</p>
-				<div class="divider"></div>
+				<!-- <div class="divider"></div> -->
 				<p id="traditional-vs-crest-olympiads">&nbsp;</p>
-				<img src="<?=base_url()?>assets/images/original/about-image2.png" class="left responsive-img" style="max-width: 40%;padding:10px;">
-				<p>CREST Olympiads is a pioneer in its focus to help students become well-rounded individuals who can think critically about problems from multiple perspectives with a strong emphasis on conceptual knowledge. These Olympiad exams are trying to break the typical stereotype around conventional Olympiad exams.</p>
-
-				<table>
-					<tbody>
-						<tr>
-							<td>&nbsp;</td>
-							<td><strong>Traditional Olympiads</strong></td>
-							<td><strong>CREST Olympiads</strong></td>
-						</tr>
-						<tr>
-							<td>Mode of exam</td>
-							<td>Pen &amp; paper</td>
-							<td>Online</td>
-						</tr>
-						<tr>
-							<td>Date of exam</td>
-							<td>Fixed</td>
-							<td>Flexibility provided to students to choose a date</td>
-						</tr>
-						<tr>
-							<td>Type of exam</td>
-							<td>A mix of theory &amp; practical</td>
-							<td>Focus entirely on conceptual understanding and discourage rote learning</td>
-						</tr>
-						<tr>
-							<td>Application to exam</td>
-							<td>Typically through schools</td>
-							<td>Encourage individual as well as school participation</td>
-						</tr>
-						<tr>
-							<td>Preparation</td>
-							<td>None</td>
-							<td>Two (2) complimentary practice exams</td>
-						</tr>
-						<tr>
-							<td>Access to Olympiad organization</td>
-							<td>Generally not available</td>
-							<td>Invite parents &amp; students to write to <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a> for queries &amp; continuous feedback</td>
-						</tr>
-					</tbody>
-				</table>
-
+				<!-- <img src="<?php //echo base_url(); ?>assets/images/original/about-image2.png" class="left responsive-img" style="max-width: 40%;padding:10px;"> -->
+				<p>Unicus Olympiads believes in transforming the child’s approach, hence making him more practicable so that he has the answer to all why, what, how, when and where. The subjects offered by Unicus Olympiads are:</p>
+                 <ul>
+                 	<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus Maths Olympiad (UMO).</li>
+                 	<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus Science Olympiad (USO)</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus English Olympiad (UEO) </li>
+					
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus GK Olympiad (UGKO)</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus Cyber Olympiad (UCO)</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>Unicus Critical Thinking Olympiad (UCTO)</li>
+					</ul>
+				<p>These subjects are carefully selected by our team of professionals keeping in mind the importance each subject has in a student’s life to make him an all-rounder. This will help the students to understand every aspect of the problem by recognising and evaluating all the factors affecting the solution. </p>
+				<p><strong>Unicus Olympiads will have the following features:</strong> </p>
+				 <ul>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>It is a summer Olympiad</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>1 mock test which can be attempted 3 number of times</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>The exam will require the students to have access to webcam </li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>The questions will be audio, video and text based</li>
+					<li class="valign-wrapper"><i class="material-icons">keyboard_arrow_right</i>The exam will be level based. The highest level of examination will have negative marking</li>
+					<li class="valign-wrapper"><i class="material-icons" style="margin-top:-15px">keyboard_arrow_right</i>Along with the primary subjects i.e. Maths, English, Science, Cyber and GK, we promote one other very important subject which is necessary for enhancing the Intelligence quotient of the child. This subject is Critical Thinking</li>
+					</ul>
+                  
 
 			</div>
 		</div>
@@ -91,6 +68,9 @@
 </div>
 
 <style type="text/css">
+#aboutid{
+      margin-top:60px;
+  }
 	blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -121,5 +101,10 @@ blockquote p {
 .funky-text{
 	font-size: 2.2em;
 	font-family: 'Melonheadz';
+}
+@media only screen and (max-width: 768px){
+#aboutid{
+margin-top: -60px;
+}
 }
 </style>

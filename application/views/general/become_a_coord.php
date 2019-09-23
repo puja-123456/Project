@@ -29,7 +29,7 @@
 <script type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact_us.css">
 <p>&nbsp;</p>
-<div class="container" style="margin-top:90px">
+<div class="container" id="bac">
 	<div class="row text-center">
 		<h1>Become a Co-ordinator</h1>
 	</div>
@@ -113,6 +113,14 @@
 }
 form input, form textarea, form button{
 	margin: 3px 0px;
+}
+#bac{
+	margin-top:90px;
+}
+@media only screen and (max-width: 768px){
+	#bac{
+	margin-top:-60px;
+}
 }
 </style>
 

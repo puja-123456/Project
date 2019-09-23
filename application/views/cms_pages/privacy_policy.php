@@ -1,4 +1,4 @@
-<div class="row" style="margin-top:70px">
+<div class="row" id="ppid">
 	<p>&nbsp;</p>
 	<h1 class=""><?=$title?></h1>
 	<div class="col s12 m12">
@@ -77,7 +77,15 @@
 </script>
 
 <style type="text/css">
+@media only screen and (max-width: 768px){
+	#ppid{
+		margin-top:-70px;
+	}
+}
 @media only screen and (min-width: 768px){
+	#ppid{
+		margin-top:70px;
+	}
 	.syllabus-menu{
 		position: fixed;
 		padding: 0px 10px;
