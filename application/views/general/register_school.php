@@ -11,7 +11,7 @@
 }
 
 .partner li{
-	font-family: "Lato";
+	font-family: "Lucida Sans";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;

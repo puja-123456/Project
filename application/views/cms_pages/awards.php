@@ -1,10 +1,10 @@
-<div class="row" style="margin-top:60px">
+<div class="row" id="anrid" >
 <p>&nbsp;</p>
 	<h1>Awards & Recognition</h1>
 	<div class="row">
 		<div class="col s10 offset-s1">
-			<a href="<?php echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a>
+		<!-- 	<a href="<?php// echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
+			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
 			<p><strong>For students appearing for UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2), the awards and recognition are as follows:</strong></p>
 			<ul>
 			<li class="anr"><i class="material-icons">check_circle</i>Top 15% students will be awarded with a merit certificate</li>
@@ -44,4 +44,12 @@
 {
 position: relative;
 }
+#anrid{
+	margin-top:60px;
+}
+@media only screen and (max-width: 767px){
+#anrid{
+	margin-top:-60px;
+   }
+	}
 </style>

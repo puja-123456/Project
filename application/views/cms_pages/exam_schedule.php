@@ -1,4 +1,4 @@
-<div class="fuild-container" style="margin-top: 120px;padding: 1px 20px 20px 20px;;background-color: #71dad440;">
+<div class="fuild-container" id="esid">
     <h1 class="center-align">Exam Schedule</h1>
     <p><strong>Unicus Olympiads Fee Structure</strong></p>
     <p>The fee per subject per student is Rs. 225 for students studying and residing in India. It is $10 (USD) per subject per student for students studying and residing outside India.</p>
@@ -93,3 +93,13 @@
 </ol>
  
 </div>
+<style>
+  #esid{
+        margin-top: 120px;padding: 1px 20px 20px 20px;;background-color: #71dad440;
+    }
+@media only screen and (max-width: 767px){
+    #esid{
+        margin-top:0px;padding: 1px 20px 20px 20px;;background-color: #71dad440;
+    }
+}
+</style>

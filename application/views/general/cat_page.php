@@ -30,7 +30,8 @@
 	<div class="col m9 s12 ">
 		<div class="row padding-right-70">
 			<div class="row">
-				<div class="col s11">
+				<div class="col s12 m11">
+					<h1 style="margin-top: 0px;">About</h1>
 					<img src="<?=base_url()?>assets/images/original/<?php echo $category['slug']; ?>-banner.jpg" class="responsive-img">
 					<div class="row">
 					<div id="about">
@@ -215,3 +216,19 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 }
  }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

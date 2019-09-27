@@ -6585,4 +6585,218 @@ public function download_instruction()
 		 	
   }
 
+
+
+
+
+    //View Quizzes
+    function quizzes() {
+        
+        //$this->load->model('member');
+
+        // if(!$this->member->isProfileUpdated($this->ion_auth->get_user_id())) {
+        //     $this->prepare_flashmessage('Please complete you profile before processing..', 1);
+        //     redirect('user/profile', 'refresh');
+        // }
+
+        $this->load->model('member');
+        // $isFreeMember = $this->member->isFreeMember($this->ion_auth->get_user_id());
+
+        $this->data['data'] = array();
+        $this->data['title'] = 'Quizzes';
+        $this->data['active_menu'] = 'exams';
+
+        // Code written for fetching quizzes based on admin restrictions
+        // $check = $this->base_model->run_query("SELECT quizzes_for from general_settings");
+        $today = date('Y-m-d');
+        //if ($check[0]->quizzes_for == "groupquizzes") {
+        $userid = $this->ion_auth->get_user_id();
+        //echo $userid;die;
+        $check_user_group = $this->base_model->run_query("SELECT * FROM users WHERE id= " . $userid);
+      //  print_r()
+        $class = $check_user_group[0]->class;
+        $course_id = $check_user_group[0]->course;
+
+
+      //echo $class;die;
+        $preferedSubCategorySlug = $check_user_group[0]->prefered_subjects;
+      //  echo $preferedSubCategorySlug;die;
+        //$this->load->model('category');
+        // $this->data['prefered_subject'] = $this->category->getSubCategoryNameBySlug($preferedSubCategorySlug);
+
+   /*     if ($isFreeMember) {
+
+            $sql = "select q.*,c.name as catname,s.name as subcatname,s.slug as subcatslug, cl.name as classname from 
+                     quiz q, categories c, subcategories s,  class cl
+                    where ( c.catid=q.catid AND s.subcatid=q.subcatid 
+                    AND cl.classid = q.classid AND cl.name = '" . $class . "'
+                    AND q.status='Active' AND c.catid='" . $course_id . "' and q.quiztype <> 'Paid') group by q.quizid ";
+
+            // echo $sql;exit;
+        } else {*/
+
+            $sql = "SELECT q.*, c.name  AS catname FROM quiz q INNER JOIN categories c ON c.catid=q.catid";
+                    
+            // echo $sql;exit;
+        // }
+       $this->data['user_class'] = $class;
+        $this->data['records'] = $records = $this->base_model->run_query($sql);
+ //print_r($records);die;
+
+//        $subjects = array();
+//        if (count($records) > 0) {
+//            $intCounter = 0;
+//            foreach ($records as $row) {
+//                // $subjects[$intCounter]['subcatid']   = $row->subcatid;
+//                $subjects[$intCounter]['subcatname'] = $row->subcatname;
+//                $intCounter++;
+//            }
+//        }
+//
+//        sort($subjects);
+
+       // $this->data['subjects'] = array_unique($subjects, SORT_REGULAR);
+        
+        $saturday = false;
+        date_default_timezone_set('Asia/Kolkata');
+        if( date('Y-m-d', strtotime('this Saturday')) == date('Y-m-d') ) {
+            $saturday = true;
+        }
+        else{
+            date_default_timezone_set('Asia/Riyadh');
+            if( date('Y-m-d', strtotime('this Saturday')) == date('Y-m-d') ) {
+                $saturday = true;
+            }
+        }
+        date_default_timezone_set('Asia/Kolkata');
+        //echo  date('Y-m-d H:i:s');exit;
+        
+        //if( $_SERVER['REMOTE_ADDR'] == $this->config->item('office_ip')) {
+            if( $_SERVER['HTTP_X_FORWARDED_FOR'] == $this->config->item('office_ip')) {
+            $this->data['content'] = $view = 'user/exam/quizzes';
+        } else {
+            if($saturday) {
+                $this->data['content'] = $view = 'user/exam/quizzes';
+            } else {
+                $this->data['content'] = $view = 'user/exam/not-saturday';
+            }
+        }
+
+        // $this->data['content'] = $view = 'user/exam/quizzes';
+        // $this->data['content'] = $view = 'user/exam/not-saturday';
+        if ($this->session->userdata('school_portal_id')) {
+            $this->adminschoolLayout();
+        } else {
+            $this->_render_page('temp/usertemplate', $this->data);
+        }
+    }
+
+    /* Get Quizzes by user selected Options like Category, Sub Category, Quiz Type
+     * and Difficulty Level. */
+
+    function get_quizzes() {
+        $today = date('Y-m-d');
+        $category_id = $this->input->post('catid');
+        $sub_category_id = $this->input->post('subcatid');
+        $quiz_type = $this->input->post('quiztype');
+        $difficulty_level = $this->input->post('difficultylevel');
+        $cond1 = 1;
+        $cond_val1 = 1;
+        $cond2 = 1;
+        $cond_val2 = 1;
+        $cond3 = 1;
+        $cond_val3 = 1;
+        $cond4 = 1;
+        $cond_val4 = 1;
+        $cond5 = 1;
+        $cond6 = "";
+        $cond7 = 1;
+        $cond8 = "";
+        $cat_table = '';
+        $sub_cat_table = '';
+        if (trim($category_id) != "") {
+            $cond1 = "q.catid";
+            $cond_val1 = $category_id;
+        }
+        if (trim($sub_category_id) != "") {
+            $cond2 = "q.subcatid";
+            $cond_val2 = $sub_category_id;
+        }
+        if (trim($quiz_type) != "") {
+            $cond3 = "q.quiztype";
+            $cond_val3 = $quiz_type;
+        }
+        if (trim($difficulty_level) != "") {
+            $cond4 = "q.difficultylevel";
+            $cond_val4 = $difficulty_level;
+        }
+        if (trim($category_id) != "" || trim($sub_category_id) != "" || trim($quiz_type) != "" || trim($difficulty_level) != "") {
+            $cond5 = "c.catid";
+            $cond6 = ", c.name as catname";
+            $cat_table = ', ' . $this->db->dbprefix('categories') . ' c';
+            $cond7 = "s.subcatid";
+            $cond8 = ", s.name as subcatname";
+            $sub_cat_table = ', ' . $this->db->dbprefix('subcategories') . ' s';
+//            $check = $this->base_model->run_query("SELECT quizzes_for from general_settings");
+//            if ($check[0]->quizzes_for == "groupquizzes") {
+//                $userid = $this->ion_auth->get_user_id();
+//                $check_user_group = $this->base_model->run_query("SELECT * FROM users WHERE id= " . $userid);
+//                $query1 = 'select q.*' . $cond6 . $cond8 . ' from ' . $this->db->dbprefix('quiz') . ' q' . $cat_table . $sub_cat_table . ', ' . $this->db->dbprefix('quiz_for') . ' qf                where ' . $cond1 . '=' . $cond_val1 . ' and ' . $cond2 . '=' . $cond_val2 . ' and ' . $cond3 . '="' . $cond_val3 . '" and ' . $cond4 . '="' . $cond_val4 . '" and ' . $cond5 . '=q.catid and ' . $cond7 . '=q.subcatid                 AND (qf.groupid = ' . $check_user_group[0]->group . ' and qf.quizid = q.quizid )                AND q.status="Active" AND q.enddate>="' . $today . '" group by q.quizid';
+//                $query2 = 'select q.*' . $cond6 . $cond8 . ' from ' . $this->db->dbprefix('quiz') . ' q' . $cat_table . $sub_cat_table . ' where ' . $cond1 . '=' . $cond_val1 . ' and ' . $cond2 . '=' . $cond_val2 . ' and ' . $cond3 . '="' . $cond_val3 . '" and ' . $cond4 . '="' . $cond_val4 . '" and ' . $cond5 . '=q.catid and ' . $cond7 . '=q.subcatid				AND q.quiz_for != "*" and q.status = "Active" 				AND q.status="Active" AND q.enddate>="' . $today . '" group by q.quizid order by quizid DESC';
+//                $query = $query1 . " UNION " . $query2;
+//            } else {
+            $query = 'select q.*' . $cond6 . $cond8 . ' from ' . $this->db->dbprefix('quiz') . ' q' . $cat_table . $sub_cat_table . ' where ' . $cond1 . '=' . $cond_val1 . ' and ' . $cond2 . '=' . $cond_val2 . ' and ' . $cond3 . '="' . $cond_val3 . '" and ' . $cond4 . '="' . $cond_val4 . '" and ' . $cond5 . '=q.catid and ' . $cond7 . '=q.subcatid AND q.status="Active" AND q.enddate>="' . $today . '"';
+            //}
+        } else {
+            $check = $this->base_model->run_query("SELECT quizzes_for from general_settings");
+//            if ($check[0]->quizzes_for == "groupquizzes") {
+//                $userid = $this->ion_auth->get_user_id();
+//                $check_user_group = $this->base_model->run_query("SELECT * FROM users WHERE id= " . $userid);
+//                $query1 = "select q.*,c.name as catname,s.name as subcatname from " . $this->db->dbprefix('quiz') . " q," . $this->db->dbprefix('categories') . " c," . $this->db->dbprefix('subcategories') . " s, " . $this->db->dbprefix('quiz_for') . " qf where c.catid=q.catid                 and s.subcatid=q.subcatid AND (qf.groupid = " . $check_user_group[0]->group . " and qf.quizid = q.quizid )                AND q.status='Active' AND q.enddate>='" . $today . "' group by q.quizid";
+//                $query2 = "select q.*,c.name as catname,s.name as subcatname 				from " . $this->db->dbprefix('quiz') . " q," . $this->db->dbprefix('categories') . " c,				" . $this->db->dbprefix('subcategories') . " s where c.catid=q.catid and s.subcatid=q.subcatid				AND q.quiz_for != '*' and q.status = 'Active' 				AND q.status='Active' AND q.enddate>='" . $today . "' group by q.quizid order by quizid DESC";
+//                $query = $query1 . " UNION " . $query2;
+//            } else {
+            $query = "select q.*,c.name as catname,s.name as subcatname from " . $this->db->dbprefix('quiz') . " q," . $this->db->dbprefix('categories') . " c," . $this->db->dbprefix('subcategories') . " s where c.catid=q.catid                 and s.subcatid=q.subcatid AND q.status='Active' AND q.enddate>='" . $today . "'";
+            //}
+        }
+        $records = $this->base_model->run_query($query);
+        echo json_encode($records);
+    }
+
+    //Fetch Subjects according to Quiz
+    function get_subjects() {
+        $id = $this->input->post('quizid');
+        $sub = $this->base_model->run_query(
+                "select qq.*,s.name as subjectname from "
+                . $this->db->dbprefix('quizquestions') . " qq,"
+                . $this->db->dbprefix('subjects') . " s where s.subjectid=qq.subjectid
+		and s.status='Active' AND qq.quizid=" . $id
+        );
+        echo json_encode($sub);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 }

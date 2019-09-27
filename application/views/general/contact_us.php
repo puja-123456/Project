@@ -2,14 +2,9 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script type="text/javascript">
 
-	$(document).ready(function() {
-	
-
-  $("#contactform").submit(function() {
-
-
-// 	function get_action(form) 
-// {
+$(document).ready(function() { 
+  $("#contactform").submit(function() { 
+ 
     var v = grecaptcha.getResponse();
     if(v.length == 0)
     {
@@ -21,7 +16,7 @@
         document.getElementById('captcha').innerHTML="Captcha verified";
         return true; 
     }
-// }
+ 
 });
 
 });
@@ -34,9 +29,7 @@
     height: 2px;
     background-color: #ffd223 !important;
   }
-/*  .input-field>label {
-    color: #000000a3;
-  }*/
+ 
   .input-field {
     margin-top: 0.4rem !important;
   }
@@ -60,17 +53,9 @@
     font-style: unset !important;
   }
 </style>
-
-<!-- <div class="box">
-  <div class="ribbon ribbon-top-left"><span>ribbon</span></div>
-  </div>
- -->
-<div class="container" style="margin-top:80px;margin-bottom: 30px">   
-<div class="row">
-  
-  
-   <!--  <div> -->
-    	 
+ 
+<div class="container" id="conid" >   
+<div class="row"> 
  
 <!--   </div>#095d807a !important
  -->    <div class="col s12 m4 l12 solid" >
@@ -105,19 +90,19 @@
 			 echo form_open("crest/contact", $attributes); ?>
 			<div style="text-align: center;">
 				<p style="color: #655c5c;font-size: 15px;">Write to us and we'll get back to you within 48 working hours.</p>
-				<div class="col s4 input-field">
+				<div class="col s12 m4 input-field">
 					<i class="material-icons prefix">account_circle</i>
 					<input id="name_contact" name="name_contact" type="text" required class="validate">
           			<label for="name_contact">Name</label>
 					<?php echo form_error('name_contact'); ?>
 				</div>
-				<div class="col s4 input-field">
+				<div class="col s12 m4 input-field">
 					<i class="material-icons prefix">email</i>
 					<input id="email_contact" name="email_contact" type="email" required class="validate">
           			<label for="email_contact">Email</label>
 					<?php echo form_error('email_contact'); ?>
 				</div>
-				<div class="col s4 input-field">
+				<div class="col s12 m4 input-field">
 					<i class="material-icons prefix">phone</i>
 					<input id="phone_contact" name="phone_contact" type="number" maxlength="10" required class="validate onlyNumbers">
           			<label for="phone_contact">Phone Number</label>
@@ -125,7 +110,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="input-field col s12">
+				<div class="input-field col s12 m12">
 					<i class="material-icons prefix">mode_edit</i>
 					<textarea id="message_contact" class="materialize-textarea" name="message_contact"></textarea>
 					<label for="message_contact">Message</label>
@@ -182,12 +167,18 @@
 <style type="text/css">
 @media screen and (min-width: 768px)
 {
+#conid{
+		margin-top:80px;margin-bottom: 30px;
+	}
 #submit{
     top: -27px;left: -40px;font-size: 18px;background-color: #fedd59 !important;color: #000;
   }
 }
 @media screen and (max-width: 768px)
 {
+#conid{
+		margin-top:-30px;margin-bottom: 60px;
+	}
   #submit{
   top: -27px;left:0px;font-size: 14px;background-color: #fedd59 !important;color: #000;
 }

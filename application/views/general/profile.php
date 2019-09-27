@@ -325,12 +325,12 @@ else if($this_user->popup_id==5)
 <div class="fuild-container">
 
   <div class="row contact">
-      <div class="col s2 well"> 
+      <div class="col s12 m2 well"> 
        <?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
        </div> 
      
     
-    <div class="col s10 offset-s2 text-center well" style="min-height:347px;padding: 0px 30px;">
+    <div class="col s12 m10 offset-s2 text-center well" style="min-height:347px;padding: 0px 30px;">
       <h1>Profile</h1> 
 
  
@@ -998,7 +998,20 @@ $('#exam').text(exam);
 $("#reg_form :input").prop("disabled", true);
 
 </script>
+<style>
+@media only screen and (max-width: 768px){	
 
+.row.contact {
+    margin-top: 0px;
+}
+}
+@media only screen and (min-width: 768px){	
+
+.row.contact {
+    margin-top: 62px;
+}
+}
+</style>
 <script type="text/javascript">
 
 

@@ -1,10 +1,10 @@
 <!-- Bootstrap -->
-<link href="<?php echo base_url(); ?>assets/designs/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/designs/css/font-awesome.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/designs/css/style.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/designs/font.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/designs/css/jquery.dataTables.css" rel="stylesheet">
-<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/designs/images/img/fav.ico" type="image/x-icon">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/font.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/jquery.dataTables.css" rel="stylesheet">
+<link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/images/img/fav.ico" type="image/x-icon">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -12,10 +12,10 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="<?php echo base_url(); ?>assets/designs/js/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="<?php echo base_url(); ?>assets/designs/js/bootstrap.min.js"></script>
-<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>assets/designs/js/jquery.dataTables.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>assets/js/jquery.dataTables.js"></script>
 <script type="text/javascript" language="javascript" class="init">
     $(document).ready(function () {
 
@@ -47,7 +47,7 @@
     <div class="bradcome-menu hide_on_phone">
         <ul>
             <li><a href="<?php echo base_url(); ?>user">Home</a></li>
-            <li><img  src="<?php echo base_url(); ?>assets/designs/images/arrow.png"></li>
+            <li><img  src="<?php echo base_url(); ?>assets/images/arrow.png"></li>
             <li><a href="#"> Worksheets </a></li>
         </ul>
     </div>
@@ -111,7 +111,7 @@ if ($this->session->flashdata('message'))
                 $CI->load->model('Member');
 
                 $i = 1;
-
+             // print_r($records);die;
 
                 if (count($records) > 0) {
                     foreach ($records as $r) {
@@ -122,7 +122,7 @@ if ($this->session->flashdata('message'))
                             <td><?php echo $r->catname; ?></td>
                             <td><?php echo $r->subcatname; ?></td>
 
-                            <td><?php echo $r->classname; ?></td>
+                            <td><?php echo "class".$user_class; ?></td>
                             <td><?php echo $r->deauration; ?> Min</td>
                             <td>
         <?php
@@ -132,21 +132,15 @@ if ($this->session->flashdata('message'))
         $quiz_id = $r->quizid;
         $pass_arg = $r->slug;
         $attemptsLeft = $CI->Member->getQuizRemainingAttempts($userid, $r->quizid);
-
+   //  echo $attemptsLeft;die;
         //echo $attemptsLeft = $CI->Member->getQuizRemainingAttempts($userid, $r->quizid);
 
-        if ($r->quiztype == "Paid") {
-            $arr = $this->base_model->run_query("SELECT `id` FROM `quizsubscriptions` WHERE `user_id`='" . $userid . "' AND `quizid`='" . $subcat_id . "'");
-            if (!empty($arr[0])) {
-                $chk_payment_status = true;
-            } else {
-                $quiz_id = $subcat_id;
-                $pass_arg = $r->subcatslug;
-            }
-        }
+        
         ?>
                                 <?php if (!empty($attemptsLeft)) { ?>
-                                    <a <?php if ($r->quiztype == "Free" || $chk_payment_status == true) { ?>onclick="return set_session()"<?php }if ($r->quiztype == "Paid" && $chk_payment_status == false) { ?>onclick="return unset_session()"<?php } ?> href="<?php echo base_url(); ?>user/instructions/<?php echo ($pass_arg); ?>" class="btn bg-primary wnm-user" style="margin:0px"> <i class="fa fa-puzzle-piece"></i> Take Exam</a>
+                                    <a <?php if ($r->quiztype == "Free" || $chk_payment_status == true) { ?>
+                                        onclick="return set_session()"
+                                        <?php }if ($r->quiztype == "Paid" && $chk_payment_status == false) { ?>onclick="return unset_session()"<?php } ?> href="<?php echo base_url(); ?>user/instructions/<?php echo ($pass_arg); ?>" class="btn bg-primary wnm-user" style="margin:0px"> <i class="fa fa-puzzle-piece"></i> Take Exam</a>
                                     <span style="font-size:10px; display:block; font-style: italic; color:red; padding-top: px; margin-top: 0px">
                                     <?php if ($attemptsLeft > 1) echo $attemptsLeft . ' attempts left';
                                     else echo $attemptsLeft . ' attempt left'; ?></span>
@@ -196,6 +190,9 @@ if ($this->session->flashdata('message'))
         padding: 2px !important;
         width: 100%;
     }
+.logo img {
+    width: 200px;
+}
 </style>
 <script>
     function set_session() {

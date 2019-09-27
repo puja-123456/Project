@@ -27,13 +27,14 @@
 		</div>
 	</div>
 
-	<div class="col s12 m9">
-		<h1 style="padding-left: 0px;text-transform: uppercase;">Marking Scheme</h1> 
+	<div class="col s12 m9" id="mkid">
+		<h1 style="padding-left: 0px;">Marking Scheme</h1> 
 
 		<div class="">
-			<p class="flow-text">Pattern of Marking Scheme</p>
-			 
- 
+			<!-- <p class="flow-text">Pattern of Marking Scheme</p> -->
+			 <p>The marking scheme for both the rounds i.e. preliminary and final round for all the subjects under Unicus Olympiads are given below. </p>
+			 <p>Please select the round and then the subject to get complete detail of marking scheme about that subject.</p>
+           
               <div class="row">
 							<div class="col m4 l4 s12">
 					<div class="card">
@@ -206,11 +207,16 @@ ul:not(.browser-default)>li {
 		letter-spacing: 0.5px;
 		border-bottom: 2px solid #11332f;
 	}
-
+#mkid{
+	margin-top: 0px;
+   }
 	
 }
 
 @media only screen and (max-width: 767px){
+#mkid{
+	margin-top: -67px;
+   }
 .syllabus-menu{
 		margin-top: -76px;
 	}
@@ -301,7 +307,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 
 <div class="col m9 s12">
 	<p>&nbsp;</p>
-	<h1 class="left-align" style="text-transform: uppercase;">Marking Scheme</h1>
+	<h1 class="left-align">Marking Scheme</h1>
     
     <div> 
 	<!-- <p class="hidden-sm">&nbsp;</p> -->
@@ -316,7 +322,6 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 	 	
 		</ul> 
  
-			<br>
 		</div> 
 	<!-- <div class="col s12 m3">
 		<div class="syllabus-menu">
@@ -701,7 +706,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 }
 .left-align{
 	padding-left:-40px !important;
-	margin-top: -20px;
+	margin-top: -80px;
 }
  }
 

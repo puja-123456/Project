@@ -92,6 +92,8 @@ $route['awards'] = 'unicus/cms_page';
 $route['sample-papers'] = 'unicus/cms_page';
 $route['terms-of-use'] = 'unicus/cms_page';
 $route['privacy-policy'] = 'unicus/cms_page';
+$route['user/instructions/(:any)'] = 'user/instructions';
+
 
 $route['co-ordinator'] = 'unicus/coordinator';
 $route['contact-us'] = 'unicus/contact';
@@ -113,6 +115,7 @@ $route['daily-quiz/start'] = "daily_quiz/start";
 $route['daily-quiz/start/(:any)'] = "daily_quiz/get_questions/$1";
 
 $route['olympiad-exam'] = 'auth/olympiad_login';
+
 
 $route['brain-yoga'] = 'unicus/brain_yoga';
 $route['brain-yoga/(:any)'] = "unicus/brain_yoga";

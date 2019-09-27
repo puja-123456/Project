@@ -9,6 +9,7 @@ class Quiz extends CI_Model {
     }
     
     public function getValidity($intQuizId) {
+        //echo $intQuizId;die;
         $sql = " SELECT quiztype, validitytype, validityvalue FROM quiz "
                 . "  WHERE quizid = " . $intQuizId ;
         

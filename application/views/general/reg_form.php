@@ -78,6 +78,9 @@ window.fbAsyncInit = function() {
 }
 
 @media only screen and (max-width: 786px){	
+	#regid{
+		margin-top:-106px;
+	}
 	#share_buttons button{
 		font-size: 11px;
 		margin-bottom: 5px;
@@ -421,16 +424,35 @@ else
        @-webkit-keyframes blinker-two {  
          100% { opacity: 0; }
        }
+@media screen and (max-width: 768px){
+[type="checkbox"]+span:not(.lever) {
+  line-height: 17px;
+}
+#menu{
+	margin-top:30px;
+	margin-bottom: 20px;
+	position: relative !important;
+}
+.row .col.offset-s2 {
+    margin-left: 0;
+}
+.row .col.offset-m3 {
+     margin-left: 0;
+}
+}
 
 
   </style>
 
-<div class="container"> 
+<div class="fuild-container" id="regid"> 
     
+    <div class="row contact">
+      <div class="col s12 m2 well"> 
 	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
-	<div class="row text-center">
+</div> 
+	<div class="col s12 m10 offset-s2 text-center well row ">
 		<h1><?php if ($this->ion_auth->logged_in()){ echo "Subscription to Olympiad Exam/s"; } else {?>Individual Registration Form <?php } ?></h1>
-	</div>
+	
 	<?php if (!$this->ion_auth->logged_in()){ ?> 
 	<ol> 
 <li>You cannot edit the information after submitting it.</li>
@@ -439,7 +461,7 @@ else
 </ol>
 
 <?php  } ?>
-	<div class="row contact">
+	
 		<div class="col-md-12 text-center well" style="min-height:347px;">
 
 	<?php if ($this->session->flashdata('success_message')) { ?>
@@ -1036,6 +1058,7 @@ else
 				<?php echo form_close(); ?>
 		    </div>
 		</div>
+	</div>
 	</div>
 </div>
 

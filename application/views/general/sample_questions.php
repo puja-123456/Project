@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="sqid">
 <p>&nbsp;</p>
 	<h1 class="left-align flow-text"><?php echo $this_category->name." ".$this_syllabus->name; ?> Sample Papers</h1>
 
@@ -232,7 +232,9 @@
 </div>
 
 <style type="text/css">
-	
+#sqid{
+	margin-top:-30px;
+}
 .question .ans{
 	cursor: pointer;
 }

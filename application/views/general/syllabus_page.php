@@ -17,7 +17,7 @@
 					 
 		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -189,7 +189,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 
 		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -335,7 +335,9 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 <div class="fuild-container">
 	<div class="row">
 	<h1 class="left-align">Syllabus</h1>
-    
+    <p style="padding: 0px 14px 0px 15px;">Unicus Olympiads syllabus is carefully designed by our intellectual team of subject matter experts. The syllabus for all the subjects take into consideration the syllabus for each year in school.</p> 
+<p style="padding: 0px 14px 0px 15px;">The syllabus for all the classes under every subject of Unicus Olympiads is given below.</p>    
+
     <div class="col m3 s12">
 		<div class="syllabus-menu">
 			<!-- <p><?php //echo $category['name']; ?></p> -->

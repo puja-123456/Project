@@ -532,12 +532,39 @@ ul.cases li
       </div>
     </div>
   </div>
-
-<div class="container">
+<style>
+<style>
+#invid{
+  margin-top: 65px;
+}
+#menu{
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px){
+[type="checkbox"]+span:not(.lever) {
+  line-height: 17px;
+}
+#menu{
+  margin-top:-30px; 
+  position: relative !important;
+}
+.row .col.offset-s2 {
+    margin-left: 0;
+}
+.row .col.offset-m3 {
+     margin-left: 0;
+}
+}
+</style>
+</style>
+<div class="fuild-container"> 
+  <div class="row contact">
+  <div class="col s12 m2 well"> 
 	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
-	<div class="row text-center">
+</div>
+	 <div class="col s12 m10 offset-s2 text-center well row" style="min-height:447px;" id="invid">
 		<h1>View and Challenge the answers</h1>
-	</div>
+	
 
 	<?php 
 
@@ -1463,10 +1490,8 @@ else
 
 	</div>
 </div>
+</div> 
 
-
-
-
-
+</div>
 
 

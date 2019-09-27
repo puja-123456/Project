@@ -7,12 +7,16 @@
 
 <p>&nbsp;</p>
 
-<div class="container">
+<div class="fuild-container">
+	<div class="row contact">
+    <div class="col s12 m2 well"> 
 	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
-	<div class="row text-center">
+    </div>
+    <div class="col s12 m10 offset-s2 text-center well row">
+	<div class="row text-center" id="invid">
 		<h1>Invoice</h1>
 	</div>
-	<div class="row contact">
+	
 		<div class="col-md-12 text-center well" style="min-height:347px;">
 
 
@@ -21,7 +25,7 @@
 				
 				
 					
-						<table>
+						<table class="responsive-table">
 							<th>S.No.</th>
 							<th>Subject Name</th>
 							<th>Amount Due</th>
@@ -102,8 +106,30 @@
 	</div>
 </div>
 
-
-
+</div>
+<style>
+#invid{
+	margin-top: 65px;
+}
+#menu{
+	margin-top: 40px;
+}
+@media screen and (max-width: 768px){
+[type="checkbox"]+span:not(.lever) {
+  line-height: 17px;
+}
+#menu{
+	margin-top:-30px; 
+	position: relative !important;
+}
+.row .col.offset-s2 {
+    margin-left: 0;
+}
+.row .col.offset-m3 {
+     margin-left: 0;
+}
+}
+</style>
 
 
 

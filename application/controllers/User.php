@@ -44,17 +44,17 @@ class User extends MY_Controller {
     public function instructions() {
         //$this->session->unset_userdata('discount_amount');
         date_default_timezone_set('Asia/Kolkata');
-
-      
+      //echoCURDATE();die; $this->session->userdata('user_id');die;
          // $quiz_subscription_info = $this->db->query("SELECT * FROM quizsubscriptions WHERE user_id='" . $this->session->userdata('user_id') . "' and status=1")->row_array();
-          $quiz_subscription_info = $this->db->query("SELECT * FROM quizsubscriptions WHERE user_id='" . $this->session->userdata('user_id') . "' AND exam_status=1 AND DATE(from_date) = CURDATE()")->row_array();
-          // print_r($quiz_subscription_info); die;
+   /*      $quiz_subscription_info = $this->db->query("SELECT * FROM quizsubscriptions WHERE user_id='" . $this->session->userdata('user_id') . "' AND exam_status=1 AND DATE(from_date) = CURDATE()")->row_array();*/
+
+            $quiz_subscription_info = $this->db->query("SELECT * FROM quizsubscriptions WHERE user_id='" . $this->session->userdata('user_id') . "' AND exam_status=1")->row_array();
+           //print_r($quiz_subscription_info); die;
 
          $today_date= date('Y-m-d H:i:s');
          //$today_date='2019-03-22 00:00:00';
 
      
-
         
 // $date=  date(strtotime($quiz_subscription_info['from_date']), strtotime("-10 minute"));
 
@@ -63,19 +63,20 @@ class User extends MY_Controller {
 $start_date=date("Y-m-d H:i:s", strtotime($quiz_subscription_info['from_date']) - 600);
 
 
+//echo $quiz_subscription_info['to_date'];die;
 
 
-
-         if( $today_date >= $start_date && $today_date <= $quiz_subscription_info['to_date'])
+        if( $today_date >= $start_date && $today_date <= $quiz_subscription_info['to_date'])
+      /*  if( $today_date >= $start_date)*/
          { 
-
+//echo "djjd";die;
            /*  $quiz_id_info = $this->db->query("SELECT quiz_id FROM question_assign WHERE find_in_set('" . $quiz_subscription_info['worksheet_id'] . "',assigned_worksheet_ids) <> 0")->row_array();*/
-
+      //   echo $quiz_subscription_info['worksheet_id'];die;
          
 
               $quiz_id_info = $this->db->query("SELECT quiz_id FROM question_assign WHERE worksheet_id='"  . $quiz_subscription_info['worksheet_id'] . "'")->row_array();
 
-              // print_r($quiz_slug_info);die;
+             //  print_r($quiz_id_info);die;
 
              
 

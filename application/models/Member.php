@@ -40,19 +40,23 @@ class Member extends CI_Model
     }
     
     public function getQuizRemainingAttempts($intUserId, $intQuizId) {
+       // echo $intQuizId;
+      //  echo $intUserId;die;
         $sql = " SELECT COUNT(id) as tot FROM user_quiz_results_history "
                 . " WHERE userid = " . $intUserId. " AND quiz_id = " . $intQuizId;
         $result = $this->db->query($sql)->result_array();
+     //   print_r($result);die;
         
         $this->load->model('quiz');
         $validityvalue = 3;
         $quizResult = $this->quiz->getValidity($intQuizId);
-        if(count($quizResult) > 0 ) {
+       // print_r($quizResult);die;
+                if(count($quizResult) > 0 ) {
             $validityvalue = $quizResult[0]['validityvalue'];
         }
         
         $quizAttempted = $result[0]['tot'];
-        
+        //echo $quizAttempted;die;
         $attemptsLeft = ($validityvalue - $quizAttempted);
 
         return $attemptsLeft < 0 ? 0 : $attemptsLeft;

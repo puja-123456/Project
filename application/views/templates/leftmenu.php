@@ -186,22 +186,26 @@ button.close {
   <label for="tm" id="toggle-menu">MENU <!-- <span class="drop-icon">▾</span> --></label>
   <input type="checkbox" id="tm">
   <ul class="main-menu clearfix">
-     <li class="<?php if (isset($active_menu) && ($active_menu == "profile" || $active_menu == "update_password" || $active_menu == "upload_documents" || $active_menu == "reward_points" )) { echo "active"; } ?> first">
-      <a href="#">Account
+    
+     <li class="<?php if (isset($active_menu) && ($active_menu == "profile" || $active_menu == "update_password" || $active_menu == "upload_documents")) { echo "active"; } ?> first">
+      <a href="#">My Details
            <span class="drop-icon">▾</span>
         <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
       </a>
        <input type="checkbox" id="sm1">
       <ul class="sub-menu" id="sub-menu">
         <li class=""><a
-            href="<?php echo base_url(); ?>crest/profile">Profile<hr></a>
+            href="<?php echo base_url(); ?>unicus/profile">Profile<hr></a>
           </li>
         <li class=""><a
-            href="<?php echo base_url(); ?>crest/update_password">Update Password<hr></a>
+            href="<?php echo base_url(); ?>unicus/update_password">Change Password<hr></a>
         </li>
           <li class=" "><a
-            href="<?php echo base_url(); ?>crest/upload_documents">Upload Documents<hr></a>
+            href="<?php echo base_url(); ?>unicus/upload_documents">Upload Documents<hr></a>
         </li> 
+         <li class="<?php if (isset($active_menu) && $active_menu == "subcategories") echo "active"; ?>">
+            <a href id="preview" data-toggle="modal" data-target="#myModal">Preview Certificate</a>
+        </li>
          <!--  <li class="">
             <a href="<?php //echo base_url()."crest/reward_points"; ?>">Rewards Points<hr></a>
         </li>    -->
@@ -209,40 +213,73 @@ button.close {
     </li>
  
 
-    <li class="<?php if (isset($active_menu) && ($active_menu == "registration" || $active_menu == "invoice")) { echo "active"; } ?> second">
-      <a href="#">Subscription
+   <li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> second" >
+            <a href="#">Take Exam
+          <span class="drop-icon">▾</span>
+        <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+            </a>
+             <input type="checkbox" id="sm2">
+      <ul class="sub-menu" id="sub-menu1">
+        <li class=""><a
+            href="<?php echo base_url(); ?>unicus/quizzes">Mock Test<hr></a>
+          </li> 
+           <li class=""><a
+            href="<?php echo base_url(); ?>unicus/profile">Main Courses<hr></a>
+          </li> 
+        </ul>
+        </li> 
+
+
+<li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> third" >
+            <a href="#">Result
+          <span class="drop-icon">▾</span>
+        <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+            </a>
+             <input type="checkbox" id="sm2">
+      <ul class="sub-menu" id="sub-menu2">
+        <li class=""><a
+            href="<?php echo base_url(); ?>">Performance<hr></a>
+          </li> 
+           <li class=""><a
+            href="<?php echo base_url(); ?>">Answer keys & Challenge<hr></a>
+          </li> 
+          <li class=""><a
+            href="<?php echo base_url(); ?>unicus/result">Final Result<hr></a>
+          </li> 
+        </ul>
+        </li> 
+
+
+ <li class="<?php if (isset($active_menu) && $active_menu == "access_card") echo "active"; ?>">
+            <a href="<?php echo base_url()."unicus/access"; ?>"> Book Slot</a>
+        </li> 
+        
+
+
+    <li class="<?php if (isset($active_menu) && ($active_menu == "registration" || $active_menu == "invoice")) { echo "active"; } ?> four">
+      <a href="#">Support
            <span class="drop-icon">▾</span>
         <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
       </a>
-       <input type="checkbox" id="sm2">
-      <ul class="sub-menu" id="sub-menu1">
+       <input type="checkbox" id="sm3">
+      <ul class="sub-menu" id="sub-menu3">
           <li class="">
-            <a href="<?php echo base_url(); ?>crest/reg_form">Subscribe<hr>
+            <a href="<?php echo base_url(); ?>unicus/reg_form">Subscription<hr>
           </a>
         </li>
        <li class="">
-            <a href="<?php echo base_url()."crest/invoice"; ?>">Invoice<hr></a>
+            <a href="<?php echo base_url()."unicus/invoice"; ?>">Invoice<hr></a>
           </li>
-      </ul>
-    </li>
-     <li class="<?php if (isset($active_menu) && $active_menu == "subcategories") echo "active"; ?>">
-            <a href id="preview" data-toggle="modal" data-target="#myModal">Preview Certificate</a>
-        </li>
-      
-        <li class="<?php if (isset($active_menu) && $active_menu == "access_card") echo "active"; ?>">
-            <a href="<?php echo base_url()."crest/access"; ?>">Slot/Access</a>
-        </li> 
-        
-        <li class="<?php if (isset($active_menu) && $active_menu == "result") echo "active"; ?>">
-            <a href="<?php echo base_url()."crest/result"; ?>">Result</a>
-        </li> 
-    
-        <li class="<?php if (isset($active_menu) && $active_menu == "challenge_test") echo "active"; ?>" >
-            <a href="<?php echo base_url()."crest/challenge_test"; ?>">View & Challenge</a>
-        </li>
-         <li class="<?php if (isset($active_menu) && $active_menu == "add_feedback_form") echo "active"; ?>" id="add_feedback_form" >
+      <li class="<?php if (isset($active_menu) && $active_menu == "add_feedback_form") echo "active"; ?>" id="add_feedback_form" >
             <a href="javascript:void(0)">Feedback</a>
         </li>
+      </ul>
+    </li> 
+    
+     <!--    <li class="<?php //if (isset($active_menu) && $active_menu == "challenge_test") echo "active"; ?>" >
+            <a href="<?php //echo base_url()."unicus/challenge_test"; ?>">View & Challenge</a>
+        </li>
+          -->
   </ul>
 </div>
 <script>
@@ -251,11 +288,21 @@ button.close {
 		$("#sub-menu").toggle();
     //$(".sub-menu").toggleClass("open").show();
 	});
-		$("ul.main-menu.clearfix li.second a").click(function () {
+  $("ul.main-menu.clearfix li.second a").click(function () {
+    //alert("hello");
+    $("#sub-menu1").toggle();
+    //$(".sub-menu").toggleClass("open").show();
+  });
+		$("ul.main-menu.clearfix li.third a").click(function () {
 		//alert("hello");
-		$("#sub-menu1").toggle();
+		$("#sub-menu2").toggle();
     //$(".sub-menu").toggleClass("open").show();
 	});
+  $("ul.main-menu.clearfix li.four a").click(function () {
+    //alert("hello");
+    $("#sub-menu3").toggle();
+    //$(".sub-menu").toggleClass("open").show();
+  });
 </script>
     <div class="clearfix"></div>
 
@@ -334,6 +381,7 @@ popup.close();
 </script>
 
 <style>
+
 #toggle-menu, #menu a {
     padding: 0.7em 1em !important;
 }
@@ -348,9 +396,10 @@ popup.close();
     box-shadow: 2px 2px 13px 2px #5b908d63;
 }
 #menu .sub-menu a {   
-  padding: 2px 10px 2px 20px !important;
-  text-indent:10px; 
-  font-size: 15px;
+    padding: 1px 1px 2px 20px !important;
+    text-indent: 10px;
+    font-size: 14px;
+    width: 100%;
 }
 #menu ul {
   margin: 0;
@@ -382,7 +431,8 @@ popup.close();
   border-width: 0 0 1px;
 }
 
-#menu .sub-menu {
+#menu .sub-menu { 
+   
   /*background-color: #444;*/
   background-color: #26a69a;
   border-width: 1px 1px 0;
@@ -506,18 +556,18 @@ popup.close();
   }
 
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 768px) {
 
-  #hello
-{
-  
-  position: relative;
-  top: 0px;
-  
+ #menu{
+   width: 14.6666666667% !important; 
+    margin-top: 25px;
 }
 
-
   }
+
+
+
+
 
   @media only screen 
     and (min-width : 767px) 
@@ -556,7 +606,7 @@ popup.close();
   /*  position: absolute;*/
     top: 100%;
     left: 0;
-    width: 12em;
+    width: 100%;
     z-index: 3000;
   }
 
@@ -657,7 +707,7 @@ h1
     position: relative;
     top: 100%;
     left: 0;
-    width: 12em;
+    width: 14em;
     z-index: 3000;
   }
 

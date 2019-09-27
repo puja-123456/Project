@@ -456,7 +456,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service .service__details h6 a { 
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -539,7 +539,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_1.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -615,7 +615,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_2.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -691,7 +691,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_3.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -767,7 +767,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_4 .service__details h6 a { 
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -843,7 +843,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_5.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -919,7 +919,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_6.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -995,7 +995,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_7.service__details h6 a {
     color: #333333;
     display: block;
-    font-family: "Dosis", sans-serif;
+    font-family: "Lucida Sans";
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 21px;

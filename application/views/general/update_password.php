@@ -23,12 +23,18 @@ window.fbAsyncInit = function() {
 
 <style type="text/css">
 @media only screen and (min-width:767px){
+	.fuild-container{
+		margin-top:71px;
+	}
 #menu, #toggle-menu {
-    height: 366px !important;
-    overflow-y: scroll !important;
+   /* height: 366px !important;*/
+   /* overflow-y: scroll !important;*/
 }
 }
 @media only screen and (max-width:767px){
+	.fuild-container{
+		margin-top:-30px;
+	}
 	#menu, #toggle-menu {
     height: auto !important;
     overflow-y: hidden !important;

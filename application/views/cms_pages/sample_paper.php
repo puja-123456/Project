@@ -1,6 +1,9 @@
 
 <div class="row">
 <h1 class="left-align" >Sample Papers</h1>
+<p style="padding: 0px 14px 0px 15px;">The sample papers for all the subjects in Unicus Olympiads are designed by a team of experts. The aim of Unicus sample papers is to give the students a familiarity with the syllabus covered. Also, it will tell the pattern followed and the marking scheme which can help the students prepare nicely for the exam.</p>
+<p style="padding: 0px 14px 0px 15px;">All the Unicus sample papers can be downloaded easily. You can view the sample papers or click on the download button to download Unicus sample papers.
+</p>
 <!-- <h1>Sample Papers</h1> -->
  <div class="col m3 s12">
 		<div class="syllabus-menu">

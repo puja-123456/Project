@@ -64,7 +64,7 @@
 	<meta property="og:title"         content="<?php if(isset($og_title)) echo $og_title; else if(isset($title)) echo $title; else echo 'CREST Olympiads'; ?>" />
 	<meta property="og:description"   content="<?php echo (isset($meta_description)) ? $meta_description : 'CREST Olympiads'; ?>" />
 	<meta property="fb:app_id"      content="<?php echo $this->config->item('facebook_api_key'); ?>"/>
-	<meta property="og:image"         content="<?php echo (isset($og_image_url)) ? $og_image_url : base_url().'assets/images/favicon.ico'; ?>"/>
+	<meta property="og:image"         content="<?php echo (isset($og_image_url)) ? $og_image_url : base_url().'assets/images/fevicon.ico'; ?>"/>
 
 	<!-- Insert this to the head section of your web page. -->
 
@@ -74,7 +74,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	 
 
-	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon"> 
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/fevicon.ico" type="image/x-icon"> 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.js"></script> 
       <script defer src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script> 
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -167,7 +167,7 @@ $(document).ready(function(){
 	
 	<style type="text/css">
 		body p, body span{
-			font-family: "Lato",sans-serif;
+			font-family: "Lucida Sans";
 			line-height: 29px;
 		}
 		strong{
@@ -214,7 +214,7 @@ $(document).ready(function(){
 		    background-color: #ff4a4a52;
 		}
 		nav.nav-extended ul#nav-mobile li a {
-			font-family: sans-serif;
+			font-family: "Lucida Sans";
 			/*font-family: 'Melonheadz';*/
 			font-size: 16px;
 		}
@@ -244,7 +244,7 @@ $(document).ready(function(){
 			background-color: rgba(0,0,0,0);
 		}
 		nav ul .register-li a .btn{
-		    font-family: 'Melonheadz';
+		    font-family: "Lucida Sans";
     		font-size: 16px;
 		}
 		.dropdown-content li {
@@ -504,7 +504,7 @@ nav.nav-extended ul#nav-mobile li.active {
     height: auto;
 }
 .dropdown-content li {
-    font-family: sans-serif;
+    font-family: "Lucida Sans";
     line-height: 2rem;
     }
 ul#dropdown1 a { 
@@ -647,7 +647,7 @@ ul:not(.browser-default)>li
 .droopmenu>li>a, .droopmenu>li>span {
     color: #212121;
     text-transform: uppercase;
-    font-family: 'Oswald',sans-serif;
+    font-family: "Lucida Sans";
     /* line-height: 114px; */
     font-weight: 600;
 }
@@ -656,7 +656,7 @@ ul:not(.browser-default)>li
     font-size: 1em;
     font-weight: 500;
     /*text-transform: uppercase;*/
-    font-family: sans-serif;
+    font-family: "Lucida Sans";
 }
 @media only screen and (min-width: 768px){
 
@@ -710,7 +710,7 @@ h5 {
     font-size: 16px;
     /*text-transform: uppercase;*/
     font-weight: 600;
-    font-family: 'Oswald',sans-serif;
+    font-family: "Lucida Sans";
 }
 }
 .dm-page .droopmenu>li>h3, .droopmenu .droopmenu-tabnav a {
@@ -1157,8 +1157,8 @@ li.droopmenu-parent .material-icons {
                     if (!$this->ion_auth->logged_in()){?>
                     	<li><a href="<?=base_url()?>login">Login</a></li>
 			     <li> <a href="<?=base_url()?>registration" >Register</a></li><?php } else { ?>
-				</li><a href="<?=base_url()?>crest/reg_form" >Dashboard</a></li>
-				</li><a href="<?=base_url()?>auth/logout" >Logout</a></li><?php } ?> 
+				<li class="droopmenu-parent"><a href="<?=base_url()?>crest/reg_form" >Dashboard</a></li>
+				<li class="droopmenu-parent"><a href="<?=base_url()?>auth/logout" >Logout</a></li><?php } ?> 
 
 
 

@@ -11,22 +11,15 @@
       <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
       <link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
       <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
-      <link href="<?php echo base_url();?>assets/css/morris-0.4.3.min.css" rel="stylesheet">
-
+     <link href="<?php echo base_url();?>assets/css/morris-0.4.3.min.css" rel="stylesheet">
+ <script type = "text/javascript"  
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>      
       <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon">
       
       
-      <?php if(isset($site_data->google_analytics)) echo $site_data->google_analytics; ?>
-
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-      
+      <?php //if(isset($site_data->google_analytics)) echo $site_data->google_analytics; ?> 
             
-                    <script>
+                 <!--    <script>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -35,7 +28,7 @@
                   ga('create', 'UA-81806453-1', 'auto');
                   ga('send', 'pageview');
 
-                </script>
+                </script> -->
 
        <?php 
       // if( $this->router->fetch_class() === 'user' && $this->router->fetch_method() === 'paymentconfirmation')  { ?>
@@ -86,7 +79,7 @@
 
 			?>
              
-               <a href="<?php echo $hlink;?>"><img src="<?php echo base_url();?>assets/images/logo/logo.png" ></a> 
+               <a href="<?php echo $hlink;?>"><img src="<?php echo base_url();?>assets/images/logo/logo.png" width="200"></a> 
             </div>
          </div>
       

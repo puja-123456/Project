@@ -1,7 +1,7 @@
 
 <!-- Slider-->
 <!-- Middle Content-->
-<div class="row" style="margin-top:80px">
+<div class="row" id="logid">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="bradcome-menu">
             <ol class="breadcrumb inner-breadcrumb">
@@ -112,6 +112,15 @@
 <style>
 .butt{
     color: #000 !important;
+}
+#logid{
+    margin-top:80px;
+}
+@media screen and (max-width: 768px)
+{
+    #logid{
+    margin-top:-10px;
+}
 }
 </style>
 
