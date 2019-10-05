@@ -29,11 +29,11 @@
 <script type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact_us.css">
 <p>&nbsp;</p>
-<div class="container" id="bac">
-	<div class="row text-center">
+<div class="fuild-container" id="bac">
+	<div class="text-center">
 		<h1>Become a Co-ordinator</h1>
 	</div>
-	<div class="row contact">
+	<div class="contact">
 		<div class="col-md-12 text-center well" style="min-height:347px;">
 
 	<?php if ($this->session->flashdata('success_message')) { ?>
@@ -43,11 +43,11 @@
 		</strong>
 	</span><br></div>
 	<?php } ?>
-
-			<?php echo form_open("crest/coordinator"); ?>
-				<div class="row inner content">
-				<p>Are you looking to become a Coordinator with Unicus Olympiads?</p>
+<p>Are you looking to become a Coordinator with Unicus Olympiads?</p>
 				<p>If yes, then you can join us to become our coordinator for your specified location. All the educators i.e. teachers, principals, mentors, tutors, or any other people, can become a coordinator with us.</p>
+			<?php echo form_open("crest/coordinator", 'class="container"'); ?>
+				<div class="row inner content">
+				
 				<div class="col s12 m6  input-field">
 					<input class="form-control" id="name" name="name" type="text" required>
 					<label for="name">Your Name</label><br>
@@ -116,9 +116,18 @@ form input, form textarea, form button{
 }
 #bac{
 	margin-top:90px;
+	padding: 0px 30px 20px 30px;
+}
+p{
+	font-size: 13px;
+}
+.input-field.col label {
+    left: .75rem;
+    font-size: 13px;
 }
 @media only screen and (max-width: 768px){
 	#bac{
+    padding: 0px 5px 20px 10px;
 	margin-top:-60px;
 }
 }

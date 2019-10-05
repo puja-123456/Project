@@ -20,17 +20,28 @@
 #ssbtn{
 	color:#000;
 }
-#srf{;
+#srf{
+    padding: 30px;
 	margin-top:50px
+}
+p{
+	font-size: 13px;
+    line-height: 18px !important;
+}
+input:not([type]).validate+label, input[type=text]:not(.browser-default).validate+label, input[type=password]:not(.browser-default).validate+label, input[type=email]:not(.browser-default).validate+label, input[type=url]:not(.browser-default).validate+label, input[type=time]:not(.browser-default).validate+label, input[type=date]:not(.browser-default).validate+label, input[type=datetime]:not(.browser-default).validate+label, input[type=datetime-local]:not(.browser-default).validate+label, input[type=tel]:not(.browser-default).validate+label, input[type=number]:not(.browser-default).validate+label, input[type=search]:not(.browser-default).validate+label, textarea.materialize-textarea.validate+label {
+    width: 100%;
+    font-size: 13px;
 }
 @media only screen and (max-width: 768px){
 	#srf{
-	margin-top:-60px;
+	padding: 0px 5px;
+    margin-top:-60px;
+
 }
 }
 </style>
 
-<div class="container">
+<div class="fuild-container">
 	<p>&nbsp;</p>
 	<div class="row" id="srf" >
 		
@@ -40,7 +51,7 @@
               If your school is looking for Unicus Olympiads registration then the school Olympiad coordinators can fill the below form. Our representative will contact you within 48 working hours. 
 			</p>
 			<p>
-				The students who are looking for individual registrations, please fill the form on <a href="http://www.crestolympiads.com/" target="_blank">Home Page</a>. If you have any query, then please email at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>
+				The students who are looking for individual registrations, please fill the form on <a href="<?php echo base_url(); ?>" target="_blank">Home Page</a>. If you have any query, then please email at <a href="mailto:info@unicusolympiads.com">info@unicusolympiads.com</a>
 			</p>
 			<p>Kindly note that we have different fees for Indian schools and International (outside India) schools. </p>
 			<p>
@@ -56,7 +67,7 @@
 			<p>
 				<em>Our representative will contact you within <strong>48 working hours</strong>.</em>
 			</p>
-			<?php echo form_open("school_reg/register",'class="form-horizontal" name="principals"'); ?>
+			<?php echo form_open("school_reg/register",'class="form-horizontal container" name="principals"'); ?>
 			<!-- <form class=""  method="POST" action= > -->
 			<div class="row">
 				<div class="col s12 m6 input-field">

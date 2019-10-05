@@ -33,7 +33,7 @@ $().ready(function(){
     };
     $("#add_feedback_form").on("click",function(){
         $.confirm({
-            title: 'CREST Olympiads - Feedback',
+            title: 'Unicus Olympiads - Feedback',
             content: 'url:<?=base_url();?>assets/feedback-form.html',
             buttons: {
                 sayMyName: {
@@ -82,7 +82,7 @@ $().ready(function(){
                        else {
                             jQuery.ajax({
                                 type: 'post',
-                                url: '<?php echo base_url() ?>crest/add_feedback',
+                                url: '<?php echo base_url() ?>unicus/add_feedback',
                                 data: {user_id: user_id, comment: comment, testimonial: testimonial, rating: scale, ppv_check:ppv_check, csrf_test_name: csrf_hash},
                                 dataType: 'json',
                                 async: false,

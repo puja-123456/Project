@@ -147,6 +147,9 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 .center-align{
 	margin-top: 60px;
 }
+#sogeid{
+	margin-top: 0px;
+}
 #register{
 	background-color: #43cec9 !important; 
 	 border-radius: 3em;
@@ -388,11 +391,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		<h3 style="font-weight: bold;margin-left:26px;text-align: center;">About Olympiads</h3>
 	</div>
 	<div class="col-md-12" style="background-color: #43cec9;">
-		<p style="margin: 10px;padding: 15px 42px 15px 42px;">
+		<p style="margin: 10px;padding: 15px 42px 15px 42px;font-size: 13px">
         Unicus Olympiads are the only Summer Olympiads
         Why should a student be burdened with extra exams during his/her class year? 
-        Well, with this thought Unicus Olympiads is launched. It conducts Olympiad exams only during the summer breaks for that class which the student has recently passed.  
-        Unicus Olympiads makes a child practicable which helps him/her answer the questions why, what, how, when and where to any problem. Hence, it increases the questioning capacity of the child. </p>
+        Many people say that ‘Life is a race’ and in this race we compel our children to study what will come next rather than making their previous concepts clear. If the children understand what they have studied and how to practically apply those studies then automatically they will ace this race. </p>
 	</div>
  </div> 
 
@@ -457,7 +459,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service .service__details h6 a { 
     display: block;
     font-family: "Lucida Sans";
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
     transition: all 0.3s ease 0s;
@@ -469,7 +471,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .service__details p {
     color: #777777;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 27px;
 }
 
@@ -532,7 +534,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_1 .service__details h6 a {
     color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -547,7 +549,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_1 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_1 .service__btn {
@@ -608,7 +610,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_2 .service__details h6 a {
     color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -623,7 +625,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_2 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_2 .service__btn {
@@ -684,7 +686,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_3 .service__details h6 a {
     color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -699,7 +701,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_3 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_3 .service__btn {
@@ -761,7 +763,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_4 .service__details h6 a {
       color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -775,7 +777,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_4 .service__details p {
       color: #000;
-    line-height: 23px;
+    line-height: 20px;
 } 
 
 .service_4 .service__btn {
@@ -836,7 +838,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_5 .service__details h6 a {
       color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -851,7 +853,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_5 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_5 .service__btn {
@@ -912,7 +914,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_6 .service__details h6 a {
       color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -927,7 +929,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_6 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_6 .service__btn {
@@ -988,7 +990,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .service_7 .service__details h6 a {
     color: #000;
     display: block;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 21px;
 }
@@ -1003,7 +1005,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 .service_7 .service__details p {
     color: #000;
-    line-height: 23px;
+    line-height: 20px;
 }
 
 .service_7 .service__btn {
@@ -1356,9 +1358,9 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 	<h3 align="center" style="font-weight: bold;padding: 25px 10px 0px 10px;">Steps Of Giving Exam</h3>
 </div>
 	
-<div class="col-md-12 col s12 center-align">
+<div class="col-md-12 col s12 center-align" id="sogeid">
 	<div class="col s12 m3 l3s" >
-		<h4 style="font-weight: normal; font-size: 16px;">
+		<h4 style="font-weight: normal; font-size: 13px;">
 		  
 		  <span class="fa-stack fa-3x">
         <i id='blah' class="fa fa-circle-o fa-stack-2x"></i>
@@ -1368,7 +1370,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		Login to the website <a href="<?php echo base_url(); ?>" style="color:yellow">www.unicusolympiads.com</a></h4>
 	</div>
 	<div class="col s12 m3 l3s" >
-		<h4 style="font-weight: normal; font-size: 16px;">
+		<h4 style="font-weight: normal; font-size: 13px;">
             <span class="fa-stack fa-3x">
         <i id='blah' class="fa fa-circle-o fa-stack-2x"></i>
         <strong class="fa-stack-1x">2</strong>
@@ -1379,7 +1381,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 <div class="col s12 m3 l3s" >
 
-		<h4 style="font-weight: normal; font-size: 16px;">
+		<h4 style="font-weight: normal; font-size: 13px;">
 
            <span class="fa-stack fa-3x">
         <i id='blah' class="fa fa-circle-o fa-stack-2x"></i>
@@ -1389,7 +1391,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 	   Go to My Details and click Upload Documents. Then, upload all the required documents.</h4>
 	</div>
 <div class="col s12 m3 l3s" >
-		<h4 style="font-weight: normal; font-size: 16px;">
+		<h4 style="font-weight: normal; font-size: 13px;">
           <span class="fa-stack fa-3x">
         <i id='blah' class="fa fa-circle-o fa-stack-2x"></i>
         <strong class="fa-stack-1x">4</strong>

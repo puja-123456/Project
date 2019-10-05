@@ -115,7 +115,9 @@
         display: inline;
     }
 
-    
+    td, th {
+    padding: 0px !important;
+  }
 
 </style>
 
@@ -129,9 +131,10 @@
 
             <ul class="instructions">
 
-              <li style="text-align: center">All the slot timings are in Indian Standard Time (IST)</li><br/>
-              <li id="exam_link" style="font-weight: 700;text-align: center;list-style-type: none !important;font-size:18px">To take exam, click <a href="https://www.crestolympiads.com/user/instructions" <?php if( $today_date >= $start_date && $today_date <= $end_date)
-         { echo ""; } else { echo "style='pointer-events: none;'";} ?> >here</a></li>
+              <li style="text-align: center">Do note that all the timings are in Indian Standard Time (IST).</li>
+              <li>If you want to edit your pre-booked slot, you can do so by clicking the edit button. Editing of 
+slot is chargeable @ Rs. 30 per slot change. </li>
+             
               <li id="exam_mobile_link" style="font-weight: 700;text-align: center;list-style-type: none !important;font-size:18px;display: none;color:#960a00">You can take exam only on desktop/laptop.</li>
 
 
@@ -172,11 +175,12 @@
 
 
 
-                 
+               //  print_r($olympiad_exam_name);die;
 
                 
 
                  for($i=0;$i<count($olympiad_exam_name);$i++) {
+                  //print_r($subject);die;
 
                   if (in_array(strtoupper($olympiad_exam_name[$i]->olympiad_exam_slug), $subject))
 
@@ -432,7 +436,7 @@
 
 
                             <select id="cro_exam_name" name="olympiad_exam_name" required class="validate">
-                            <option value="cro">CREST Reasoning Olympiad (CRO)</option>
+                            <option value="cro">Unicus Mathematic Olympiad (UMO)</option>
 
 
                  <?php 
@@ -555,7 +559,7 @@
 
 
                             <select id="cso_exam_name" name="olympiad_exam_name" required class="validate">
-                            <option value="cso">CREST Science Olympiad (CSO)</option>
+                            <option value="cso">Unicus Science Olympiad (USO)</option>
 
 
                  <?php 
@@ -1858,23 +1862,40 @@ $(".book_slot").addClass("disabled");
 
 ul.instructions li
 {
+  font-size: 13px !important;
   list-style-type: none !important;
 }
-
+table, th, td {
+    font-size: 13px;
+    }
+button.btn.col.s6.offset-s3.book {
+    padding: 17px 55px 13px 23px;
+    line-height: 0px;
+}
+@media only screen and (max-width:768px){
+  .fuild-container{
+    margin-top:30px;
+  }
+  }
+@media only screen and (min-width:768px){
+  .fuild-container{
+    margin-top:70px;
+  }
+  }
 @media only screen and (max-width:600px){
+
 .text-center {
     width: 100% !important;
     margin-top: 37px;
     margin-left: 10px !important;
 }
-#menu, #toggle-menu {
-    background-color: #751e49;
-    width: 250px;
-       }
+.col.s10.offset-s2.text-center.well {
+    margin-top: 0px;
+}
 #menu {
     position: relative !important;
-    margin-top: -37px;
-    left: 36px;
+    margin-top: -50px;
+   /* left: 36px;*/
       }
 .row .col.offset-s3
 {

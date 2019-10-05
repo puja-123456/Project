@@ -28,7 +28,7 @@
 
 	<div class="col m9 s12">
 		<div class="">
-			<h4>Subjects</h4>
+			<h5>Subjects</h5>
 			<div class="row">  
             <!--  <div class="col s1"><a href="<?php echo base_url().$category['slug']; ?>">About</a></div> -->
              <?php
@@ -37,7 +37,7 @@
 				foreach ($categories as $syllabus) {
 					 if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
-             <a href="<?php echo base_url().$syllabus['slug'].'/sample-papers'; ?>"><div class="col s12 m2"><?php echo $syllabus['name'].' Sample Papers'; ?>
+             <a href="<?php echo base_url().$syllabus['slug'].'/sample-papers'; ?>"><div class="col s12 m5 alllinks"><?php echo $syllabus['name'].' Sample Papers'; ?>
              	
 
              </div></a> 
@@ -56,7 +56,7 @@
 				?>
 
 				<div id="">
-					<h4><?php echo $syllabus['name']; ?></h4>
+					<h5><?php echo $syllabus['name']; ?></h5>
 					<p>
 						<?php echo $syllabus['long_description']; ?>
 					</p>
@@ -73,8 +73,15 @@
  
 
 <style type="text/css">
+.alllinks{
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+p{
+	font-size: 13px;
+}
 ul:not(.browser-default)>li {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1em;
     padding: 10px 0px 5px 0px;
     list-style-type: none;

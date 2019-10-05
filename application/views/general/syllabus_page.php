@@ -33,15 +33,15 @@
 	<h1 class="left-align"><?php echo $category['name']; ?> Syllabus</h1>
 	
 		<div>
-			<h4>Classes</h4>
+			<h5>Classes</h5>
 			<div class="row">  
-             <div class="col s1"><a href="<?php echo base_url().$category['slug']; ?>">About</a></div>
+            <!--  <div class="col s1"><a href="<?php echo base_url().$category['slug']; ?>">About</a></div> -->
              <?php
 				 $i=1;
 				foreach ($all_syllabus as $syllabus) {
 					 if($syllabus->name != ucfirst($class_name)) {
 					?>
-             <a href="<?php echo base_url().$url.'-'.$i; ?>"><div class="col s12 m1"><?php echo ucfirst($syllabus->name); ?></div></a> 
+             <a href="<?php echo base_url().$url.'-'.$i; ?>"><div class="col s12 m1 alllinks"><?php echo ucfirst($syllabus->name); ?></div></a> 
 					<?php 
 				}
 				$i++;
@@ -57,7 +57,7 @@
 				?>
 
 				<div id="syllabus-<?php echo $syllabus->id; ?>">
-					<h4><?php echo $syllabus->name; ?></h4>
+					<h5><?php echo $syllabus->name; ?></h5>
 					<p>
 						<?php echo $syllabus->description; ?>
 					</p>
@@ -74,6 +74,13 @@
  
 
 <style type="text/css">
+p{
+	font-size: 13px;
+}
+.alllinks{
+	font-size: 13px;
+	padding-left: 0px !important;
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;
@@ -203,7 +210,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 
 	<div class="col m9 s12">
 		<div class="">
-			<h4>Subjects</h4>
+			<h5>Subjects</h5>
 			<div class="row">  
             <!--  <div class="col s1"><a href="<?php echo base_url().$category['slug']; ?>">About</a></div> -->
              <?php
@@ -212,7 +219,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 				foreach ($categories as $syllabus) {
 					 if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
-             <a href="<?php echo base_url().$syllabus['slug'].'-syllabus'; ?>"><div class="col s12 m2"><?php echo $syllabus['name']; ?></div></a> 
+             <a href="<?php echo base_url().$syllabus['slug'].'/syllabus'; ?>"><div class="col s12 m4 alllinks"><?php echo $syllabus['name']; ?></div></a> 
 					<?php 
 			      }
 				/*$i++;*/
@@ -228,7 +235,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 				?>
 
 				<div id="">
-					<h4><?php echo $syllabus['name']; ?></h4>
+					<h5><?php echo $syllabus['name']; ?></h5>
 					<p>
 						<?php echo $syllabus['long_description']; ?>
 					</p>
@@ -245,6 +252,13 @@ ul.droopmenu-col.droopmenu-col3 h5 {
  
 
 <style type="text/css">
+.alllinks{
+	font-size: 13px;
+	    margin-bottom: 5px;
+}
+p{
+	font-size: 13px;
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;
@@ -335,7 +349,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 <div class="fuild-container">
 	<div class="row">
 	<h1 class="left-align">Syllabus</h1>
-    <p style="padding: 0px 14px 0px 15px;">Unicus Olympiads syllabus is carefully designed by our intellectual team of subject matter experts. The syllabus for all the subjects take into consideration the syllabus for each year in school.</p> 
+    <p style="padding: 0px 14px 0px 15px;">Unicus Olympiads syllabus is carefully designed by our intellectual team of subject matter experts. Unicus Olympiads considers the syllabus for all the subjects taking into consideration the syllabus for immediate last two years studied in school for classes 3-10 while it considers the syllabus of just the last class for classes 1 and 2.</p> 
 <p style="padding: 0px 14px 0px 15px;">The syllabus for all the classes under every subject of Unicus Olympiads is given below.</p>    
 
     <div class="col m3 s12">
@@ -393,7 +407,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 //if($syllabus->name != ucfirst($class_name)) {
 					?>
                 <!--  <?php //print_r($url);die; ?> -->
-                  <a href="<?php echo base_url().$url[$j].'-'.$i; ?>"><div class="col m1 s12" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
+                  <a href="<?php echo base_url().$url[$j].'-'.$i; ?>"><div class="col m1 s12 alllinks" style="margin-bottom: 10px;    padding-left: 0px;">Class <?php echo $i; ?></div></a>
 					<?php 
 				   //}
 				 
@@ -413,6 +427,15 @@ ul.droopmenu-col.droopmenu-col3 h5 {
  
 
 <style type="text/css">
+p{
+	font-size: 13px;
+}
+.alllinks{
+	font-size: 13px;
+}
+.alllink{
+	font-size: 13px;
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;

@@ -5,12 +5,13 @@
 
 
 		<p>
-			Unicus Olympiads, a venture of <strong>Assessment Square (registered office at Tower B4, Unit 1110, Spaze IT Park, Sohna Road, Gurgaon - 122018, India)</strong> understands that privacy is an important issue for visitors to the website&nbsp;<a href="https://www.unicusolympiads.com">www.unicusolympiads.com</a>. The following information is designed to help visitors understand what information we gather from our site, and how we handle the information once we gather it.
+			Unicus Olympiads, a venture of <strong>Assessment Square</strong> (registered office at B-1003, BPTP Freedom Park, Sector 57, Gurugram, Haryana 122003, India) understands that privacy is an important issue for visitors to the website <a href="https://www.unicusolympiads.com">www.unicusolympiads.com</a>. The following information is designed to help visitors understand what information we gather from our site, and how we handle the information once we gather it.  
 		</p> 
 		<p><strong>Information Collection and Use</strong><br /> Unicus Olympiads collects personally identifiable information ("Personal Information") such as your full name, student name, email address, mailing address and/or telephone number, etc. only in order to create or enhance your experience while navigating the site or giving the tests. When we collect this information from you, it is because you voluntarily submit the information to us in order to register for Online Olympiads, blogs, contests and bulletin boards, in connection with content or suggestions you submit to us or because you want us to furnish you with products, services or information. We may also obtain Personal Information from third parties.</p>
-		<p><strong>Cookies</strong><br /> Cookies are small bits of information that the Unicus Olympiads website place on the hard drive of your computer. Cookies remember information about your activities on our site and enable Unicus Olympiads to make your visits to our site more enjoyable. For example, cookies can store your password for easy login to a site you have previously visited. It can also save your preferences for a personalized home page. Information about your activities on Unicus Olympiads site and other non-personally identifiable information about you may also be used to limit the online ads you encounter to those we believe are consistent with your interests..</p>
+		<p><strong>Cookies</strong><br /> Cookies are small bits of information that the Unicus Olympiads website place on the hard drive of your computer. Cookies remember information about your activities on our site and enable Unicus Olympiads to make your visits to our site more enjoyable. For example, cookies can store your password for easy login to a site you have previously visited. It can also save your preferences for a personalized home page. Information about your activities on Unicus Olympiads site and other non-personally identifiable information about you may also be used to limit the online ads you encounter to those we believe are consistent with your interests.</p>
 		<p>You can program your computer to warn you each time a cookie is being sent or to refuse cookies completely. However, without cookies you will not have access to certain features on Unicus Olympiads web site.</p>
-        <p><strong>Sharing of Information</strong><br />Every User hereby expressly agrees and that this Website may share the Information collected from you with its affiliates, employees, agents, third party service provider, sellers, suppliers, banks, payment gateway operators and such other individuals and institutions located within or outside India from time to time to ensure efficient management of User accounts, to detect and prevent identity theft and other illegal acts, to provide specialized, respond to legal, judicial, quasi-judicial law enforcement agencies or in connection with an investigation on matters related to public safety, as permitted by law and for such other purposes that this Website may deem fit from time to time.Every User hereby represents and warrants that that sharing of such Information shall not cause any wrongful loss/gain or damage to either the User or to any third party.</p>
+        <p><strong>Sharing of Information</strong><br />Every User hereby expressly agrees and that this Website may share the Information collected from you with its affiliates, employees, agents, third party service provider, sellers, suppliers, banks, payment gateway operators and such other individuals and institutions located within or outside India from time to time to ensure efficient management of User accounts, to detect and prevent identity theft and other illegal acts, to provide specialized, respond to legal, judicial, quasi-judicial law enforcement agencies or in connection with an investigation on matters related to public safety, as permitted by law and for such other purposes that this Website may deem fit from time to time.Every User hereby represents and warrants that that sharing of such Information shall not cause any wrongful loss/gain or damage to either the User or to any third party.
+           </p>
 		<p>Unicus Olympiads web site may be linked to Internet sites operated by other companies. Some of these third party sites may be co-branded with a Unicus Olympiads logo, even though they are not operated or maintained by Unicus Olympiads. Unicus Olympiads’ website may also carry advertisements from other companies. Unicus Olympiads is not responsible for the privacy practices of web sites operated by third parties that are linked to our site or for the privacy practices of third party or Internet advertising companies. Once you’ve left the Unicus Olympiads site via such a link or by clicking on an advertisement, you should check the applicable privacy policy of the third party or advertiser site to determine how they will handle any Personal Information they collect from you.</p>
 		<p><strong>Opt Out</strong><br />Unicus Olympiads considers opt-out requests very seriously. All unsubscribe or opt-out requests should be sent to us by filling up the form on the 'Contact Us' Page of this Website and we will process your request within a reasonable time after receipt. However, we are not responsible for, and in some cases we are incapable of, removing your personally identifiable information from the lists of any third party who has previously been provided your information in accordance with this Privacy Policy or your consent. You should contact such third parties directly. If you would like to update or correct any personally identifiable information that you have provided to us, please fill up the form on the 'Contact Us' Page of this Website and once we confirm your information, we will update such information within a reasonable amount of time.</p>
 		<p><strong>Use of Personal Information</strong><br />Unicus Olympiads will use your Personal Information provided under this Policy in a manner that is consistent with this Policy. If Unicus Olympiads obtains Personal Information from a third party, such as a business partner, our use of that information is governed by this Policy.</p>
@@ -19,9 +20,9 @@
 
 		<p><strong>Changes to Unicus Olympiads’ Internet Privacy Policy</strong>
 		<p>Unicus Olympiads may, from time to time, make changes to this policy. We recommend that visitors to this site re-visit this privacy policy on every occasion to learn of new privacy practices or changes to our policy.</p>
-		<p><strong>How to contact CREST Olympiads about this Privacy Policy</strong><br />If site visitors have any questions, concerns, or complaints about this Privacy Policy, or want to let us know what they think about any of our offerings and services, they can do so by sending an email using the form on the 'Contact Us' page of this website</a></p>
+		<p><strong>How to contact Unicus Olympiads about this Privacy Policy</strong><br />If site visitors have any questions, concerns, or complaints about this Privacy Policy, or want to let us know what they think about any of our offerings and services, they can do so by sending an email using the form on the <a href="http://www.unicusolympiads.com/contact-us" target="_blank" >'Contact Us'</a> page of this website</a></p>
 		<p>&nbsp;</p>
-		<p></p>Note: To ensure the safety and protection of consumer information, we will continue to review and improve our Privacy Policy and Procedures. Our Privacy Policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically..</p>
+		<p><strong>Note:</strong> To ensure the safety and protection of consumer information, we will continue to review and improve our Privacy Policy and Procedures. Our Privacy Policy is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically.</p>
 	</div>
 </div>
 
@@ -77,13 +78,19 @@
 </script>
 
 <style type="text/css">
+p{
+	font-size: 13px;
+	/*padding:30px;*/
+}
 @media only screen and (max-width: 768px){
 	#ppid{
+		padding: 5px;
 		margin-top:-70px;
 	}
 }
 @media only screen and (min-width: 768px){
 	#ppid{
+		padding: 0px 30px;
 		margin-top:70px;
 	}
 	.syllabus-menu{

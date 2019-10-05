@@ -22,9 +22,28 @@ window.fbAsyncInit = function() {
 </script>
 
 <style type="text/css">
+.input-field .prefix { 
+    font-size: 1.5rem; 
+}
+.input-field>label {
+    font-size: 13px !important;
+    }
+  #commid{
+        margin-top: -70px;
+  }
+  .col.s12.m10.offset-s2.text-center.well.row ol li {
+    font-size: 13px;
+}
+ /* 
+  #commids{
+        margin-top: -40px;
+  }*/
+  
 
 @media only screen and (max-width:1199px){
-	
+	#commid{
+        margin-top: 0px;
+  }
 	#share_buttons{
 		margin-left: 0px !important;
 		margin-right: 0px !important;
@@ -79,6 +98,7 @@ window.fbAsyncInit = function() {
 
 @media only screen and (max-width: 786px){	
 	#regid{
+    padding: 0px !important;
 		margin-top:-106px;
 	}
 	#share_buttons button{
@@ -89,6 +109,11 @@ window.fbAsyncInit = function() {
 
 @media only screen and (min-width: 601px)
 {
+ .row .col.m10{
+    width: 100%;
+    padding: 0px 30px;
+ }
+  
 .datepicker-modal {
 	
 	top: 1% !important;
@@ -97,6 +122,22 @@ window.fbAsyncInit = function() {
 
 
 	}
+}
+#regid{
+  padding: 0px 30px;
+}
+input:not([type]).validate+label, input[type=text]:not(.browser-default).validate+label, input[type=password]:not(.browser-default).validate+label, input[type=email]:not(.browser-default).validate+label, input[type=url]:not(.browser-default).validate+label, input[type=time]:not(.browser-default).validate+label, input[type=date]:not(.browser-default).validate+label, input[type=datetime]:not(.browser-default).validate+label, input[type=datetime-local]:not(.browser-default).validate+label, input[type=tel]:not(.browser-default).validate+label, input[type=number]:not(.browser-default).validate+label, input[type=search]:not(.browser-default).validate+label, textarea.materialize-textarea.validate+label {
+    width: 100%;
+    font-size: 13px;
+}
+#home_address{
+font-size: 13px;
+}
+#home_address1{
+font-size: 13px;
+}
+#home_address2{
+font-size: 13px;
 }
 </style>
 <script type="text/javascript">
@@ -425,6 +466,9 @@ else
          100% { opacity: 0; }
        }
 @media screen and (max-width: 768px){
+  li.in-cl{
+  margin-left: 0px !important;
+  }
 [type="checkbox"]+span:not(.lever) {
   line-height: 17px;
 }
@@ -478,18 +522,18 @@ else
 					
 					<div class="row">
 						 
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">redeem</i>
+					<!--	<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+						 	<i class="material-icons prefix">redeem</i>
 							 
 							<input id="referral_code" name="referral_code" type="text" class="validate" value="" oninput="this.value = this.value.toUpperCase()">
 		          			<label for="referral_code">Enter Referral Code (if available)</label>
-							<?php echo form_error('referral_code'); ?>
-						</div>
+							<?php echo form_error('referral_code'); ?> 
+						</div>-->
 
 						
 					
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">account_circle</i>
+							<i class="material-icons prefix cyan-text">account_circle</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->username;
@@ -506,7 +550,7 @@ else
 							<?php echo form_error('name'); ?>
 						</div>
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">account_circle</i>
+							<i class="material-icons prefix cyan-text">account_circle</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->father_mother_guardian_name;
@@ -519,7 +563,7 @@ else
 							<?php echo form_error('father_mother_guardian_name'); ?>
 						</div>
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">event</i>
+							<i class="material-icons prefix cyan-text">event</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->dob;
@@ -531,8 +575,63 @@ else
 			                <label for="dob">Date of Birth <span style="color:red">*</span></label>
 			                <?php echo form_error('dob'); ?>
 						</div>
+            <div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+              <i class="material-icons prefix cyan-text">email</i>
+              <?php
+                if(isset($this_user)){
+                  $val = $this_user->email;
+                }
+                else if($this->input->post('email')){
+                $val = $this->input->post('email');
+                }
+                else if(isset($email)){
+                  $val = $email->email;
+                }else{
+                  $val ="";
+                }
+              ?>
+              <input id="email" name="email" type="email" required class="validate" value="<?=$val?>">
+                    <label for="email">Email <span style="color:red">*</span></label>
+              <?php echo form_error('email'); ?>
+            </div>
+           <div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+              <i class="material-icons prefix cyan-text">phone</i>
+              <?php
+                if(isset($this_user)){
+                  $val = $this_user->phone;
+                }
+                else if($this->input->post('phone')){
+                $val = $this->input->post('phone');
+                }
+                else{
+                  $val ="";
+                }
+              ?>
+              <input id="phone" name="phone" type="text" required class="validate onlyNumbers" value="<?=$val?>" maxlength="15">
+                    <label for="phone">Mobile Number <span style="color:red">*</span></label>
+              <?php echo form_error('phone'); ?>
+            </div>
+            
+            <div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+              <i class="material-icons prefix cyan-text">lock</i>
+              <?php
+                if(isset($this_user)){
+                  $val = $this_user->password;
+                }
+                 
+                else{
+                  $val ="";
+                }
+              ?>
+              <input id="password" name="password" type="password" required class="validate" value="<?=$val?>">
+                    <label for="password">Password <span style="color:red">*</span></label>
+              <?php echo form_error('password'); ?>
+            </div>
+
+
+
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">location_on</i>
+							<i class="material-icons prefix cyan-text">location_on</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->home_address;
@@ -547,7 +646,7 @@ else
 							<?php echo form_error('home_address'); ?>
 						</div>
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">account_balance</i>
+							<i class="material-icons prefix cyan-text">account_balance</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->school;
@@ -564,7 +663,7 @@ else
 			                <?php echo form_error('school'); ?>
 						</div>
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">location_on</i>
+							<i class="material-icons prefix cyan-text">location_on</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->school_address;
@@ -577,7 +676,7 @@ else
 							<?php echo form_error('school_address'); ?>
 						</div>
 						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">location_on</i>
+							<i class="material-icons prefix cyan-text">location_on</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->city;
@@ -590,15 +689,15 @@ else
 							<?php echo form_error('city'); ?>
 						</div>
 						
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">location_on</i>
+						<div class="col m6 s12 input-field" id="commid" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+							<i class="material-icons prefix cyan-text">location_on</i>
 							<?php $this->load->view('auth/select_phone'); ?>
 		          			<label for="country">Country <span style="color:red">*</span></label>
 		          			<input type="hidden" id="country_code" name="country_code" value="">
 							<?php echo form_error('country'); ?>
 						</div>
 						 <div class="col m6 s12 input-field" id="state_name" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-			              <i class="material-icons prefix">location_on</i>
+			              <i class="material-icons prefix cyan-text">location_on</i>
 			              <?php
 			                if(isset($this_user)){
 			                  $val = $this_user->state;
@@ -612,7 +711,7 @@ else
 			            </div>
 
 						 <div class="col m6 s12 input-field" id="state_list" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-                   <i class="material-icons prefix">location_on</i>
+                   <i class="material-icons prefix cyan-text">location_on</i>
                   <?php  if($this_user->state == '0' || $this_user->state == ''){?>
                     <select class="form-control" id="selectstate" name="selectstate" style="margin-top: 24px;" required>
                       <option value="">Select State</option>
@@ -659,81 +758,17 @@ else
               <?php echo form_error('state'); ?>
                </div>
 
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->pincode;
-								}else{
-									$val ="";
-								}
-							?>
-							<!-- <input id="pincode" name="pincode" type="text" required class="validate onlyNumbers" value="<?=$val?>"> -->
-              <input id="pincode" name="pincode" type="text" required class="validate" value="<?=$val?>">
-		          			<label for="pincode">Pincode <span style="color:red">*</span></label>
-							<?php echo form_error('pincode'); ?>
-						</div>
-
+						
 						<div class="col m6 s12 input-field" style="display:none">
-							<i class="material-icons prefix">phone</i>
+							<i class="material-icons prefix cyan-text">phone</i>
 							<input id="country_code_value" name="country_code_value" type="text" required disabled class="validate onlyNumbers">
 		          			<label for="country_code">Country Code <span style="color:red">*</span></label>
 							<!-- <input type="hidden" id="country_code" name="country_code" value="" required class="validate"> -->
 							<?php echo form_error('country_code'); ?>
 						</div>
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">phone</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->phone;
-								}
-								else if($this->input->post('phone')){
-								$val = $this->input->post('phone');
-								}
-								else{
-									$val ="";
-								}
-							?>
-							<input id="phone" name="phone" type="text" required class="validate onlyNumbers" value="<?=$val?>" maxlength="15">
-		          			<label for="phone">Mobile Number <span style="color:red">*</span></label>
-							<?php echo form_error('phone'); ?>
-						</div>
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">email</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->email;
-								}
-								else if($this->input->post('email')){
-								$val = $this->input->post('email');
-								}
-								else if(isset($email)){
-									$val = $email->email;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="email" name="email" type="email" required class="validate" value="<?=$val?>">
-		          			<label for="email">Email <span style="color:red">*</span></label>
-							<?php echo form_error('email'); ?>
-						</div>
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">lock</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->password;
-								}
-								 
-								else{
-									$val ="";
-								}
-							?>
-							<input id="password" name="password" type="password" required class="validate" value="<?=$val?>">
-		          			<label for="password">Password <span style="color:red">*</span></label>
-							<?php echo form_error('password'); ?>
-						</div>
-						<div class="col m6 s12 input-field" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
-							<i class="material-icons prefix">mode_edit</i>
+						
+						<div class="col m6 s12 input-field"  <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+							<i class="material-icons prefix cyan-text">mode_edit</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->class;
@@ -757,6 +792,21 @@ else
 							<label for="class">Class <?php echo "(".date('Y')."-".date('Y', strtotime('+1 year')).")";?><span style="color:red">*</span></label>
 							<?php echo form_error('class'); ?>
 						</div>
+            <div class="col m6 s12 input-field" id="commid" <?php if ($this->ion_auth->logged_in()){ echo "style=display:none";} ?>>
+              <i class="material-icons prefix cyan-text">location_on</i>
+              <?php
+                if(isset($this_user)){
+                  $val = $this_user->pincode;
+                }else{
+                  $val ="";
+                }
+              ?>
+              <!-- <input id="pincode" name="pincode" type="text" required class="validate onlyNumbers" value="<?=$val?>"> -->
+              <input id="pincode" name="pincode" type="text" required class="validate" value="<?=$val?>">
+                    <label for="pincode">Pincode <span style="color:red">*</span></label>
+              <?php echo form_error('pincode'); ?>
+            </div>
+
 					</div>
 					<div class="row subjects_div">
 					<?php $price = ' (INR 225/ USD 10.0)';$cisro_price = ' (INR 500/ USD 25.0)';?>
@@ -773,40 +823,44 @@ else
 							<label>Subjects <span style="color:red">*</span></label>
 						</div>
 						<div class="col m6 s12 input-field">
+              <div class="col m12 s12 input-field">
 							<?php 
-							if(strpos($subjects,"CMO") > -1){
+							if(strpos($subjects,"UMO") > -1){
 								$val = 'checked="checked" disabled';
 							}else{$val ="";}
 							?>
-							<label> <input class="subjects" type="checkbox" onclick="" value="CMO" <?=$val;?>><span>CREST Mathematics Olympiad<?=$price?></span></label>
-						</div>
-						<div class="col m6 s12 input-field">
-							<?php 
-							if(strpos($subjects,"CSO") > -1){
-								$val = 'checked="checked" disabled';
-							}else{$val ="";}
-							?>
-							<label> <input class="subjects" type="checkbox" onclick="" value="CSO" <?=$val;?>><span>CREST Science Olympiad<?=$price?></span></label>
-						</div>
-						<div class="col m6 s12 input-field">
-							<?php 
-							if(strpos($subjects,"CEO") > -1){
-								$val = 'checked="checked" disabled';
-							}else{$val ="";}
-							?>
-							<label> <input class="subjects" type="checkbox" onclick="" value="CEO" <?=$val;?>><span>CREST English Olympiad<?=$price?></span></label>
-						</div>
-						<div class="col m6 s12 input-field">
-							<?php 
-							if(strpos($subjects,"CCO") > -1){
-								$val = 'checked="checked" disabled';
-							}else{$val ="";}
-							?>
-							<label> <input class="subjects" type="checkbox" onclick="" value="CCO" <?=$val;?>><span>CREST Cyber Olympiad<?=$price?></span></label>
-						</div>
+							<label> <input class="subjects" type="checkbox" onclick="" value="UMO" <?=$val;?>><span>Unicus Mathematics Olympiad<?=$price?></span></label></div>
+
+                <div class="col m12 s12 input-field">
+              <?php 
+              if(strpos($subjects,"USO") > -1){
+                $val = 'checked="checked" disabled';
+              }else{$val ="";}
+              ?>
+              <label> <input class="subjects" type="checkbox" onclick="" value="USO" <?=$val;?>><span>Unicus Science Olympiad<?=$price?></span></label>
+            </div>
+            <div class="col m12 s12 input-field">
+              <?php 
+              if(strpos($subjects,"UEO") > -1){
+                $val = 'checked="checked" disabled';
+              }else{$val ="";}
+              ?>
+              <label> <input class="subjects" type="checkbox" onclick="" value="UEO" <?=$val;?>><span>Unicus English Olympiad<?=$price?></span></label>
+            </div>
+              <div class="col m12 s12 input-field">
+              <?php 
+              if(strpos($subjects,"UCO") > -1){
+                $val = 'checked="checked" disabled';
+              }else{$val ="";}
+              ?>
+              <label> <input class="subjects" type="checkbox" onclick="" value="UCO" <?=$val;?>><span>Unicus Cyber Olympiad<?=$price?></span></label>
+            </div>
+						
+					
+					
 
 						<?php 
-							if(strpos($subjects,"CRO") > -1){
+							if(strpos($subjects,"URO") > -1){
 								$val = 'checked="checked" disabled';
 								
 							}
@@ -818,9 +872,9 @@ else
 							?>
 							<?php if(!empty($val)) 
 							{?>
-					 	 <div class="col m6 s12 input-field"  >
+					 	 <div class="col m12 s12 input-field">
 							
-							<label> <input class="subjects" type="checkbox" onclick="" value="CRO" <?=$val;?>><span>CREST Reasoning Olympiad<?=$price?></span></label>
+							<label> <input class="subjects" type="checkbox" onclick="" value="URO" <?=$val;?>><span>Unicus Reasoning Olympiad<?=$price?></span></label>
 						</div> 
 						<?php } ?>
              <?php 
@@ -836,9 +890,9 @@ else
               ?>
               <?php if(!empty($val)) 
               {?>
-             <div class="col m6 s12 input-field"  >
+             <div class="col m12 s12 input-field" >
               
-              <label> <input class="subjects" type="checkbox" onclick="" value="CISRO" <?=$val;?>><span>CREST Inter-school Reasoning Olympiad<?=$cisro_price?></span></label>
+              <label> <input class="subjects" type="checkbox" onclick="" value="CISRO" <?=$val;?>><span>Unicus Inter-school Reasoning Olympiad<?=$cisro_price?></span></label>
             </div> 
             <?php } ?>
 						 
@@ -851,21 +905,24 @@ else
 							}
 
 						?>
-						<div class="col m6 s12 input-field" <?=$hide_cfo;?>>
+						<div class="col m12 s12 input-field" <?=$hide_cfo;?>>
 							<?php 
-							if(strpos($subjects,"CFO") > -1){
+							if(strpos($subjects,"UFO") > -1){
 								$val = 'checked="checked" disabled';
 							}else{$val ="";}
 							?>
-							<label> <input class="subjects" name="CFO" type="checkbox" onclick="" value="CFO" <?=$val;?>><span>CREST French Olympiad<?=$price?></span></label>
+							<label> <input class="subjects" name="UFO" type="checkbox" onclick="" value="UFO" <?=$val;?>><span>Unicus French Olympiad<?=$price?></span></label>
 						</div>
 						<input type="hidden" id="subjects" name="subjects" value="">
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
 						<p class="country_india_cost">Cost of 1 Subject: INR 225</p>
 						<p class="country_other_cost">Cost of 1 Subject: INR 700 ≈ USD 10</p>
-					</div>
-					<br>
+            
+          </div>
+          <div class="col m6 s12 input-class">
+          
+				 
 
 					<?php
 					 if ($this->ion_auth->logged_in()){
@@ -886,16 +943,16 @@ else
 							echo "<br>";
 
 							
-								if(isset($wallet_amount)){
-									$val = $wallet_amount;
-								}else{
-									$val ="0";
-								}
+								// if(isset($wallet_amount)){
+								// 	$val = $wallet_amount;
+								// }else{
+								// 	$val ="0";
+								// }
 
-								echo "(-) Your wallet amount : ".$val;
+								// echo "(-) Your wallet amount : ".$val;
 							
 
-							echo "<br>";
+					/*		echo "<br>";*/
 
 						}
 
@@ -907,7 +964,7 @@ else
 								}
 								 if ($this->ion_auth->logged_in()){
 
-								echo "Net amount due (-ve amount indicates +ve wallet balance): ".'<input id="amount_show" name="amount_show" type="text" required disabled class="validate onlyNumbers">';
+								echo "Net amount due (-ve amount indicates): ".'<input id="amount_show" name="amount_show" type="text" required disabled class="validate onlyNumbers">';
 							}
 							else
 							{
@@ -916,7 +973,7 @@ else
 
 							}
 							?>
-					<div class="row">						
+				<!-- 	<div class="row">						
 						
 						<div class="col m6 s12 input-field" style="display: none;">
 
@@ -939,8 +996,10 @@ else
 
 						
 						
-					</div>
-					<div class="row">
+					</div> -->
+            </div>
+          </div>
+					<div class="row" style="margin-top: -20px;">
 
 					
 
@@ -948,39 +1007,57 @@ else
 
 					<ul class="list">
 						<li>
-						Unicus Olympiads will be conducted online and the students will have to take the exams from their residence or any other place where they have access to computer with good Internet connectivity. The schools who have subscribed to these exams, may decide to conduct these exams using their computer lab. The exam can't be taken using Mobile device. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.
+						Unicus Olympiads conducts examinations in both online and pen/paper mode.<br/><br/>  
+            <ol><li class="in-cl">In case of online mode, the exam will be conducted online i.e. either on Laptop or 
+            desktop. The students will have to take the exams from their residence or any other 
+            place where they have access to computer with good Internet connectivity (2 Mbps) 
+            and latest version of the browser (preferably Google Chrome). If schools have 
+            subscribed for online mode of exam, then they may decide to conduct these exams 
+            using their computer lab.  </li>
+            <li class="in-cl">In case of offline mode, the exam will be conducted in schools only in pen/paper 
+            mode. </li>
+            </ol>
 					</li> 
-					<br>
-					<li>
-						Unicus Olympiads brings progressive thinking and hence, is quite different from traditional Olympiad exams. Click <a href="<?=base_url();?>about-us#traditional-vs-unicus-olympiads" target="_blank">here</a> to know more.
-
-					</li>
-					<br>
-					<li>
-						It’s in the best interest of students not to use any unfair means while attempting these exams. These exams are just a first step for a much bigger goal of appearing for competitive exams that are being conducted online these days. Although all the exams will require the students to have access to the webcam.
-				    </li>
-				    <br>
+					 
+          <li>In case of online mode, the exam can't be taken using Mobile device.</li>
+          
+          <li>Unicus Olympiads is a summer Olympiad. Hence, it focusses on the last 2 classes studied by the student.</li>
+           
+          <li>The online mode of examinations will be proctored. Hence, webcam is compulsory on every laptop/desktop. </li>
+            
+				    
 				    <li>
-						Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a>. We will provide flexibility to the students to select preferred dates for Preliminary Round exam.
+						To know about the exam and answer key dates, Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a> Page.
 					</li>
-					<br>
+				 
 					<li>
-						We take preparation seriously. Hence, there would be one mock test, provided complimentary. The student can appear for the test 3 times. He/she can view the performance too on his/her dashboard.
+						There will be 1 mock provided to all the students which can appeared online for a maximum of 3 times.  
           </li>
-					<br>
+				 
 					<li>
-						Do read the <a href="https://www.crestolympiads.com/faqs" target="_blank">Frequently Asked Questions (FAQs)</a> thoroughly.
+						Do read the <a href="<?php echo base_url(); ?>faqs" target="_blank">Frequently Asked Questions (FAQs)</a> thoroughly.
 					</li>
-					<br>
+				 
 					<li>
-            Kindly make payment only after reading the above statements. The fees once paid is non-refundable. For any queries or suggestions,  do write to us at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a>.
+           Kindly make payment only after you read and accept the above statements. Do note that the 
+fees once paid is non-refundable. For any queries or suggestions, do write to us at  <a href="mailto:info@unicusolympiads.com">info@unicusolympiads.com</a>.
 						</li>
 					</ul>
 					 
 					<label> <input class="instructions" type="checkbox"  onclick="" value="" required><span>I acknowledge that I have read and agree to the above Instructions.</span></label>
 			
 					</div>
-					<style>
+
+<style>
+[type="checkbox"]+span:not(.lever) { 
+     font-size: 13px !important;
+    }
+  .input-class{
+    font-size: 13px !important;
+  }
+  ul.list li {
+    font-size: 13px;
+}
 					.hr-text {
   line-height: 2.5em;
 /*  position: relative;
@@ -1179,7 +1256,7 @@ $("#state_name").hide();
 			if(country_sel.toLowerCase() != 'india' ){
 				$("input:checkbox[class=subjects]:checked").not(":disabled").each(function () {
 					if(sclass < 6 ){
-						if($(this).val() != 'CFO'){
+						if($(this).val() != 'UFO'){
 						amount += 700;
 						}
 					}else{
@@ -1190,7 +1267,7 @@ $("#state_name").hide();
 			}else{
 				$("input:checkbox[class=subjects]:checked").not(":disabled").each(function () {
 					if(sclass < 6 ){
-						if($(this).val() != 'CFO'){
+						if($(this).val() != 'UFO'){
 							amount += 225;
 						}
 					}else{
@@ -1253,12 +1330,12 @@ $("#state_name").hide();
 		$(".red-text").hide();
 		
 		if($("#class").val() > 5){
-			$("input:checkbox[name=CFO]").parent().parent().show(100);
+			$("input:checkbox[name=UFO]").parent().parent().show(100);
 		}
 		if($("#class").val() < 6){
 			// console.log($("#class").val());
-			$("input:checkbox[name=CFO]").prop("checked", false);
-			$("input:checkbox[name=CFO]").parent().parent().hide(100);
+			$("input:checkbox[name=UFO]").prop("checked", false);
+			$("input:checkbox[name=UFO]").parent().parent().hide(100);
 		}
 	});
 	$(".subjects").on("click",function(e){
@@ -1277,14 +1354,14 @@ $("#state_name").hide();
 			// var elem = $('.subjects_d');
 			var amount = 0;
 			var sclass = $("#class").val();
-			var wamount = $("#wallet_amount").val();
+			//var wamount = $("#wallet_amount").val();
 
 			var country_sel = $('#country option:selected').val();
 				// console.log(country_sel );
 			if(country_sel.toLowerCase() != 'india' ){
 				$("input:checkbox[class=subjects]:checked").not(":disabled").each(function () {
 					if(sclass < 6 ){
-						if($(this).val() != 'CFO'){
+						if($(this).val() != 'UFO'){
 						amount += 700;
 						}
 					}else{
@@ -1293,19 +1370,19 @@ $("#state_name").hide();
 					}
 		        });
 
-		        if(amount>0 && amount>wamount )
-		        {
+		    //     if(amount>0 && amount>wamount )
+		    //     {
 
-		        var total_amount=amount-wamount;
-		    }
-		    else
-		    {
-		    	var total_amount=wamount-amount;
-		    }
+		    //     var total_amount=amount-wamount;
+		    // }
+		    // else
+		    // {
+		    // 	var total_amount=wamount-amount;
+		    // }
 			}else{
 				$("input:checkbox[class=subjects]:checked").not(":disabled").each(function () {
 					if(sclass < 6 ){
-						if($(this).val() != 'CFO'){
+						if($(this).val() != 'UFO'){
 							amount += 225;
 						}
 					}else{
@@ -1315,8 +1392,8 @@ $("#state_name").hide();
 		        });
 
 
-		         var total_amount=amount-wamount;
-
+		         //var total_amount=amount-wamount;
+          var total_amount=amount;
 		        
 
 			}
@@ -1379,7 +1456,7 @@ $("#state_name").hide();
 		var subjects = '';
 		$("input:checkbox[class=subjects]:checked").each(function () {
 			if(sclass < 6 ){
-				if($(this).val() != 'CFO'){
+				if($(this).val() != 'UFO'){
 					subjects += $(this).val() + ',';
 				}
 			}else{

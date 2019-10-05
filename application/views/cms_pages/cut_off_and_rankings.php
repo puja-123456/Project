@@ -33,34 +33,26 @@ if($subject == 'umo'){ ?>
 	
 	<div class="col s12 m9" id="umocid" >
 		<div class="row">
-			<h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
+		 <h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
 			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
 			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li> 
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
+			 
 			
 		</div>
 	</div>
@@ -116,6 +108,9 @@ if($subject == 'umo'){ ?>
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -123,6 +118,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -174,6 +172,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -236,34 +237,26 @@ display:none;
 
 	<div class="col s12 m9" id="umocid">
 		<div class="row">
-			<h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
+			 <h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
 			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
 			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li><br/>
-				<li>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
+			 
 			
 		</div>
 	</div>
@@ -320,6 +313,9 @@ display:none;
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -327,6 +323,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -378,6 +377,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -441,34 +443,26 @@ display:none;
 
 	<div class="col s12 m9" id="umocid">
 		<div class="row">
-			<h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
+		<h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
 			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
 			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li> 
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
+			 
 			
 		</div>
 	</div>
@@ -524,6 +518,9 @@ display:none;
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -531,6 +528,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -582,6 +582,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -647,35 +650,28 @@ display:none;
 	
 	<div class="col s12 m9" id="umocid">
 		<div class="row">
-		 <h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
-			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>  
 			 
+			<h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
+			
+			<ul>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
-			
+			 
+			 
 		</div>
 	</div>
 </div>
@@ -730,6 +726,9 @@ display:none;
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -737,6 +736,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -788,6 +790,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -854,37 +859,30 @@ display:none;
 
 
 
-	<h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
+	
 	<div class="col s12 m9" id="umocid">
 		<div class="row">
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
+		 <h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
 			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
 			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
-			
+			 
+			 
 		</div>
 	</div>
 </div>
@@ -939,6 +937,9 @@ display:none;
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -946,6 +947,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -997,6 +1001,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -1060,35 +1067,26 @@ display:none;
 
 	<div class="col s12 m9" id="umocid">
 		<div class="row">
-			<h1 style="margin-top: 100px;">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
+			<h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
+			<p>The ranks will be given on the following criteria:</p>
 			
-			<h2>Cut-off to Qualify for Final Round</h2>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
 			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
 			</ul>
 			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
-			<p>The ranks will be given on the following criteria:</p>
-		 
-			<ul>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li> 
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the ranks for each session.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class=""><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
-			
+			 
 		</div>
 	</div>
 </div>
@@ -1143,6 +1141,9 @@ display:none;
 
 </script>
 <style> 
+p{
+	font-size: 13px;
+}
 .material-icons
 {
 position: relative;
@@ -1150,6 +1151,9 @@ top: 5px;
 }
  
 @media only screen and (min-width: 768px){
+	#corheading{
+	margin-top: 100px;
+}
 	#umocid{
 		margin-top: -28px;
 	}
@@ -1201,6 +1205,9 @@ display:none;
 
 }
 @media only screen and (max-width: 768px){
+	#corheading{
+	margin-top: -20px;
+}
 	#coarid{
 		margin-top: -55px;
 	}
@@ -1260,34 +1267,26 @@ display:none;
 	</div>
 	<div class="col s12 m9">
 		<div class="row">
-			<h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1>
-			<!-- <a href="<?php //echo base_url(); ?>cro-rankers" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Rankers</button></a>
-			<a href="<?php //echo base_url(); ?>cro-cutoff" target="_blank"><button style="background-color: #79554833 !important;border-radius: 5px;padding:10px;cursor: pointer;">CRO Cut-offs</button></a> -->
-			
-			<h4>Cut-off to Qualify for Final Round</h4>
-			<p>UGKO, UCO and UCTO (classes 1 to 10) and UEO, USO and UMO (classes 1 and 2) will have just one round which will be the final round. Hence, no cut-off would be required in this case.</p>
-			<p>While UEO, USO and UMO (classes 3 to 10) will have preliminary round followed by the final round if the student’s score is above the cut-off. The applicants of UEO, USO and UMO (classes 3 to 10) should fulfil any of the following 3 criteria to qualify for Final Round Olympiads exams:</p>
-			<ul>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Top 5% of candidates in a particular class that have given the Preliminary Round exam.</li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Top 25 rank holders in a particular class and in a particular city (top 50 cities in India)/zone(remaining towns and cities including international locations is divided into <p style="margin-left:23px">5 zones - East, West, North and South, and International).</p></li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Top 3 students (registered through school) from every school with more than 25 students in a class appearing for an Olympiad exam.</li>
-			 
-			</ul>
-			<p> </p>
-			<h2>Ranking Criteria for Final Round Exams</h2>
+			<h1  id="corheading">Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads</h1> 
+			<p>Cut-offs and Raking Criteria for all the subjects of Unicus Olympiads i.e. UEO, UMO, USO, UCO, UGKO and UCTO is as follows: </p>
+			<p><strong>Ranking Criteria for Main Exam for all the subjects </strong></p>
 			<p>The ranks will be given on the following criteria:</p>
-		 
+			
 			<ul>
 				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Total marks obtained in the exam.</li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of</li>
-				<p style="text-indent: 20px;">a. marks scored in 'Achievers' section if the students have given only Final round</p>
-				<p style="text-indent: 20px;">b. marks scored in 'Achievers' section of Preliminary Round exam</p>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie, the student completing the test in lesser time will be ranked higher.</li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again, the younger student based on Date of Birth will be ranked higher.</li> 
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be announced based on normalization of the</p><p style="text-indent: 23px;"> ranks for each session.</li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
-				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
-			</ul> 
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>If two or more students score same total marks then the ranks will be determined on the basis of<p style="margin-left:23px"><strong>a.</strong> marks scored in 'Achievers' section of the previous class.</p>
+				<p style="margin-left:23px"><strong>b.</strong> marks scored in 'Achievers' section of the previous to previous class.</p>
+               <p style="margin-left:23px"><strong>c.</strong> marks scored in ‘Regular’ section of the previous class.</p>
+               <p style="margin-left:23px"><strong>d.</strong> marks scored in ‘Regular’ section of the previous to previous class.</p>
+			</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie (in case of online mode of exam), the student completing the test in lesser time will be ranked higher.</li>
+				<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of a tie again (in case of online mode of exam), the younger student based on Date of Birth will be ranked higher.</li>  
+			 <li class="coar"><i class="material-icons">keyboard_arrow_right</i>Since Unicus Olympiads will be held on different days and sessions with different sets of question papers, final ranks will be <div id="textarr" >announced based on normalization of the ranks for each session.</div></li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case two or more students score same marks under the criteria above, they will be awarded the same rank.</li>
+			<li class="coar"><i class="material-icons">keyboard_arrow_right</i>In case of any confusion, decision of the Academic Council will be final & binding.</li>
+			</ul>
+			<p> </p>
+			 
 			
 		</div>
 	</div>
@@ -1343,6 +1342,9 @@ display:none;
 </script>
  
 <style type="text/css">
+p{
+	font-size: 13px;
+}
 #coarid{
 	margin-top:60px;
 }
@@ -1354,7 +1356,7 @@ display:none;
 position: relative; 
 }
 ul:not(.browser-default)>li {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1em;
     padding: 10px 0px 5px 0px;
     list-style-type: none;
@@ -1385,6 +1387,9 @@ ul:not(.browser-default)>li {
 	}
 }
 @media only screen and (min-width: 768px){
+	#textarr{
+	margin-left:23px;line-height: 25px;
+}
 	.padding-right-70{
 		padding-right: 50px;
 	}

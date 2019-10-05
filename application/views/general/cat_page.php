@@ -17,7 +17,7 @@
 					 
 		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<a target="_blank" href="https://www.olympiadsuccess.com"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -31,8 +31,8 @@
 		<div class="row padding-right-70">
 			<div class="row">
 				<div class="col s12 m11">
-					<h1 style="margin-top: 0px;">About</h1>
-					<img src="<?=base_url()?>assets/images/original/<?php echo $category['slug']; ?>-banner.jpg" class="responsive-img">
+					<h5 style="margin-top: 0px;">About</h5>
+					<!-- <img src="<?=base_url()?>assets/images/original/<?php echo $category['slug']; ?>-banner.jpg" class="responsive-img"> -->
 					<div class="row">
 					<div id="about">
 						<?php echo $category['long_description']; ?>
@@ -98,8 +98,11 @@
 </script>
 
 <style type="text/css">
+p{
+	font-size: 13px;
+}
 ul:not(.browser-default)>li {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1em;
     padding: 10px 0px 5px 0px;
     list-style-type: none;

@@ -1,6 +1,6 @@
 <div class="row" id="sqid">
 <p>&nbsp;</p>
-	<h1 class="left-align flow-text"><?php echo $this_category->name." ".$this_syllabus->name; ?> Sample Papers</h1>
+	<h1 class="left-align flow-text" id="spcid"><?php echo $this_category->name." ".$this_syllabus->name; ?> Sample Papers</h1>
 
 <!-- <div class="col-md-4 col-xs-12 col-sm-12 quick-links">
 	   <h2 class="inner-hed">Other Classes Sample Papers</h2>
@@ -150,7 +150,7 @@
 
 					<!-- <a href="" class="white-text" id="desktop_link"><button class="btn btn-secondary" style="font-family: 'Melonheadz';" onclick="openPopup()">Test Yourself</button></a> -->
 			<a href="<?php echo base_url()."daily-quiz/start"; ?>" class="white-text" id="phone_link"><button class="btn btn-secondary" style="font-family: 'Melonheadz';margin-top:30px">Test Yourself</button></a>
-	   <h1 class="left-align flow-text">Other Classes Sample Papers</h1>
+	   <h1 class="left-align flow-text" style="padding-left: 0px;">Other Classes Sample Papers</h1>
 		<div class="notif">
 		    <ul>
 		    <?php
@@ -168,7 +168,7 @@
 		   <?php if($other_sample_paper_same_course){
 
 		   // print_r($other_sample_paper_same_course);die; ?>
-	   <h1 class="left-align flow-text">Other Subjects Sample Papers</h1>
+	   <h1 class="left-align flow-text" style="padding-left: 0px;">Other Subjects Sample Papers</h1>
 		<div class="notif">
 		    <ul>
 		    <?php foreach ($other_sample_paper_same_course as $key) {
@@ -247,11 +247,11 @@ button.col.s12.waves-effect.waves-light.btn.ans {
     height: auto;
     padding: 5px;
 }
-h1.left-align.flow-text{
-	margin-top:80px;
+#spcid{
+	margin-top:120px;
 }
 @media only screen and (max-width: 768px){
-h1.left-align.flow-text{
+#spcid{
 	margin-top:10px;
 }
 	.row .col.m8{

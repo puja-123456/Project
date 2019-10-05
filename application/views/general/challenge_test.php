@@ -540,7 +540,20 @@ ul.cases li
 #menu{
   margin-top: 40px;
 }
+@media screen and (min-width: 768px){
+  #menu{
+    max-height: 400px;
+    overflow-y: scroll; 
+    width: 16.666667% !important;
+  }
+  .fuild-container{
+    margin-top:90px;
+  }
+  }
 @media screen and (max-width: 768px){
+  .fuild-container{
+    margin-top:30px;
+  }
 [type="checkbox"]+span:not(.lever) {
   line-height: 17px;
 }
@@ -559,10 +572,10 @@ ul.cases li
 </style>
 <div class="fuild-container"> 
   <div class="row contact">
-  <div class="col s12 m2 well"> 
+  <div class="col s12 m3 well"> 
 	<?php if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
 </div>
-	 <div class="col s12 m10 offset-s2 text-center well row" style="min-height:447px;" id="invid">
+	 <div class="col s12 m9 offset-s2 text-center well row" style="min-height:447px;" id="invid">
 		<h1>View and Challenge the answers</h1>
 	
 

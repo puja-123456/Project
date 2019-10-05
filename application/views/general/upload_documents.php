@@ -79,8 +79,29 @@ window.fbAsyncInit = function() {
 	left: 54px;
 	border-radius: 6px;*/
 }
+form#upload_documents ol li {
+    font-size: 14px;
+    font-family: "Lucida sans";
+}
+.col.m12.s12.input-field {
+    font-size: 14px;
+    font-family: "Lucida sans";
+}
+@media only screen and (min-width: 786px){
+/*	#menu{
+    max-height: 400px;
+    overflow-y: scroll; 
+    width: 16.666667% !important;
+  }*/
+.fuild-container{
+	margin-top: 70px;
+}
 
+}
 @media only screen and (max-width: 786px){	
+.fuild-container{
+	margin-top: 30px;
+}
 	#share_buttons button{
 		font-size: 11px;
 		margin-bottom: 5px;
@@ -133,7 +154,7 @@ $(document).ready(function(){
      
     
     <div class="col s10 offset-s2 text-center well" style="min-height:347px;padding: 0px 30px;">
-      <h1>Upload Documents</h1> 
+      <h1>Submit Documents</h1> 
 
 <!-- <div class="container">
 	<?php //if ($this->ion_auth->logged_in()){ $this->load->view('templates/leftmenu'); }?>
@@ -158,9 +179,9 @@ $(document).ready(function(){
 					<div class="row">
 						<ol>
 							<li><!-- Please ensure that the required documents are uploaded. Otherwise "<strong>Access Card</strong>" will not be issued. -->
-								You are required to upload the documents before the exam.
+								Make sure you submit the required documents before the exam.
 							</li>
-							<li>Maximum size of each document is 200 KB. In case the file size is more than 200 KB, <a href="https://compressimage.toolur.com/" target="_blank" rel="nofollow">click here</a> to compress image.</li>
+							<li>Only jpeg/jpg and png images are allowed with a maximum size of 200 KB. In case the file size is more than 200 KB, <a href="https://compressimage.toolur.com/" target="_blank" rel="nofollow">click here</a> to compress image. (supported format – jpeg/jpg and png)</li>
 						</ol>
 					
 						<div class="col m12 s12 input-field">

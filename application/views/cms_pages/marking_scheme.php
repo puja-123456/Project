@@ -32,8 +32,8 @@
 
 		<div class="">
 			<!-- <p class="flow-text">Pattern of Marking Scheme</p> -->
-			 <p>The marking scheme for both the rounds i.e. preliminary and final round for all the subjects under Unicus Olympiads are given below. </p>
-			 <p>Please select the round and then the subject to get complete detail of marking scheme about that subject.</p>
+			 <p>Unicus Olympiads examinations are based on the immediate last 2 classes studied by the student. So, please find below the marking scheme for Main Exam for all the subjects under Unicus Olympiads. </p>
+			 <p>Please select the subject to get complete detail of marking scheme about that subject.</p>
            
               <div class="row">
 							<div class="col m4 l4 s12">
@@ -174,6 +174,9 @@
 </script>
  -->
 <style type="text/css">
+h5 {
+	font-size: 14px !important;
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;
@@ -208,7 +211,9 @@ ul:not(.browser-default)>li {
 		border-bottom: 2px solid #11332f;
 	}
 #mkid{
-	margin-top: 0px;
+	line-height: 15px; 
+	 font-size: 13px;
+	 margin-top: 0px;
    }
 	
 }
@@ -266,9 +271,8 @@ ul.droopmenu-col.droopmenu-col3 h5 {
     font-weight: 600;
     line-height: inherit;
 }
- 
+}
 
-	}
 </style>
 
 
@@ -323,228 +327,99 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 		</ul> 
  
 		</div> 
-	<!-- <div class="col s12 m3">
-		<div class="syllabus-menu">
-			<p class="flow-text">Level 1 Marking Scheme</p>
-			<div class="row">
-				<ul class="left-align">
-					<li><a href="#cmo-marking-scheme-l1">UNICUS Mathematics Olympiad</a></li>
-					<li><a href="#cso-marking-scheme-l1">UNICUS Science Olympiad</a></li>
-					<li><a href="#ceo-marking-scheme-l1">UNICUS English Olympiad</a></li>
-					<li><a href="#cco-marking-scheme-l1">UNICUS Cyber Olympiad</a></li>
-					<li><a href="#cro-marking-scheme-l1">UNICUS Reasoning Olympiad</a></li>
-					<li><a href="#cfo-marking-scheme-l1">UNICUS French Olympiad</a></li>
-					 
-					
-				</ul>
-			</div>
-			<div class="divider"></div>
-			<p class="flow-text">Level 2 Marking Scheme</p>
-			<div class="row">
-				<ul class="left-align">
-					<li><a href="#cmo-marking-scheme-l2">UNICUS Mathematics Olympiad</a></li>
-					<li><a href="#cso-marking-scheme-l2">UNICUS Science Olympiad</a></li>
-					<li><a href="#ceo-marking-scheme-l2">UNICUS English Olympiad</a></li>
-				</ul>
-			</div>
-		</div>
-	</div> -->
+	 
 	<div class="col s12 m12">
 		<div class="row">
-			<h4>Level 1 Exam Pattern and Marking Scheme</h4> 
-			<?php echo $detailsoflevel1; ?> 
-			 <p>&nbsp;</p>
-			<!-- <h3 id="cco-marking-scheme-l1">UNICUS Cyber Olympiad (CCO)</h3>
+	 <?php echo $ultitle; ?>
+		<!-- 	<h4>Level 1 Exam Pattern and Marking Scheme</h4>  -->
+			<?php //echo $detailsoflevel1; ?> 
+
+ 
 			<table class="responsive-table highlight">
 				<tbody>
 					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
+						<td>Classes</td>
+						<td>Class and Topic/ Section</td>
+						<td>Total Questions</td>
 						<td>Marks per Question</td>
 						<td>Total Marks</td>
 					</tr>
 					<tr>
 						<td rowspan="3">
-							1<sup>st</sup> to 4<sup>th</sup>
+							1<sup>st</sup> & 2<sup>nd</sup>
 						</td>
-						<td>Computers &amp; IT</td>
-						<td>25</td>
+						<td>Previous Class Regular</td>
+						<td>30</td>
 						<td>1</td>
-						<td>25</td>
+						<td>30</td>
 					</tr>
 					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
+						<td>Previous Class Achievers</td>
+						<td>5</td>
 						<td>2</td>
-						<td>20</td>
+						<td>10</td>
 					</tr>
 					<tr>
 						<td><strong>Grand Total</strong></td>
 						<td><strong>35</strong></td>
 						<td> </td>
-						<td><strong>45</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>Computers &amp; IT</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table> -->
-			<!-- <p>&nbsp;</p> -->
-			<!-- <h3 id="cgko-marking-scheme-l1">UNICUS General Knowledge Olympiad (CGKO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							1<sup>st</sup> to 4<sup>th</sup>
-						</td>
-						<td>General Knowledge</td>
-						<td>45</td>
-						<td>1</td>
-						<td>45</td>
-					</tr>
-					<tr>
-						<td>Current Affairs</td>
-						<td>15</td>
-						<td>2</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>60</strong></td>
-						<td> </td>
-						<td><strong>75</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>General Knowledge</td>
-						<td>60</td>
-						<td>1</td>
-						<td>60</td>
-					</tr>
-					<tr>
-						<td>Current Affairs</td>
-						<td>15</td>
-						<td>2</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>75</strong></td>
-						<td> </td>
-						<td><strong>90</strong></td>
-					</tr>
-				</tbody>
-			</table> -->
-			<!-- <p>&nbsp;</p>
-			<h3 id="cro-marking-scheme-l1">UNICUS Reasoning Olympiad (CRO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="2">
-							1<sup>st</sup> to 4<sup>th</sup>
-						</td>
-						<td>Logical Reasoning</td>
-						<td>25</td>
-						<td>1</td>
-						<td>25</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>35</strong></td>
-						<td> </td>
-						<td><strong>45</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="2">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>Logical Reasoning</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>
-			<p>&nbsp;</p>
-			<h3 id="cfo-marking-scheme-l1">UNICUS French Olympiad (CFO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
+						<td><strong>40</strong></td>
 					</tr>
 					<tr>
 						<td rowspan="4">
-							6<sup>th</sup> to 10<sup>th</sup>
+							3<sup>rd</sup> to 5<sup>th</sup>
 						</td>
-						<td>French Language</td>
-						<td>40</td>
+					    <td>Previous Class Regular</td>
+						<td>23</td>
 						<td>1</td>
-						<td>40</td>
+						<td>23</td>
 					</tr>
 					<tr>
-						<td>About France/French</td>
-						<td>10</td>
+						<td>Previous Class Achievers</td>
+						<td>7</td>
 						<td>2</td>
-						<td>20</td>
+						<td>14</td>
+					</tr>
+						<tr>
+						<td>Previous to Previous Class Achievers</td>
+						<td>3</td>
+						<td>2</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td><strong>Grand Total</strong></td>
+						<td><strong>40</strong></td>
+						<td> </td>
+						<td><strong>50</strong></td>
+					</tr>
+
+
+					<tr>
+						<td rowspan="5">
+							6<sup>th</sup> to 10<sup>th</sup>
+						</td>
+					    <td>Previous Class Regular</td>
+						<td>28</td>
+						<td>1</td>
+						<td>28</td>
+					</tr>
+					<tr>
+						<td>Previous Class Achievers</td>
+						<td>7</td>
+						<td>2</td>
+						<td>14</td>
+					</tr>
+						<tr>
+						<td>Previous to Previous Class Regular</td>
+						<td>12</td>
+						<td>1</td>
+						<td>12</td>
+					</tr>
+						<tr>
+						<td>Previous to Previous Class Achievers</td>
+						<td>3</td>
+						<td>2</td>
+						<td>6</td>
 					</tr>
 					<tr>
 						<td><strong>Grand Total</strong></td>
@@ -553,15 +428,15 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 						<td><strong>60</strong></td>
 					</tr>
 				</tbody>
-			</table> -->
-			<p>&nbsp;</p>
-			<h4>Level 2 Exam Pattern and Marking Scheme</h4>
-             <?php echo $detailsoflevel2; ?> 
-			
-			<p> </p>
+			</table> 
+
+
+			 <p>&nbsp;</p>
+			 
+			 
 		</div>
 
-		<p>&nbsp;</p>
+		<p>&nbsp;</p>x
 	</div>
 </div>
  
@@ -617,6 +492,10 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 </script>
 
 <style type="text/css">
+td, th { 
+    font-size: 13px;
+
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;
@@ -709,7 +588,6 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 	margin-top: -80px;
 }
  }
-
 
  
 </style>

@@ -33,7 +33,14 @@ $(document).ready(function() {
   .input-field {
     margin-top: 0.4rem !important;
   }
-  .solid:before 
+  .input-field.col label {
+/*    left: .75rem;*/
+    font-size: 13px;
+}
+ p{
+ 	font-size: 13px;
+ }
+.solid:before 
 {
     content:"";
     display:block;

@@ -36,17 +36,20 @@
 
 		$i=1;
 		foreach ($questions as $q) {
+			//echo $i;
 			?>
 			
 				<li <?php if($i=1){ ?> class="active" <?php } else { } ?> >
-					<div class="collapsible-header"><?php echo "Q.".$i; ?><i class="material-icons rotate">keyboard_arrow_right</i><?=$q->ques;?></div>
+					<div class="collapsible-header"><?php echo "Q.".$q->id; ?><i class="material-icons rotate">keyboard_arrow_right</i><?=$q->ques;?></div>
 					<div class="collapsible-body"><span><?=$q->answer;?></span></div>
+					
 				</li>
 			
-
+ 	
 			<?php
-		$i++;
+	$i++;
 	}
+
 		?>
 		</ul>
 	</div>

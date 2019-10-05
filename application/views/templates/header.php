@@ -700,7 +700,7 @@ ul:not(.browser-default)>li
     padding: 5px 0;
     border-bottom: 0;
     font-weight: 400 !important;
-    font-size: 1em !important;
+    font-size: 13px !important;
 }
 /*.droopmenu li>ul {
 	height: 70px !important;

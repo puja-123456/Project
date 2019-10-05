@@ -1,7 +1,7 @@
 
 <div class="row">
 <h1 class="left-align" >Sample Papers</h1>
-<p style="padding: 0px 14px 0px 15px;">The sample papers for all the subjects in Unicus Olympiads are designed by a team of experts. The aim of Unicus sample papers is to give the students a familiarity with the syllabus covered. Also, it will tell the pattern followed and the marking scheme which can help the students prepare nicely for the exam.</p>
+<p style="padding: 0px 14px 0px 15px;">The sample papers for all the subjects in Unicus Olympiads are designed by a team of experts. The aim of Unicus sample papers is to give the students a familiarity with the syllabus covered. Also, it will tell the pattern followed and the <a href="<?php echo base_url(); ?>/marking-scheme" >marking scheme</a> which can help the students prepare nicely for the exam.</p>
 <p style="padding: 0px 14px 0px 15px;">All the Unicus sample papers can be downloaded easily. You can view the sample papers or click on the download button to download Unicus sample papers.
 </p>
 <!-- <h1>Sample Papers</h1> -->
@@ -49,7 +49,7 @@
 					 //if($syllabus->name != ucfirst($class_name)) {
 					?>
 					
-                  <a href="<?php echo base_url().$category[0].'/sample-papers-class-'.$i; ?>"><div class="col m1 s12" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
+                  <a href="<?php echo base_url().$category[0].'/sample-papers-class-'.$i; ?>"><div class="col m1 s12 alllinks" style="margin-bottom: 10px;">Class <?php echo $i; ?></div></a>
 					<?php 
 				   //}
 				 
@@ -65,6 +65,16 @@
 </div>
 
 <style>
+p{
+	font-size: 13px;
+}
+.alllinks{
+	padding-left: 0px !important;
+	 font-size: 13px;
+}
+.alllink{
+	 font-size: 13px;
+}
 ul:not(.browser-default)>li {
     font-size: 14px;
     line-height: 1em;
@@ -128,7 +138,7 @@ ul:not(.browser-default)>li {
 .left-align{
 	margin-top: 20px;
 }
-.alllink{
+.alllink{ 
 	    margin-bottom: 10px;
 }
 

@@ -7,6 +7,10 @@
 }
 </style>
 <style>
+.modal .modal-content {
+  margin-top: -5px;
+    padding: 5px 15px !important;
+}
     .close {
   float: right;
   font-size: 21px;
@@ -37,7 +41,7 @@ button.close {
 }
 .modal {
   position: fixed;
-  top: 0;
+  top: 90px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -101,7 +105,7 @@ button.close {
 }
 .modal-header {
   min-height: 16.42857143px;
-  padding: 15px;
+  padding: 0px;
   border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
@@ -112,12 +116,20 @@ button.close {
   line-height: 1.42857143;
 }
 .modal-body {
+    position: relative;
+    padding: 10px;
+    background: url(http://localhost/crest_new/assets/images/certificate_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 871px 500px;
+    height: 500px;
+/*
+
   position: relative;
   padding: 20px; 
   background: url("<?php echo base_url(); ?>assets/images/certificate_bg.jpg");
   background-repeat: no-repeat;
   background-size: 900px 500px;
-  height:500px;
+  height:500px;*/
 }
 .modal-footer {
   padding: 19px 20px 20px;
@@ -195,13 +207,13 @@ button.close {
        <input type="checkbox" id="sm1">
       <ul class="sub-menu" id="sub-menu">
         <li class=""><a
-            href="<?php echo base_url(); ?>unicus/profile">Profile<hr></a>
+            href="<?php echo base_url(); ?>unicus/profile">Profile</a>
           </li>
         <li class=""><a
-            href="<?php echo base_url(); ?>unicus/update_password">Change Password<hr></a>
+            href="<?php echo base_url(); ?>unicus/update_password">Change Password</a>
         </li>
           <li class=" "><a
-            href="<?php echo base_url(); ?>unicus/upload_documents">Upload Documents<hr></a>
+            href="<?php echo base_url(); ?>unicus/upload_documents">Submit Documents</a>
         </li> 
          <li class="<?php if (isset($active_menu) && $active_menu == "subcategories") echo "active"; ?>">
             <a href id="preview" data-toggle="modal" data-target="#myModal">Preview Certificate</a>
@@ -211,9 +223,15 @@ button.close {
         </li>    -->
       </ul>
     </li>
+
+
+ <li class="<?php if (isset($active_menu) && $active_menu == "access_card") echo "active"; ?>">
+            <a href="<?php echo base_url()."unicus/access"; ?>"> Book Slot</a>
+        </li> 
+        
  
 
-   <li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> second" >
+ <!--   <li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> second" >
             <a href="#">Take Exam
           <span class="drop-icon">▾</span>
         <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
@@ -221,39 +239,35 @@ button.close {
              <input type="checkbox" id="sm2">
       <ul class="sub-menu" id="sub-menu1">
         <li class=""><a
-            href="<?php echo base_url(); ?>unicus/quizzes">Mock Test<hr></a>
+            href="<?php echo base_url(); ?>unicus/quizzes">Mock Test</a>
           </li> 
            <li class=""><a
-            href="<?php echo base_url(); ?>unicus/profile">Main Courses<hr></a>
+            href="<?php echo base_url(); ?>unicus/profile">Main Exam</a>
           </li> 
         </ul>
-        </li> 
+        </li>  -->
 
 
-<li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> third" >
-            <a href="#">Result
+<!-- <li class="<?php if (isset($active_menu) && $active_menu == "mock_test") echo "active"; ?> third" >
+            <a href="#">Results
           <span class="drop-icon">▾</span>
         <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
             </a>
              <input type="checkbox" id="sm2">
       <ul class="sub-menu" id="sub-menu2">
-        <li class=""><a
-            href="<?php echo base_url(); ?>">Performance<hr></a>
+         <li class=""><a
+            href="<?php echo base_url(); ?>">Performance</a>
           </li> 
            <li class=""><a
-            href="<?php echo base_url(); ?>">Answer keys & Challenge<hr></a>
+            href="<?php echo base_url(); ?>unicus/challenge_test">Answer keys & Challenge</a>
           </li> 
           <li class=""><a
-            href="<?php echo base_url(); ?>unicus/result">Final Result<hr></a>
+            href="<?php echo base_url(); ?>unicus/result">Final Results</a>
           </li> 
         </ul>
         </li> 
+ -->
 
-
- <li class="<?php if (isset($active_menu) && $active_menu == "access_card") echo "active"; ?>">
-            <a href="<?php echo base_url()."unicus/access"; ?>"> Book Slot</a>
-        </li> 
-        
 
 
     <li class="<?php if (isset($active_menu) && ($active_menu == "registration" || $active_menu == "invoice")) { echo "active"; } ?> four">
@@ -264,11 +278,11 @@ button.close {
        <input type="checkbox" id="sm3">
       <ul class="sub-menu" id="sub-menu3">
           <li class="">
-            <a href="<?php echo base_url(); ?>unicus/reg_form">Subscription<hr>
+            <a href="<?php echo base_url(); ?>unicus/reg_form">Subscription
           </a>
         </li>
        <li class="">
-            <a href="<?php echo base_url()."unicus/invoice"; ?>">Invoice<hr></a>
+            <a href="<?php echo base_url()."unicus/invoice"; ?>">Invoice</a>
           </li>
       <li class="<?php if (isset($active_menu) && $active_menu == "add_feedback_form") echo "active"; ?>" id="add_feedback_form" >
             <a href="javascript:void(0)">Feedback</a>
@@ -317,7 +331,7 @@ button.close {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title"style="text-align: center">Certificate Preview</h4>
+          <h5 class="modal-title"style="text-align: center">Certificate Preview</h5>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -328,7 +342,7 @@ button.close {
                 This is to certify that <span id="uname" style="width:30%"><?php echo $user_details[0]->username; ?> </span>  of class <span id="uclass"><?php echo $user_details[0]->class; ?></span>  <br/>
                 studying at <span id="uschool" style="width:40%"><?php echo $user_details[0]->school.", ".$user_details[0]->city; ?></span> <br/>
                 has been awarded _______________ in <br/>
-                <span id="exam"><?php echo "CREST Mathematics Olympiad";//echo rtrim($user_details[0]->prefered_subject,","); ?></span> <br/>
+                <span id="exam"><?php echo "Unicus Mathematics Olympiad";//echo rtrim($user_details[0]->prefered_subject,","); ?></span> <br/>
                 conducted on <span id="date">DD MMM, 2019</span> </div>
           
         </div>
@@ -383,7 +397,7 @@ popup.close();
 <style>
 
 #toggle-menu, #menu a {
-    padding: 0.7em 1em !important;
+    padding: 0.3em 1em !important;
 }
 #main-menu ul li {
   background-color: #ffd223; 
@@ -397,8 +411,8 @@ popup.close();
 }
 #menu .sub-menu a {   
     padding: 1px 1px 2px 20px !important;
-    text-indent: 10px;
-    font-size: 14px;
+   /* text-indent: 10px;*/
+    font-size: 12px;
     width: 100%;
 }
 #menu ul {
@@ -428,14 +442,14 @@ popup.close();
 
 #menu li, 
 #toggle-menu {
-  border-width: 0 0 1px;
+  border-width: 0 0 0px;
 }
 
 #menu .sub-menu { 
-   
+       
   /*background-color: #444;*/
   background-color: #26a69a;
-  border-width: 1px 1px 0;
+  border-width: 0px 0px 0;
   margin: 0 1em;
 }
 
@@ -444,19 +458,19 @@ popup.close();
 }
 
 #menu li, 
-#toggle-menu, 
+
 #menu a {
   position: relative;
   display: block;
-  background-color: #26a69a;
-  color: white;
+  background-color: #ffffff;
+  color: #000;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
 }
 
 #menu, 
 #toggle-menu {
   /*background-color: #09c;*/
-  background-color: #751e49;
+  background-color: #000;
 }
 
 #toggle-menu, 
@@ -473,13 +487,13 @@ popup.close();
 #menu a {
   transition: all .125s ease-in-out;
   -webkit-transition: all .125s ease-in-out;
-  font-size:18px;
+  font-size:14px;
 }
 
 #menu a:hover {
-  background-color: white;
+ /* background-color: white;*/
 /*  color: #09c;*/
-  color: #751e49;
+  color: #f16f15 !important;
 }
 
 #menu .sub-menu {
@@ -520,7 +534,7 @@ popup.close();
 }*/
 
 #toggle-menu {
-    background: #333;
+    background: #000;
     text-align:center;
 }
 
@@ -534,15 +548,15 @@ popup.close();
   }
 }*/
 
-#hello
+/*#hello
 {
   
   position: relative;
   top: 50px;
   
-}
+}*/
 
-@media only screen and (max-width: 1199px) {
+/*@media only screen and (max-width: 1199px) {
 
   #hello
 {
@@ -553,22 +567,30 @@ popup.close();
 }
 
 
-  }
+  }*/
 
 
-@media only screen and (min-width: 768px) {
-
- #menu{
-   width: 14.6666666667% !important; 
+@media only screen and (min-width: 768px) { 
+#menu{
+ /* border: 1px solid #ddd2d2;*/
+   width: 14.6666666667%; 
     margin-top: 25px;
-}
-
+} 
   }
 
-
-
-
-
+@media only screen and (max-width: 768px) { 
+#menu .sub-menu{
+margin-top: 15px !important;
+}
+#toggle-menu {
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+#menu {
+  background-color: unset;
+}
+}
   @media only screen 
     and (min-width : 767px) 
     and (max-width : 1199px)  {
@@ -591,6 +613,7 @@ popup.close();
   }
 
   #menu li {
+        /*line-height: 0px;*/
     float: none !important;
     border-width: 0 1px 0 0;
   }
@@ -633,7 +656,7 @@ popup.close();
   .main-menu li
   {
      /*background-color: #09c;*/
-     background-color: #751e49;
+     background-color: #000;
   }
 
   .sub-menu li
@@ -646,13 +669,13 @@ popup.close();
   line-height: 1;
 }
 
-#hello
+/*#hello
 {
   
   position: relative;
   top: 50px;
   
-}
+}*/
 
 h1
 {
@@ -693,21 +716,18 @@ h1
   }
 
   #menu li {
+       /* line-height: 0px;*/
     float: none !important;
     border-width: 0 1px 0 0;
   }
-
-  #menu .sub-menu li {
-    float: none;
-  }
-
+ 
   #menu .sub-menu {
     border-width: 0;
     margin: 0;
     position: relative;
     top: 100%;
     left: 0;
-    width: 14em;
+    width: 12em;
     z-index: 3000;
   }
 
@@ -717,6 +737,8 @@ h1
   }
 
   #menu .sub-menu li {
+    line-height: 10px;
+     float: none;
     border-width: 0 0 1px;
   }
 
@@ -731,7 +753,7 @@ h1
   .main-menu li
   {
      /*background-color: #09c;*/
-     background-color: #751e49;
+     background-color: #000;
   }
 
   .sub-menu li
@@ -743,14 +765,14 @@ h1
   #menu .drop-icon {
   line-height: 1;
 }
-
+/*
 #hello
 {
   
   position: relative;
   top: 50px;
   
-}
+}*/
 
 h1
 {

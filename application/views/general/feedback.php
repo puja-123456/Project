@@ -29,7 +29,7 @@ $().ready(function(){
     };
     $("#add_feedback_form").on("click",function(){
         $.confirm({
-            title: 'CREST Olympiads- Feedback',
+            title: 'Unicus Olympiads- Feedback',
             content: 'url:<?=base_url();?>assets/feedback-form.html',
             buttons: {
                 sayMyName: {

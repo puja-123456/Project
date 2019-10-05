@@ -23,8 +23,26 @@ window.fbAsyncInit = function() {
 
 <style type="text/css">
 
+@media screen and (min-width: 768px){
+  #menu{
+    max-height: 300px;
+    overflow-y: scroll; 
+    width: 16.666667% !important;
+  }
+  .fuild-container{
+    margin-top:90px;
+    height: 400px;
+  }
+  }
+
 @media only screen and (max-width:767px){
-	
+	.fuild-container{
+    margin-top:30px;
+  }
+  #menu{
+  margin-top:-30px; margin-bottom: 40px;
+  position: relative !important;
+  } 
 	#share_buttons{
 		margin-left: 0px !important;
 		margin-right: 0px !important;
@@ -261,6 +279,7 @@ th {
 .row .col.offset-m3 {
      margin-left: 0;
 }
+
 }
 </style>
 <div class="fuild-container">

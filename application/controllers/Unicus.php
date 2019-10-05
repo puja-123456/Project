@@ -48,8 +48,8 @@ class Unicus extends MY_Controller {
 
 		/*$this->data['meta_description'] = 'CREST Olympiads is an online Olympiad exam for classes 1 to 10 which focuses on the practical knowledge of the student rather than theoretical knowledge.';
 		$this->data['title'] = 'Online Olympiad Exams 2019 - Individual Registration Open for Classes 1 to 10 - CREST Olympiads';*/
-		$this->data['meta_description'] = 'Individual Registration Open for 2019 online Olympiad exam for classes 1 to 10. It focuses on the practical knowledge of the student rather than theoretical knowledge.';
-		$this->data['title'] = 'Online Olympiad Exams Registration 2019 Open for Classes 1 to 10 - CREST Olympiads';
+		$this->data['meta_description'] = 'Summer Olympiad exam - Individual Registration Open for 2020 Olympiad exam for classes 1 to 10. We assess your kids practical understanding as per previous classes rather than theoretical knowledge.';
+		$this->data['title'] = 'Summer Olympiad Exam 2020, Summer Activities for Classes 1 to 10 - Unicus Olympiads';
 		$this->data['active_menu'] = 'home';
 
 		$this->data['categories'] = $this->base_model->get_details('categories');
@@ -174,6 +174,22 @@ public function cro_cutoff()
 			$this->_render_page('templates/template', $this->data); 
 
 	}
+
+
+public function main_exam()
+	{ 
+
+           /* $qcrocutoff = "SELECT * FROM subject_cutoff"; 
+			$crorescutoff = $this->db->query($qcrocutoff)->result_array(); 
+/*			print_r($croresult);die;
+*/			//$this->data['crorescutoff'] = $crorescutoff;*/
+			$this->data['title'] = "Check details here";
+			$this->data['meta_description'] = "CREST Reasoning Olympiad cut off announced. Check whether you are qualified for Medals, Merit certificates, Trophies or not."; 
+            $this->data['content'] = "general/main_exam";
+			$this->_render_page('templates/template', $this->data); 
+
+	}
+
 
 
 public function syllabus_class_pages()
@@ -426,14 +442,15 @@ public function syllabuss_pages()
 	}
 	public function sample_questions()
 	{
+		//echo "hello";die;
 
 		$slug =  $this->uri->segment(1);
         $slugs =  $this->uri->segment(2);
-      //  echo $slugs;die;
+      // echo $slugs;die;
 		if($slug!=''){
 			$slug_array = explode('-', $slugs);
 
-
+          //print_r($slug_array);die;
 			$catslug = $slug;
 			$catname = strtoupper($slug_array[2])." ".$slug_array[3];
 
@@ -459,10 +476,13 @@ public function syllabuss_pages()
 			// $this_syllabus = $this->db->query($query)->result_array();
 
 			//$where['id'] = $classid;
+
 			$where['catid'] =  $category[0]['catid'];
+			//echo  $category[0]['catid'];die;
 			$where['name'] = $catname;
 
 			$where2['catid'] =  $category[0]['catid'];
+			//echo  $category[0]['catid'];die;
 			$where2['name !='] = $catname;
 
 			$this->data['other_sample_paper_other_class'] = $this->base_model->fetch_records_from('syllabus',$where2);
@@ -472,6 +492,7 @@ public function syllabuss_pages()
 
 
 			$this_syllabus = $this->base_model->fetch_records_from('syllabus',$where);
+			//print_r($this_syllabus);die;
 			if (!$this_syllabus){
 				redirect(base_url());
 			}
@@ -489,7 +510,7 @@ public function syllabuss_pages()
 			$all_questions = $questions;
 
 			$where3['catid !='] =  $this_syllabus[0]->catid;
-			
+			//echo $this_category[0]->short_cat;
 
 			$this->data['other_sample_paper_same_course'] = $this->base_model->fetch_records_from('categories',$where3);
 
@@ -684,280 +705,39 @@ if($slug!=''){
                  if($slugsubject == 'umo') 
 
                 {
-                 $this->data['ultitle'] = 'UNICUS Mathematics Olympiad';
-                 $this->data['detailsoflevel1'] = '<h3 id="cmo-marking-scheme-l1">UNICUS Mathematics Olympiad (CMO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							1<sup>st</sup> to 4<sup>th</sup>
-						</td>
-						<td>Practical Mathematics</td>
-						<td>25</td>
-						<td>1</td>
-						<td>25</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>35</strong></td>
-						<td> </td>
-						<td><strong>45</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>Practical Mathematics</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>';
-
-            $this->data['detailsoflevel2'] ='<h3 id="cmo-marking-scheme-l2">UNICUS Mathematics Olympiad (UMO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							3<sup>rd</sup> to 10<sup>th</sup>
-						</td>
-						<td>Practical Mathematics</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>';
-
+                 $this->data['ultitle'] = '<h5 id="cmo-marking-scheme-l1">Unicus Mathematics Olympiad (CMO)</h5>';
+                // $this->data['detailsoflevel1'] = ''; 
                 }
 
                 else if($slugsubject == 'uso') { 
 
-                 $this->data['ultitle'] = 'UNICUS Science Olympiad';
-                 $this->data['detailsoflevel1'] ='<h3 id="cso-marking-scheme-l1">UNICUS Science Olympiad (USO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							1<sup>st</sup> to 4<sup>th</sup>
-						</td>
-						<td>Practical Science</td>
-						<td>25</td>
-						<td>1</td>
-						<td>25</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>35</strong></td>
-						<td> </td>
-						<td><strong>45</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>Practical Science</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>
-		 '; 
-                 $this->data['detailsoflevel2'] ='<h3 id="cso-marking-scheme-l2">UNICUS Science Olympiad (USO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							3<sup>rd</sup> to 10<sup>th</sup>
-						</td>
-						<td>Practical Science</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>';
+                 $this->data['ultitle'] = '<h5 id="cso-marking-scheme-l1">Unicus Science Olympiad (USO)</h5>';
+                 //$this->data['detailsoflevel1'] =''; 
+               
                 }
                  else if($slugsubject == 'ueo') { 
 
-                 $this->data['ultitle'] = 'UNICUS English Olympiad';
-                 $this->data['detailsoflevel1'] ='<h3 id="ceo-marking-scheme-l1">UNICUS English Olympiad (UEO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							1<sup>st</sup> to 4<sup>th</sup>
-						</td>
-						<td>English Language</td>
-						<td>25</td>
-						<td>1</td>
-						<td>25</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>35</strong></td>
-						<td> </td>
-						<td><strong>45</strong></td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							5<sup>th</sup> to 10<sup>th</sup>
-						</td>
-						<td>English Language</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>';
-                 $this->data['detailsoflevel2'] ='<h3 id="ceo-marking-scheme-l2">CREST English Olympiad (CEO)</h3>
-			<table class="responsive-table highlight">
-				<tbody>
-					<tr>
-						<td>Class</td>
-						<td>Topic/ Section</td>
-						<td>No. of Questions</td>
-						<td>Marks per Question</td>
-						<td>Total Marks</td>
-					</tr>
-					<tr>
-						<td rowspan="3">
-							3<sup>rd</sup> to 10<sup>th</sup>
-						</td>
-						<td>English Language</td>
-						<td>40</td>
-						<td>1</td>
-						<td>40</td>
-					</tr>
-					<tr>
-						<td>Achievers Section</td>
-						<td>10</td>
-						<td>2</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td><strong>Grand Total</strong></td>
-						<td><strong>50</strong></td>
-						<td> </td>
-						<td><strong>60</strong></td>
-					</tr>
-				</tbody>
-			</table>';
+                 $this->data['ultitle'] = '<h5 id="ceo-marking-scheme-l1">Unicus English Olympiad (UEO)</h5>';
+                 //$this->data['detailsoflevel1'] ='';
+               
+             }
+             else if($slugsubject == 'uco') { 
+
+                 $this->data['ultitle'] = '<h5 id="ceo-marking-scheme-l1">Unicus Cyber Olympiad (UCO)</h5>';
+                 //$this->data['detailsoflevel1'] ='';
+               
+             }
+              else if($slugsubject == 'ugko') { 
+
+                 $this->data['ultitle'] = '<h5 id="ceo-marking-scheme-l1">Unicus General knowledge Olympiad (UGKO)</h5>';
+                 //$this->data['detailsoflevel1'] ='';
+               
+             }
+             else if($slugsubject == 'ucto') { 
+
+                 $this->data['ultitle'] = '<h5 id="ceo-marking-scheme-l1">Unicus Critical Thinking Olympiad (UCTO)</h5>';
+                 //$this->data['detailsoflevel1'] ='';
+               
              }
                 $this->data['slugsubject'] = $slugsubject;
                 //echo $slugsubject;die;
@@ -2177,27 +1957,27 @@ if($slug!=''){
             $olympiad_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_level!='Level 2' and exam_status=1");
             // print_r($olympiad_exam_level);die;
 
-            $cro_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='cro'");
+            $cro_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='uro'");
 
-            $cso_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='cso'");
+            $cso_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='uso'");
 
-            $cmo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='cmo'");
+            $cmo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='umo'");
 
-            $cco_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='cco'");
+            $cco_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='uco'");
 
-            $cfo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='cfo'");
+            $cfo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='ufo'");
 
-            $ceo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='ceo'");
+            $ceo_exam_level = $this->base_model->run_query("select DISTINCT exam_level FROM  exam_schedule where exam_status=1 and olympiad_exam_slug='ueo'");
 
-            $cro_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='cro' order by to_date");
+            $cro_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='uro' order by to_date");
 
-            $cso_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='cso' order by to_date");
+            $cso_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='uso' order by to_date");
 
-            $cmo_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='cmo' order by to_date");
+            $cmo_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='umo' order by to_date");
 
-            $cco_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='cco' order by to_date");
+            $cco_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='uco' order by to_date");
 
-            $cfo_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='cfo' order by to_date");
+            $cfo_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='ufo' order by to_date");
 
             $ceo_edit_exam_level = $this->base_model->run_query("select exam_level FROM  quizsubscriptions where user_id='" . $this->session->userdata('user_id') . "' and exam_status=1 and exam_name='ceo' order by to_date");
 
@@ -4268,31 +4048,27 @@ if (!empty($errors)) {
 		&emsp;&emsp;&emsp;&emsp;
 		&emsp;&nbsp;&nbsp;<b class='invoice_no'>Invoice No: 2019/".$userid."</b>";
 		$html.="<br><br><br>";
-		$html.="<b>CREST OLYMPIADS</b><br>";
+		$html.="<b>Unicus OLYMPIADS</b><br>";
 		$html.="<b>(a venture of Assessment Square)</b><br>";
-		$html.="<b>Tower B4, 1110-B</b><br>";
+		$html.="<b>B4-1003, BPTP Freedom Park</b><br>";
 		$html.="<b>Spaze IT Park, Sohna Road</b><br>";
-		$html.="<b>Sector 49, Gurgaon</b><br>";
-		$html.="<b>Haryana - 122018</b><br>";
+		$html.="<b>Sector 57, Gurgaon</b><br>";
+		$html.="<b>Haryana - 122003</b><br>";
 		
 		$html.="<hr><br>";
 		$html.="<table border=1 cellspacing=0 cellpadding=20 class='invoice_details'>
 			<thead>
-	    	
+	    	 
 	    	<tr>
-			<th>Particulars</th>
-			<th>Amount Due</th>
-			<th>Amount Paid</th>							
-			<th>Wallet Used</th>
+			<th>Particulars</th> 
+			<th>Amount Paid</th> 
 			<th>Transaction Date</th>
 			</thead>
 			</tr>
 			<tbody>						
 			<tr>";
-		$html.=	"<td style='text-align:center'>".rtrim($user_transaction_details[0]->preferred_subjects,",")."</td>
-			<td style='text-align:center'>".$user_transaction_details[0]->transaction_amount."</td>
-			<td style='text-align:center'>".$user_transaction_details[0]->transaction_amount."</td>		
-			<td style='text-align:center'>".$user_transaction_details[0]->wallet_amount."</td>
+		$html.=	"<td style='text-align:center'>".rtrim($user_transaction_details[0]->preferred_subjects,",")."</td> 
+			<td style='text-align:center'>".$user_transaction_details[0]->transaction_amount."</td>	 
 			<td style='text-align:center'>".date('d-m-Y', strtotime($user_transaction_details[0]->transaction_date))."</td>";
 
 			$html.="</tr></tbody></table>";

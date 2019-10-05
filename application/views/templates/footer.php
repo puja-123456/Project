@@ -3,7 +3,7 @@
 <style>
 @media only screen and (min-width: 768px){
 .right {
-	margin-left: 38px;
+	margin-left: 24px;
    /* margin-top: 15px;*/
 	}
 }
@@ -12,7 +12,7 @@
 }
 ul:not(.browser-default)>li
   {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     padding: 5px 0px 5px 0px;
     list-style-type: none;
@@ -22,8 +22,8 @@ ul:not(.browser-default)>li
     padding: 8px 0px 0px 9px;
     line-height: 70px; 
     width: 200px;
-    height: auto;
-    margin-left: 0;
+    height: 80px;
+    margin-left: -10px;
     margin-top: -36px;
 }
 .white-text {
@@ -46,7 +46,7 @@ ul:not(.browser-default)>li
 
 				<ul>
 					 <a class="droopmenu-brand footer-img" href="<?php echo base_url(); ?>"><img class="responsive-img" src="<?php echo base_url(); ?>assets/images/logo/logo.png"  ></a></ul>
-					 <div  style="text-align: center;margin-top: 110px;">					
+					 <div  style="text-align: center;margin-top: 110px;font-size: 13px;">					
 						B4-1003, BPTP Freedom Park,
 						<br>Sector-57,
 						<br>Gurgaon, Haryana-122003	 
@@ -82,7 +82,7 @@ ul:not(.browser-default)>li
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>exam-schedule">Exam Schedule</a></li>
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>cut-off-and-rankings">Cut-Offs & Ranking Criteria</a></li>
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>awards">Awards &amp; Recognition</a></li>
-					<li><a class="white-text text-lighten-3" target="_blank" href="https://www.olympiadsuccess.com/courses/crest-olympiads">Olympiad Preparation</a></li>
+					<li><a class="white-text text-lighten-3" target="_blank" href="https://www.olympiadsuccess.com/">Olympiad Preparation</a></li>
 					<!-- <li><a class="white-text text-lighten-3" target="_blank" href="<?php //echo base_url(); ?>brain-yoga">Brain Yoga</a></li> -->
 					<li><a class="white-text text-lighten-3" target="_blank" href="<?php echo base_url(); ?>blog">Blog</a></li>
 					<!-- <li><a class="white-text text-lighten-3" target="_blank" href="<?php //echo base_url(); ?>schools">Schools</a></li> -->
@@ -153,7 +153,7 @@ ul:not(.browser-default)>li
 				</div><br/>
 
 				<div class="footer-copyright">
-			   <div id="contact_desktop"  style="position: relative;margin-top: -30px">
+			   <div id="contact_desktop"  style="position: relative;font-size: 13px;">
                 <span class="right" href="#">Have Questions? visit <a href="https://www.crestolympiads.com/faqs" target="_blank">FAQs</a>
 			, <div class="tooltip"><i class="material-icons small">email</i>
 			<span class="tooltiptext">info@crestolympiads.com</span>
@@ -171,10 +171,10 @@ ul:not(.browser-default)>li
 	</div>
 	<div class="container footer-copyright">
 		 	 
-			<div id="contact_desktop"  style="position: relative;margin-left:300px">
+			<div id="contact_desktop"  style="position: relative;margin-left:300px;font-size: 13px;">
 			
 			<span>
-			<i class="material-icons small">copyright</i> Unicus Olympiads<sup style="font-size: 8px">TM </sup><?=date("Y")-1; ?> &#8211; <?=date("Y"); ?>
+			<i class="material-icons small" style="font-size: 13px;">copyright</i> Unicus Olympiads<sup style="font-size: 8px">TM </sup><?=date("Y")-1; ?> &#8211; <?=date("Y"); ?>
 			</span>
 			</div>
 
@@ -186,7 +186,7 @@ ul:not(.browser-default)>li
 			<a href="tel:<?php echo $this->config->item('support_phone'); ?>"><i class="material-icons small">local_phone</i></a>
 			</span>
 			<span>
-			<i class="material-icons small">copyright</i> Unicus Olympiads<sup style="font-size: 8px">TM </sup>  <?=date("Y")-1; ?> &#8211; <?=date("Y"); ?>
+			<i class="material-icons small" style="font-size: 13px;">copyright</i> Unicus Olympiads<sup style="font-size: 8px">TM </sup>  <?=date("Y")-1; ?> &#8211; <?=date("Y"); ?>
 			</span>
 			</div>
 		</div>

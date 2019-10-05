@@ -23,13 +23,15 @@ window.fbAsyncInit = function() {
 
 <style type="text/css">
 @media only screen and (min-width:767px){
+	/*#menu{
+    max-height: 400px;
+    overflow-y: scroll; 
+    width: 16.666667% !important;
+  }*/
 	.fuild-container{
 		margin-top:71px;
 	}
-#menu, #toggle-menu {
-   /* height: 366px !important;*/
-   /* overflow-y: scroll !important;*/
-}
+ 
 }
 @media only screen and (max-width:767px){
 	.fuild-container{
@@ -91,6 +93,9 @@ window.fbAsyncInit = function() {
 }
 
 @media only screen and (max-width: 786px){	
+#menu { 
+    margin-top: 0px;
+}
 	#share_buttons button{
 		font-size: 11px;
 		margin-bottom: 5px;
@@ -141,7 +146,7 @@ $(document).ready(function(){
      
     
     <div class="col s10 offset-s2 text-center well" style="min-height:347px;padding: 0px 30px;">
-      <h1>Update Password</h1> 
+      <h1>Change Password</h1> 
    
 	<?php if ($this->session->flashdata('success_message')) { ?>
 	<div class="text-success text-center col s12" style="margin-top: 0px"><span>

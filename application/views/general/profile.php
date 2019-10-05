@@ -75,7 +75,16 @@ window.fbAsyncInit = function() {
 	left: 54px;
 	border-radius: 6px;*/
 }
-
+input:not([type]):disabled, input:not([type])[readonly="readonly"], input[type=text]:not(.browser-default):disabled, input[type=text]:not(.browser-default)[readonly="readonly"], input[type=password]:not(.browser-default):disabled, input[type=password]:not(.browser-default)[readonly="readonly"], input[type=email]:not(.browser-default):disabled, input[type=email]:not(.browser-default)[readonly="readonly"], input[type=url]:not(.browser-default):disabled, input[type=url]:not(.browser-default)[readonly="readonly"], input[type=time]:not(.browser-default):disabled, input[type=time]:not(.browser-default)[readonly="readonly"], input[type=date]:not(.browser-default):disabled, input[type=date]:not(.browser-default)[readonly="readonly"], input[type=datetime]:not(.browser-default):disabled, input[type=datetime]:not(.browser-default)[readonly="readonly"], input[type=datetime-local]:not(.browser-default):disabled, input[type=datetime-local]:not(.browser-default)[readonly="readonly"], input[type=tel]:not(.browser-default):disabled, input[type=tel]:not(.browser-default)[readonly="readonly"], input[type=number]:not(.browser-default):disabled, input[type=number]:not(.browser-default)[readonly="readonly"], input[type=search]:not(.browser-default):disabled, input[type=search]:not(.browser-default)[readonly="readonly"], textarea.materialize-textarea:disabled, textarea.materialize-textarea[readonly="readonly"] {
+     font-size: 14px;
+     font-family: "Lucida Sans";
+}
+/* .cyan-text {
+    color: #ffd223 !important;
+}*/
+.input-field .prefix { 
+    font-size: 1.5rem !important;
+}
 @media only screen and (max-width: 786px){	
 	#share_buttons button{
 		font-size: 11px;
@@ -278,7 +287,12 @@ else if($this_user->popup_id==5)
 <?php }
 
  ?>
-
+<style>
+form#reg_form ol li {
+    font-size: 14px;
+    font-family: "Lucida Sans";
+} 
+</style>
 <a href='javascript:void(0);' style="display:none;" id="modal_link" data-toggle='modal' data-target='#popupModal'></a>
 
  <div class="modal fade" id="popupModal">
@@ -353,18 +367,18 @@ else if($this_user->popup_id==5)
 				$attributes = array('onsubmit' => 'return subject_d_func()','name'=>'reg_form','id'=>'reg_form');
 				echo form_open("crest/reg_form",$attributes); ?>
 
-				<ol> 
-<li>Information once submitted can't be edited</li>
+				<ol class="profileu"> 
+<!-- <li>Information once submitted can't be edited</li>
 <li>Home address should be correct since certificate would be sent at this address, if applicable</li>
 <li>School Name & Student Name should be mentioned as you would like to appear in the <a href="" id="preview" data-toggle="modal" data-target="#myModal">Certificate</a></li>
-<li>In case of any query, please write to us at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a></li>
+<li>In case of any query, please write to us at <a href="mailto:info@crestolympiads.com">info@crestolympiads.com</a></li> -->
 </ol>
 					
 					<div class="row">
 						<br /> 
 					
 						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">account_circle</i>
+							<i class="material-icons prefix cyan-text">account_circle</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->username;
@@ -377,7 +391,7 @@ else if($this_user->popup_id==5)
 							<?php echo form_error('name'); ?>
 						</div>
 						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">account_circle</i>
+							<i class="material-icons prefix cyan-text">account_circle</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->father_mother_guardian_name;
@@ -390,7 +404,7 @@ else if($this_user->popup_id==5)
 							<?php echo form_error('father_mother_guardian_name'); ?>
 						</div>
 						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">event</i>
+							<i class="material-icons prefix cyan-text">event</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->dob;
@@ -402,114 +416,8 @@ else if($this_user->popup_id==5)
 			                <label for="dob">Date of Birth</label>
 			                <?php echo form_error('dob'); ?>
 						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->home_address;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="home_address" name="home_address" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()">
-		          			<label for="home_address">Home Address</label>
-							<?php echo form_error('home_address'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">account_balance</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->school;
-								}else{
-									$val ="";
-								}
-							?>
-			                <input id="school" name="school" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()" maxlength="30">
-			                <label for="school">School Name</label>
-			                <?php echo form_error('school'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->school_address;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="school_address" name="school_address" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()">
-		          			<label for="school_address">School Address</label>
-							<?php echo form_error('school_address'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->city;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="city" name="city" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()" maxlength="10">
-		          			<label for="city">City</label>
-							<?php echo form_error('city'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->state;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="state" name="state" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()">
-		          			<label for="state">State</label>
-							<?php echo form_error('state'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php $this->load->view('auth/select_phone'); ?>
-		          			<label for="country">Country</label>
-							<?php echo form_error('country'); ?>
-						</div>
-
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">location_on</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->pincode;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="pincode" name="pincode" type="text" required class="validate onlyNumbers" value="<?=$val?>">
-		          			<label for="pincode">Pincode</label>
-							<?php echo form_error('pincode'); ?>
-						</div>
-
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">phone</i>
-							<input id="country_code_value" name="country_code_value" type="text" required disabled class="validate onlyNumbers">
-		          			<label for="country_code">Country Code</label>
-							<input type="hidden" id="country_code" name="country_code" value="" required class="validate">
-							<?php echo form_error('country_code'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">phone</i>
-							<?php
-								if(isset($this_user)){
-									$val = $this_user->phone;
-								}else{
-									$val ="";
-								}
-							?>
-							<input id="phone" name="phone" type="text" required class="validate onlyNumbers" value="<?=$val?>">
-		          			<label for="phone">Mobile Number</label>
-							<?php echo form_error('phone'); ?>
-						</div>
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">email</i>
+                        <div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">email</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->email;
@@ -523,25 +431,21 @@ else if($this_user->popup_id==5)
 		          			<label for="email">Email</label>
 							<?php echo form_error('email'); ?>
 						</div>
-					<!-- 	<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">lock</i>
+                      <div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">phone</i>
 							<?php
 								if(isset($this_user)){
-									$val = $this_user->password;
-								}
-								// else if(isset($password)){
-								// 	$val = $password->password;
-								// }
-								else{
+									$val = $this_user->phone;
+								}else{
 									$val ="";
 								}
 							?>
-							<input id="password" name="password" type="password" required class="validate" value="<?=$val?>">
-		          			<label for="password">Password</label>
-							<?php echo form_error('password'); ?>
-						</div> -->
-						<div class="col m6 s12 input-field">
-							<i class="material-icons prefix">mode_edit</i>
+							<input id="phone" name="phone" type="text" required class="validate onlyNumbers" value="<?=$val?>">
+		          			<label for="phone">Mobile Number</label>
+							<?php echo form_error('phone'); ?>
+						</div>
+							<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">mode_edit</i>
 							<?php
 								if(isset($this_user)){
 									$val = $this_user->class;
@@ -565,8 +469,151 @@ else if($this_user->popup_id==5)
 							<label for="class">Class</label>
 							<?php echo form_error('class'); ?>
 						</div>
+
+
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php
+							$add = $this_user->home_address;
+                             //$this_user->home_address
+							//echo $a = implode("-/",$add);
+                             $res = preg_replace('/[^A-Za-z0-9]/', ', ', $add);
+                             $ressu = str_replace(', , ',', ',$res);
+                             $ressult = substr_replace($ressu ,"",-2);
+
+                             $hstring = $ressult;
+                             $split = explode(",",$hstring);
+                              //var_dump($split[0]);die;
+                              //echo $ressu;die;
+                             //echo $string = preg_replace('/-+/', '-', $add);
+							//die;
+						    if(isset($this_user)){
+									$val = $split;
+								}else{
+									$val ="";
+								}
+							?>
+							 <!-- <textarea id="home_address" name="home_address" class="validate materialize-textarea" required oninput="this.value = this.value.toUpperCase()"><?=$val?></textarea> -->
+							 <input id="home_address" name="home_address" type="text" style="height: 2.1rem;" required class="validate" value="<?=$val[0]?>" oninput="this.value = this.value.toUpperCase()">
+							 <input id="home_address1" name="home_address" type="text" style="height: 2.1rem;" required class="validate" value="<?=$val[1]?>" oninput="this.value = this.value.toUpperCase()">
+							 <input id="home_address2" name="home_address" type="text" style="height: 2.1rem;" required class="validate" value="<?=$val[2]?>" oninput="this.value = this.value.toUpperCase()">
+		          			<label for="home_address">Home Address</label>
+							<?php echo form_error('home_address'); ?>
+						</div>
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">account_balance</i>
+							<?php
+							//echo $this_user->school;die;
+								if(isset($this_user)){
+									$val = $this_user->school;
+								}else{
+									$val ="";
+								}
+							?>
+			                <input id="school" name="school" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()" maxlength="30">
+			                <label for="school">School Name</label>
+			                <?php echo form_error('school'); ?>
+						</div>
+
+                          
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php
+								if(isset($this_user)){
+									$val = $this_user->school_address;
+								}else{
+									$val ="";
+								}
+							?>
+							<input id="school_address" name="school_address" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()">
+		          			<label for="school_address">School Address</label>
+							<?php echo form_error('school_address'); ?>
+						</div>
+
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php
+								if(isset($this_user)){
+									$val = $this_user->pincode;
+								}else{
+									$val ="";
+								}
+							?>
+							<input id="pincode" name="pincode" type="text" required class="validate onlyNumbers" value="<?=$val?>">
+		          			<label for="pincode">Pincode</label>
+							<?php echo form_error('pincode'); ?>
+						</div>
+					
+
+                       	<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php
+								if(isset($this_user)){
+									$val = $this_user->city;
+								}else{
+									$val ="";
+								}
+							?>
+							<input id="city" name="city" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()" maxlength="10">
+		          			<label for="city">City</label>
+							<?php echo form_error('city'); ?>
+						</div>
+ 
+
+
+
+
+
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php
+								if(isset($this_user)){
+									$val = $this_user->state;
+								}else{
+									$val ="";
+								}
+							?>
+							<input id="state" name="state" type="text" required class="validate" value="<?=$val?>" oninput="this.value = this.value.toUpperCase()">
+		          			<label for="state">State</label>
+							<?php echo form_error('state'); ?>
+						</div>
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">location_on</i>
+							<?php $this->load->view('auth/select_phone'); ?>
+		          			<label for="country">Country</label>
+							<?php echo form_error('country'); ?>
+						</div>
+
+						
+
+						<div class="col m6 s12 input-field">
+							<i class="material-icons prefix cyan-text">phone</i>
+							<input id="country_code_value" name="country_code_value" type="text" required disabled class="validate onlyNumbers">
+		          			<label for="country_code">Country Code</label>
+							<input type="hidden" id="country_code" name="country_code" value="" required class="validate">
+							<?php echo form_error('country_code'); ?>
+						</div>
+						
+					<!-- 	<div class="col m6 s12 input-field">
+							<i class="material-icons prefix">lock</i>
+							<?php
+								if(isset($this_user)){
+									$val = $this_user->password;
+								}
+								// else if(isset($password)){
+								// 	$val = $password->password;
+								// }
+								else{
+									$val ="";
+								}
+							?>
+							<input id="password" name="password" type="password" required class="validate" value="<?=$val?>">
+		          			<label for="password">Password</label>
+							<?php echo form_error('password'); ?>
+						</div> -->
+					
 					</div>
-					<p>Please click on the <a href="https://www.crestolympiads.com/crest/reg_form">link</a> to see your subscriptions or apply for more subjects.</p>
+					<p>Please click on the <a href="<?php echo base_url(); ?>/unicus/reg_form">link</a> to see your subscriptions or apply for more subjects.</p>
 					<!-- <div class="row subjects_div">
 					<?php $price = ' (INR 225/ USD 10.0)';?>
 						
