@@ -449,17 +449,17 @@ $(document).ready(function(){
 		}
 
 .marquee {
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid #26a69a;
-  background: #26a69a;
-  color: #fff;
-  /*  position: fixed;*/
-    z-index: 99; 
-    font-size: 15px; 
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid #26a69a;
+	background: #43cec9;
+	color: #000;
+	/* position: fixed; */
+	z-index: 99;
+	font-size: 13px;
 }
 .marquee a { 
-color:#fff;
+color:#222;
 text-decoration: underline;
 /*font-size:;*/ 
 	}
@@ -539,8 +539,11 @@ ul:not(.browser-default)>li
     list-style-type: none;
   }
   .droopmenu li ul li a {
-    display: block;
-    padding: 6px 10px !important;
+    display: block; 
+   padding: 6px 10px 6px -1px !important;
+}
+.droopmenu li ul {
+    padding: 5px 0 !important;
 }
 
 	</style>
@@ -682,7 +685,8 @@ ul:not(.browser-default)>li
 }
  
 .droopmenu ul.droopmenu-grid-9, .droopmenu-grid-9 {
-    width: 1024px;
+    /*width: 1024px;*/
+    width: 850px;
 }
 .droopmenu li a .droopmenu-indicator {
     display: none; 
@@ -696,6 +700,7 @@ ul:not(.browser-default)>li
     z-index: 10;
 } 
 .droopmenu .droopmenu-col li a {
+	line-height: 7px;
     display: block;
     padding: 5px 0;
     border-bottom: 0;
@@ -794,13 +799,13 @@ li.droopmenu-parent .material-icons {
     font-family: 'Oswald',sans-serif;
 }*/
 .headermh{
-  margin-top: -13px;line-height: 30px;font-weight: 600;font-size: 18px;
+  margin-top: -22px;line-height: 30px;font-weight: 600;font-size: 18px;
 }
 </style>
 <body> 
 
         <div class="droopmenu-navbar">
-        	 <div class="marquee"><!-- Answer key for CRO Practice 1 available under <a href="https://www.crestolympiads.com/crest/challenge_test">View & Challenge</a> section | -->CRO Practice 2 Test is Scheduled on 11<sup>th</sup> July, 2019 | Book your Exam Slot/Access by <a href="<?php echo base_url(); ?>login">Login here</a> <!-- | Results for CRO Practice 1 will be delcared by 1st July, 2019 --> | Check CRO Sample Papers <a href="<?php echo base_url(); ?>cro-sample-papers">here</a> | See Marking Scheme <a href="<?php echo base_url(); ?>marking-scheme">here</a> | <a href="<?php echo base_url(); ?>faqs">Frequently Asked Questions (FAQs)</a> | Buy Practice Papers for CREST Olympiads <a href="https://www.olympiadsuccess.com/buy/crest-olympiads" target="_blank">here</a> | <!-- Last Date for CREST Reasoning Olympiads <a href="https://www.crestolympiads.com/cro">(CRO)</a> Registration is 20<sup>th</sup> June 2019  --> <a href="<?php echo base_url(); ?>cro"> CREST Reasoning Olympiads (CRO)</a> is scheduled for June/July. <a href="<?php echo base_url(); ?>registration">Apply now</a></div>
+        	 <div class="marquee">See Marking Scheme <a href="<?php echo base_url(); ?>marking-scheme"><u>here</u></a> | <a href="<?php echo base_url(); ?>faqs"><u>Frequently Asked Questions (FAQs)</u></a>|<a href="<?php echo base_url(); ?>registration" target="_blank"><u>Register now for Summer Olympiads</u></a></div>
             <div class="droopmenu-inner">
                 <div class="droopmenu-header">
                 	  <a class="droopmenu-brand" href="<?php echo base_url(); ?>"><img class="responsive-img" src="<?php echo base_url(); ?>assets/images/logo/logo.png"  ></a>
@@ -808,244 +813,7 @@ li.droopmenu-parent .material-icons {
                     <a href="#" class="droopmenu-toggle"></a>                
                 </div><!-- droopmenu-header -->
                 <div class="droopmenu-nav">
-                    <ul class="droopmenu">
-                        <!-- <li><a href="#">Home</a></li>
-                        <li>
-                            <a href="#">Flyout</a>
-                           
-                        </li>      -->                    
-                        <!-- <li>
-                          <a href="#">Mega Tabs</a>
-                            <ul class="droopmenu-megamenu droopmenu-grid">
-                                <li class="droopmenu-tabs tabs-justify">
-                                    
-                                    <div class="droopmenu-tabsection">
-                                        <a href="#" class="droopmenu-tabheader">Jewelry</a>
-                                        <div class="droopmenu-tabcontent">
-                                            <div class="droopmenu-row">
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4> NECKLACES </h4></li>
-                                                    <li><a href="#">Name Necklaces</a></li>
-                                                    <li><a href="#">Charm Necklaces</a></li>
-                                                    <li><a href="#">Crystal Necklaces</a></li>
-                                                    <li><a href="#">Beaded Necklaces</a></li>
-                                                    <li><a href="#">Tassel Necklaces</a></li>
-                                                    <li><a href="#">Bib Necklaces</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>RINGS</h4></li>
-                                                    <li><a href="#">Signet Rings</a></li>
-                                                    <li><a href="#">Statement Rings</a></li>
-                                                    <li><a href="#">Stackable Rings</a></li>
-                                                    <li><a href="#">Multistone Rings</a></li>
-                                                    <li><a href="#">Engagement Rings</a></li>
-                                                    <li><a href="#">Solitaire Rings</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>BRACELETS</h4></li>
-                                                    <li><a href="#">Charm Bracelets</a></li>
-                                                    <li><a href="#">Beaded Bracelets</a></li>
-                                                    <li><a href="#">Braided Bracelets</a></li>
-                                                    <li><a href="#">Chain Bracelets</a></li>
-                                                    <li><a href="#">Cuff Bracelets</a></li>
-                                                    <li><a href="#">Hand Bangles</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>OTHER</h4></li>
-                                                    <li><a href="#">Anklets</a></li>
-                                                    <li><a href="#">Arm Bands</a></li>
-                                                    <li><a href="#">Hair Jewelry</a></li>
-                                                    <li><a href="#">Belly Rings</a></li>
-                                                    <li><a href="#">Nose Rings</a></li>
-                                                    <li><a href="#">Toe Rings</a></li>
-                                                </ul>                                                  
-                                            </div> 
-                                        </div> 
-                                    </div> 
-                                    
-                                    
-                                    <div class="droopmenu-tabsection">
-                                        <a href="#" class="droopmenu-tabheader">Fashion</a>
-                                        <div class="droopmenu-tabcontent">
-                                            <div class="droopmenu-row">
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4> WOMEN </h4></li>
-                                                    <li><a href="#">Dresses</a></li>
-                                                    <li><a href="#">Tops &amp; Tees</a></li>
-                                                    <li><a href="#">Jackets &amp; Coats</a></li>
-                                                    <li><a href="#">Pants &amp; Capris</a></li>
-                                                    <li><a href="#">Women's Shoes</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>MEN</h4></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                    <li><a href="#">Leather Belts</a></li>
-                                                    <li><a href="#">Jackets &amp; Coats</a></li>
-                                                    <li><a href="#">Polo Tshirts</a></li>
-                                                    <li><a href="#">Men's Shoes</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>BABY</h4></li>
-                                                    <li><a href="#">Baby Jackets</a></li>
-                                                    <li><a href="#">Baby Sweaters</a></li>
-                                                    <li><a href="#">Baby Dresses</a></li>
-                                                    <li><a href="#">Baby Boots</a></li>
-                                                    <li><a href="#">Baby Tops</a></li>
-                                                    <li><a href="#">Others</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>BAGS</h4></li>
-                                                    <li><a href="#">Handbags</a></li>
-                                                    <li><a href="#">Backpacks</a></li>
-                                                    <li><a href="#">Clutch Bags</a></li>
-                                                    <li><a href="#">Shoulder Bags</a></li>
-                                                    <li><a href="#">Luggage Bags</a></li>
-                                                    <li><a href="#">Diaper Bags</a></li>
-                                                </ul>                                                   
-                                            </div>                                           
-                                        </div> 
-                                    </div> 
-                                    
-                                    
-                                    <div class="droopmenu-tabsection">
-                                        <a href="#" class="droopmenu-tabheader">Wedding</a>
-                                        <div class="droopmenu-tabcontent">
-                                            <div class="droopmenu-row">
-
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4> INVITATIONS </h4></li>
-                                                    <li><a href="#">Wedding Invitations</a></li>
-                                                    <li><a href="#">Wedding Invitation Kits</a></li>
-                                                    <li><a href="#">Wedding Templates</a></li>
-                                                    <li><a href="#">Greeting Cards</a></li>
-                                                    <li><a href="#">Save The Dates</a></li>
-                                                    <li><a href="#">Stationery</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>DECOR</h4></li>
-                                                    <li><a href="#">Ring Bearer Pillows</a></li>
-                                                    <li><a href="#">Cake Servers &amp; Knives</a></li>
-                                                    <li><a href="#">Serving &amp; Dining</a></li>
-                                                    <li><a href="#">Candles Holders</a></li>
-                                                    <li><a href="#">Cake Toppers</a></li>
-                                                    <li><a href="#">Centerpieces</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>GIFTS</h4></li>
-                                                    <li><a href="#">Guest Books</a></li>
-                                                    <li><a href="#">Wedding Favors</a></li>
-                                                    <li><a href="#">Groomsmen Gifts</a></li>
-                                                    <li><a href="#">Bridesmaids Gifts</a></li>
-                                                    <li><a href="#">Portraits &amp; Frames</a></li>
-                                                    <li><a href="#">Albums &amp; Scrapbooks</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>CLOTHING</h4></li>
-                                                    <li><a href="#">Bridal Gowns</a></li>
-                                                    <li><a href="#">Changing Dresses</a></li>
-                                                    <li><a href="#">Bridesmaid Dresses</a></li>
-                                                    <li><a href="#">Flower Girl Dresses</a></li>
-                                                    <li><a href="#">Lingerie &amp; Garters</a></li>
-                                                    <li><a href="#">Bridal Shoes</a></li>
-                                                </ul>                                               
-                                            </div>                                         
-                                        </div> 
-                                    </div> 
-                                    
-                                 
-                                    <div class="droopmenu-tabsection">
-                                        <a href="#" class="droopmenu-tabheader">Entertainment</a>
-                                        <div class="droopmenu-tabcontent">
-                                            <div class="droopmenu-row">
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4> KIDS TOYS </h4></li>
-                                                    <li><a href="#">Baby &amp; Toddler Toys</a></li>
-                                                    <li><a href="#">Dolls &amp; Action Figures</a></li>
-                                                    <li><a href="#">Learning &amp; Pre School</a></li>
-                                                    <li><a href="#">Kids Games &amp; Puzzles</a></li>
-                                                    <li><a href="#">Stuffed Animals</a></li>
-                                                    <li><a href="#">Kids Crafts</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>ELECTRONICS</h4></li>
-                                                    <li><a href="#">4K Smart Televisions</a></li>
-                                                    <li><a href="#">Gadgets &amp; Computers</a></li>
-                                                    <li><a href="#">Blue Ray DVD Players</a></li>
-                                                    <li><a href="#">HiFi Audio Systems</a></li>
-                                                    <li><a href="#">Digital Cameras</a></li>
-                                                    <li><a href="#">Video Games</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>BOOKS</h4></li>
-                                                    <li><a href="#">Blank Books</a></li>
-                                                    <li><a href="#">Children's Books</a></li>
-                                                    <li><a href="#">Book Accessories</a></li>
-                                                    <li><a href="#">Photography Books</a></li>
-                                                    <li><a href="#">Graphic Novels</a></li>
-                                                    <li><a href="#">Magazines</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>MOVIES</h4></li>
-                                                    <li><a href="#">Drama Movies</a></li>
-                                                    <li><a href="#">Action Movies</a></li>
-                                                    <li><a href="#">Science Fiction</a></li>
-                                                    <li><a href="#">Love &amp; Romance</a></li>
-                                                    <li><a href="#">Family Movies</a></li>
-                                                    <li><a href="#">Cartoons</a></li>
-                                                </ul>                                                    
-                                            </div>                                     
-                                        </div> 
-                                    </div> 
-                                    
-                                    
-                                    <div class="droopmenu-tabsection">
-                                        <a href="#" class="droopmenu-tabheader">Home</a>
-                                        <div class="droopmenu-tabcontent">
-                                            <div class="droopmenu-row">
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4> DECOR </h4></li>
-                                                    <li><a href="#">Wall Decor</a></li>
-                                                    <li><a href="#">Decorative Pillows</a></li>
-                                                    <li><a href="#">Picture Frames</a></li>
-                                                    <li><a href="#">Candle Holders</a></li>
-                                                    <li><a href="#">Flower Vases</a></li>
-                                                    <li><a href="#">Wall Clocks</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>FURNITURE</h4></li>
-                                                    <li><a href="#">Storage Boxes</a></li>
-                                                    <li><a href="#">Office Furniture</a></li>
-                                                    <li><a href="#">Bathroom Furniture</a></li>
-                                                    <li><a href="#">Bedroom Furniture</a></li>
-                                                    <li><a href="#">Kitchen Furniture</a></li>
-                                                    <li><a href="#">Dining Furniture</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>BEAUTY</h4></li>
-                                                    <li><a href="#">Bath Accessories</a></li>
-                                                    <li><a href="#">Makeup &amp; Cosmetics</a></li>
-                                                    <li><a href="#">Soaps &amp; Bath Bombs</a></li>
-                                                    <li><a href="#">Essential Oils</a></li>
-                                                    <li><a href="#">Fragrances</a></li>
-                                                    <li><a href="#">Skin Care</a></li>
-                                                </ul>
-                                                <ul class="droopmenu-col droopmenu-col3">
-                                                    <li><h4>PETS</h4></li>
-                                                    <li><a href="#">Pet Food</a></li>
-                                                    <li><a href="#">Pet Collars</a></li>
-                                                    <li><a href="#">Pet Furniture</a></li>
-                                                    <li><a href="#">Pet Clothing</a></li>
-                                                    <li><a href="#">Pet Carriers</a></li>
-                                                    <li><a href="#">Pet Bedding</a></li>
-                                                </ul>                                                    
-                                            </div>                                             
-                                        </div> 
-                                    </div> 
-                                </li>
-                            </ul>
-                        </li> -->
+                    <ul class="droopmenu"> 
                         
                         <li><a href="#">Subjects<i class="material-icons">arrow_drop_down</i></a>
                             <ul class="droopmenu-grid droopmenu-grid-9">
@@ -1093,28 +861,31 @@ li.droopmenu-parent .material-icons {
                                                     <?php } ?>
                                                 </ul>
                                                 </ul>
-                                                <ul class="droopmenu-col droopmenu-col3"> 
+                                            <!--     <ul class="droopmenu-col droopmenu-col3"> 
                                                     <li class="headermh"><h5>Marking Scheme<hr></h5></li> 
                                                     <li><a href="<?php echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l1'; ?>">Preliminary</a></li>
                                                     <li><a href="<?php echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l2'; ?>">Final</a></li>
                                                    
-                                                </ul>
+                                                </ul> -->
                                                  <ul class="droopmenu-col droopmenu-col3"> 
-                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>" style="font-size: 16px"><b>Exam Dates:</b></a></li> 
-                                                      <?php 
+                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>" style="font-size: 16px"><b>Exam Date:</b></a>
+                                                     <?php 
 			                                       $mainexamdates = $this->config->item('main_examdates'); 
 			                                       foreach ($mainexamdates as $key => $examdate) { 
                                                    //print_r($category);
 			                                       	if($category[1] == $examdate[1]){
 			                                         	?> 
 			                                       
-                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>"><?php echo $examdate[2]; ?></a></li>
+                                                      <li><a href="<?php echo base_url().'exam-schedule'; ?>"><?php echo $examdate[2]; ?></a></li>
                                                         <?php }}?>
+                                                    </li> 
+                                                   
                                                    <!--  <li><a href="<?php //echo base_url().'marking-scheme#'.$category[0].'-marking-scheme-l2'; ?>">Final</a></li> -->
-                                                    <li><a href="<?php echo base_url(); ?>awards" style="font-size: 16px">Awards</a></li>
-                                                    <li><a href="<?php echo base_url(); ?>" style="font-size: 16px">How to Participate</a></li> 
-                                                    <li><a href="https://www.olympiadsuccess.com/"  target="_blank" style="font-size: 16px">Exam Prepration</a></li> 
-                                                    <li><a href="<?php echo base_url().'faqs'; ?>">FAQs</a></li>
+                                                    <li><a href="<?php echo base_url(); ?>awards" style="font-size: 15px"><b>Awards</b></a></li>
+                                                    <li><a href="<?php echo base_url(); ?>marking-scheme" style="font-size: 15px"><b>Marking Scheme</b></a></li> 
+                                                    <li><a href="<?php echo base_url(); ?>" style="font-size: 15px"><b>How to Participate</b></a></li> 
+                                                    <li><a href="https://www.olympiadsuccess.com/"  target="_blank" style="font-size: 15px"><b>Exam Prepration</b></a></li> 
+                                                    <li><a href="<?php echo base_url().'faqs'; ?>"><b>FAQs</b></a></li>
                                                   </a>
                                                 </ul>
                                             </div><!-- droopmenu-row -->

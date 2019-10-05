@@ -1,6 +1,9 @@
  
 </div>
 <style>
+.select-wrapper input.select-dropdown { 
+    font-size: 13px; 
+}
 @media only screen and (min-width: 768px){
 .right {
 	margin-left: 24px;

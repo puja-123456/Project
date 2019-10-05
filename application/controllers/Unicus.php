@@ -910,7 +910,7 @@ if($slug!=''){
 	public function pre_registration_form(){
 
 		if ($this->input->post()) {
-
+      //   print_r($this->input->post());die;
 		// $this->data['title'] = 'Contact Us';
 		// $this->data['active_menu'] = 'contact';
 
@@ -931,8 +931,8 @@ if($slug!=''){
 		$data['country'] = $this->input->post('country');
 		$data['phone'] = $this->input->post('phone');					
 		$data['date_of_registration'] = date("Y-m-d H:i:s");
-        //$data['ip_address'] = $_SERVER['REMOTE_ADDR'];
-        $data['ip_address']=$_SERVER['HTTP_X_REAL_IP'];
+        $data['ip_address'] = $_SERVER['REMOTE_ADDR'];
+        //$data['ip_address']=$_SERVER['HTTP_X_REAL_IP'];
         $data['register_from_page'] = 'home_page';
 
 		//$this->base_model->insert_operation('temp_users',$data);

@@ -202,6 +202,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
  
 	</div> 
 <style type="text/css">
+
 input:not([type]):focus.invalid ~ label,input[type=text]:not(.browser-default):focus.invalid ~ label,input[type=password]:not(.browser-default):focus.invalid ~ label,input[type=email]:not(.browser-default):focus.invalid ~ label,input[type=url]:not(.browser-default):focus.invalid ~ label,input[type=time]:not(.browser-default):focus.invalid ~ label,input[type=date]:not(.browser-default):focus.invalid ~ label,input[type=datetime]:not(.browser-default):focus.invalid ~ label,input[type=datetime-local]:not(.browser-default):focus.invalid ~ label,input[type=tel]:not(.browser-default):focus.invalid ~ label,input[type=number]:not(.browser-default):focus.invalid ~ label,input[type=search]:not(.browser-default):focus.invalid ~ label,textarea.materialize-textarea:focus.invalid ~ label{color:#F44336;
 top:15px !important;
 }
@@ -224,14 +225,14 @@ top:15px !important;
 }
 .tabs .tab a {
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: none;
 }
 .tabs .tab a:hover, .tabs .tab a.active {
     background-color: #ffd223 !important;
     color: #000 !important;
     font-weight: 700 !important;
-    font-size: 17px !important;
+    font-size: 14px !important;
 }
 .input-field .prefix {
     position: absolute; 
@@ -260,7 +261,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		    	
 					<?php 
 					$attributes = array('onsubmit' => 'return subject_d_func()','name'=>'pre_registration_form','id'=>'pre_registration_form');
-					echo form_open("crest/pre_registration_form",$attributes); ?>
+					echo form_open("unicus/pre_registration_form",$attributes); ?>
 					
 					<div class=""> 
 						<div class="col s10 input-field">
@@ -367,7 +368,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		        </div>
 		        <div class="row">
 		            <div class="col s10">
-		                <button class="btn col s6 offset-s4" style="margin-bottom: 10px;color: #000" type="submit" >Submit<i class="material-icons right">send</i></button>
+		      <button class="btn col s6 offset-s4" style="margin-bottom: 10px;color: #000" type="submit" >Submit<i class="material-icons right">send</i></button>
 		            </div>
 		        </div>
 		        <?php echo form_close();?>
@@ -1355,7 +1356,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 </style>
 <div class="col-md-12">
-	<h3 align="center" style="font-weight: bold;padding: 25px 10px 0px 10px;">Steps Of Giving Exam</h3>
+	<h3 align="center" style="font-weight: bold;padding: 25px 10px 0px 10px;">Steps to Give Exam</h3>
 </div>
 	
 <div class="col-md-12 col s12 center-align" id="sogeid">
@@ -1501,7 +1502,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
     jQuery.ajax({
         type:'post',
-        url:'<?php echo base_url()?>crest/checkUserEmail',
+        url:'<?php echo base_url()?>unicus/checkUserEmail',
         data:{email:email,'<?php echo $this->security->get_csrf_token_name();?>' : '<?php echo $this->security->get_csrf_hash();?>'},
         dataType:'json',
         async:false,
