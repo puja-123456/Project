@@ -84,6 +84,13 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('RAZOR_KEY_ID', 'rzp_live_WO6hC8zswKkaiZ');
+//use for crestolympiads.com
 
-define('RAZOR_KEY_SECRET', 'pNEMGdF3lCAZIKkfRXHa4IX0');
+/*define('RAZOR_KEY_ID', 'rzp_live_WO6hC8zswKkaiZ');
+
+define('RAZOR_KEY_SECRET', 'pNEMGdF3lCAZIKkfRXHa4IX0');*/
+
+//use for unicusolympiads.com
+define('RAZOR_KEY_ID', 'rzp_live_s5087BtOKOnjAz');
+
+define('RAZOR_KEY_SECRET', 'rMUHB6Ifzm8Afgvs7Dlc1aFE');

@@ -28,9 +28,9 @@ window.fbAsyncInit = function() {
 .input-field>label {
     font-size: 13px !important;
     }
-  #commid{
+ /* #commid{
         margin-top: -70px;
-  }
+  }*/
   .col.s12.m10.offset-s2.text-center.well.row ol li {
     font-size: 13px;
 }
@@ -41,9 +41,9 @@ window.fbAsyncInit = function() {
   
 
 @media only screen and (max-width:1199px){
-	#commid{
+	/*#commid{
         margin-top: 0px;
-  }
+  }*/
 	#share_buttons{
 		margin-left: 0px !important;
 		margin-right: 0px !important;
@@ -1393,11 +1393,11 @@ $("#state_name").hide();
 
 
 		         //var total_amount=amount-wamount;
-          var total_amount=amount;
+         
 		        
 
 			}
-
+      var total_amount=amount;
 			var val = [];
         $(':checkbox:checked').not(":disabled").each(function(i){
           val[i] = $(this).val();
