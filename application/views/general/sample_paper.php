@@ -14,7 +14,7 @@
 					 
 		    <a href="<?php echo base_url().$url_sample_paper; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$url_sample_paper; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -31,16 +31,25 @@
 			<h5>Subjects</h5>
 			<div class="row">  
             <!--  <div class="col s1"><a href="<?php echo base_url().$category['slug']; ?>">About</a></div> -->
+
+
+      
+
+
              <?php
 				 /*$i=1;*/
 				 //print_r($categories);die;
 				foreach ($categories as $syllabus) {
 					 if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
-             <a href="<?php echo base_url().$syllabus['slug'].'/sample-papers'; ?>"><div class="col s12 m5 alllinks"><?php echo $syllabus['name'].' Sample Papers'; ?>
-             	
+            <div class="col s12 m4 alllinks">
+            <div class="card">
+						<div class="card-content white-text center-align">
+             	 <a href="<?php echo base_url().$syllabus['slug'].'/sample-papers'; ?>"><h5><?php echo $syllabus['name'].' Sample Papers'; ?></h5></a> 
+             	</div>
+             </div>
 
-             </div></a> 
+             </div>
 					<?php 
 			      }
 				/*$i++;*/
@@ -49,7 +58,7 @@
 				 
 			</div>
 		</div>  
-		 <div class="row">
+		 <!-- <div class="row">
 			<?php
 			foreach ($categories as $syllabus) { 
                if($syllabus['name'] == $category['name']){
@@ -65,7 +74,7 @@
 			}
 			}
 			?>
-		</div>  
+		</div>   -->
 	</div> 
 </div>
 </div>

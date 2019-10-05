@@ -694,7 +694,7 @@ if($slug!=''){
 		// $route['awards'] = 'crest/cms_page';
 
 		if($slugsubject!=''){
-			if($slugsubject == 'exam-schedule'){
+			if($slugsubject == 'exam-dates'){
 				$this->data['title'] = 'Olympiad Exam Dates & Schedule 2019-20 | CREST Olympiads';
 				$this->data['meta_description'] = 'Check important Olympiad exam dates for CREST Olympiads 2019-20.';
 
@@ -961,7 +961,7 @@ if($slug!=''){
 					$country = $data2['country'] = $this->input->post('country');
 					// $subjects = $data2['prefered_subject'] = $this->input->post('subjects');
 					$data2['date_of_registration'] = date("Y-m-d H:i:s");
-            		$data2['ip_address'] = $_SERVER['HTTP_X_REAL_IP'];
+            		$data2['ip_address'] = $_SERVER['REMOTE_ADDR'];
             		//$data['register_from_page'] = 'home_page';
 
 		            /* Insert into database */

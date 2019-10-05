@@ -129,33 +129,33 @@ window.fbAsyncInit = function() {
 					//if($subj[1] == $this_cus_sub){
 						//echo "<li><strong>".$subj[2]."</strong></li>";
 						
-						if($this_cus_sub=="UMO")
+						if($this_cus_sub=="CMO")
 						{
-						    $subject="Unicus Mathemactics Olympiad";
+						    $subject="CREST Mathemactics Olympiad";
 						}
-						else if($this_cus_sub=="UCTO") {
+						else if($this_cus_sub=="CRO") {
 						    
-						     $subject="unicus Critical Thinking Olympiad";
-						    
-						}
-						else if($this_cus_sub=="UCO") {
-						    
-						     $subject="Unicus Cyber Olympiad";
+						     $subject="CREST Reasoning Olympiad";
 						    
 						}
-						else if($this_cus_sub=="UEO") {
+						else if($this_cus_sub=="CCO") {
 						    
-						     $subject="Unicus English Olympiad";
-						    
-						}
-						else if($this_cus_sub=="USO") {
-						    
-						     $subject="Unicus Science Olympiad";
+						     $subject="CREST Cyber Olympiad";
 						    
 						}
-						else if($this_cus_sub=="UGKO") {
+						else if($this_cus_sub=="CEO") {
 						    
-						     $subject="Unicus General Knowledge Olympiad";
+						     $subject="CREST English Olympiad";
+						    
+						}
+						else if($this_cus_sub=="CSO") {
+						    
+						     $subject="CREST Science Olympiad";
+						    
+						}
+						else if($this_cus_sub=="CFO") {
+						    
+						     $subject="CREST French Olympiad";
 						    
 						}
 						
@@ -178,13 +178,13 @@ window.fbAsyncInit = function() {
 	?>
 	<p>Note:</p>
 	<ol>
-		<li>Please <u><a href="https://www.unicusolympiads.com/login" target="_blank">login</a></u> to Unicus Olympiads dashboard with your user email and password to upload documents & view information about certificate, your exam slot details, etc.</li>
-		<li>Please check exam dates <u><a href="https://www.unicusolympiads.com/exam-dates" target="_blank">here</a></u>.</li>
-		Visit <a href="https://www.unicusolympiads.com/faqs" target="_blank">FAQs</a> section for more details.</li>
+		<li>Please <u><a href="<?php echo base_url(); ?>login" target="_blank">login</a></u> to CREST Olympiads dashboard with your user email and password to upload documents & view information about certificate, access card details, etc.</li>
+		<li>Please check exam schedule <u><a href="<?php echo base_url(); ?>exam-dates" target="_blank">here</a></u>.</li>
+		<li>You will get 100% cashback of your amount paid if one or more of your friends use your referral code <?php echo $this_user->referral_code; ?>. For more details, check <a href="<?php echo base_url(); ?>faqs" target="_blank">FAQs</a>.</li>
 
 				<?php
-				$facebook_share_caption = "Unicus Olympiads";
-				$facebook_share_description = "Hello! Register for Unicus Olympiads, a Summer Olympiad exam for Classes 1-10 that helps assess your kid's previous class conceptual understanding.";
+				$facebook_share_caption = "CREST Olympiads";
+				$facebook_share_description = "Hey Guys, register for CREST Olympiads, India's largest online olympiad exams for Classes 1-10. Do not forget  to use my referral code ".$this_user->referral_code." while registering at ";
 				$facebook_share_url = base_url();
 				$facebook_share_image = base_url()."assets/images/logo/logo.png";
 				$shareUrl = 'https://www.facebook.com/sharer.php?caption='.$facebook_share_caption.'&description='.urlencode($facebook_share_description).'&u='.urlencode($facebook_share_url).'&picture='.urlencode($facebook_share_image);
@@ -207,7 +207,7 @@ window.fbAsyncInit = function() {
 					</span>
 				</div>
 	</ol>
-	<p>Thanks for enrolling with Unicus Olympiads. If you have any query, you may contact us at '<a href="mailto:<?=$this->config->item('contact_email');?>"><?=$this->config->item('contact_email');?></a>'.</p>
+	<p>Thanks for enrolling with CREST Olympiads. If you have any query, you may contact us at '<a href="mailto:<?=$this->config->item('contact_email');?>"><?=$this->config->item('contact_email');?></a>'.</p>
 		</div>
 	</div>
 </div>
@@ -266,7 +266,7 @@ $(document).ready(function() {
 
 		if( isMobile.any() ) {
 
-			//var text = "unicus Olympiads! "+$(this).attr("data-text");
+			//var text = "Crest Olympiads! "+$(this).attr("data-text");
 			var text = $(this).attr("data-text");
 			var url = $(this).attr("data-link");
 			var message = encodeURIComponent(text) + " - " + encodeURIComponent(url);

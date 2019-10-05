@@ -31,7 +31,7 @@
 <p>&nbsp;</p>
 <div class="fuild-container" id="bac">
 	<div class="text-center">
-		<h1>Become a Co-ordinator</h1>
+		<h1>Become a Coordinator</h1>
 	</div>
 	<div class="contact">
 		<div class="col-md-12 text-center well" style="min-height:347px;">

@@ -11,7 +11,7 @@
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-.center-align{
+#center-align{
 	margin-top: 80px;
 }	
 	/*@media only screen and (max-width: 768px){*/
@@ -22,14 +22,14 @@
 }
 @media only screen and (max-width: 767px){
  
-.center-align{
+#center-align{
 	margin-top: -30px;
 }	 
  }
 </style> 
 <div class="row">
 <p>&nbsp;</p>
-	<h1 class="center-align" >Frequently Asked Questions</h1>
+	<h1 id="center-align" >Frequently Asked Questions</h1>
 	<div class="col s12">
 		<ul class="collapsible">
 		<?php

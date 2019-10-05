@@ -22,7 +22,7 @@ $config['facebook_api_key'] = '420034855149688';
 
 $config['main_site_link'] 	= 'https://www.olympiadsuccess.com/';
 $config['image_site_link'] 	= 'https://www.olympiadsuccess.com/';
-$config['support_phone'] 	= '+91-9818-294-134';
+$config['support_phone'] 	= '+91-9870-134-447';
 //social links
 $config['facebook_link'] = 'https://www.facebook.com/crestolympiads/';
 $config['linkedin_link'] = 'https://www.linkedin.com/company/crestolympiads/';

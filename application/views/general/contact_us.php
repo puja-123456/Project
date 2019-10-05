@@ -72,13 +72,13 @@ $(document).ready(function() {
 		<p>&nbsp;</p>
 		<!-- <div class="row left-align"> -->    
 		<div class="center-align">
-			<h2 style="text-align:center;font-weight: 700;text-transform: uppercase;">Contact Us</h2>
+			<h2 style="text-align:center;font-weight: 700;text-transform: uppercase;font-style: 'lucida sans'">Contact Us</h2>
 		</div>
 		<?php
 	} else {
 		?>
 		<div class="center-align">
-			<h2 style="text-align:center;font-weight: 700;text-transform: uppercase;">Contact Us</h2>
+			<h2 style="text-align:center;font-weight: 700;text-transform: uppercase;font-style: 'lucida sans'">Contact Us</h2>
 		</div>
 
 		<?php

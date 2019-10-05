@@ -83,7 +83,7 @@ $route['cro-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';
 $route['cgko-class-(:num)-example-(:num)'] = 'breaktime/sample_questions';
 
 
-$route['exam-schedule'] = 'unicus/cms_page';
+$route['exam-dates'] = 'unicus/cms_page';
 $route['u(:any)/marking-scheme'] = 'unicus/cms_page';
 $route['marking-scheme'] = 'unicus/cmss_page';
 $route['u(:any)/cut-off-and-rankings'] = 'unicus/cms_page';

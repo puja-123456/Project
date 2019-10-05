@@ -38,8 +38,14 @@ window.fbAsyncInit = function() {
   #commids{
         margin-top: -40px;
   }*/
-  
-
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea { 
+    font-size: 13px; 
+    }
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 13px; 
+    line-height: 0px;
+    
+}
 @media only screen and (max-width:1199px){
 	/*#commid{
         margin-top: 0px;
@@ -116,7 +122,7 @@ window.fbAsyncInit = function() {
   
 .datepicker-modal {
 	
-	top: 1% !important;
+	top: 20% !important;
     max-height: 350px !important;
 
 
@@ -138,6 +144,10 @@ font-size: 13px;
 }
 #home_address2{
 font-size: 13px;
+}
+
+#confirm-submit{
+  top:19% !important;
 }
 </style>
 <script type="text/javascript">
@@ -221,7 +231,7 @@ var add3=$('#home_address').val();
      
 
     $("#razorpay_button").hide();
-    $("#ccavenue_button").hide();
+  /*  $("#ccavenue_button").hide();*/
 
     $("#preview").addClass("disabled");
 
@@ -294,7 +304,7 @@ else
   $('#cancel').click(function(){
     
     $("#razorpay_button").hide();
-    $("#ccavenue_button").hide();
+  /*  $("#ccavenue_button").hide();*/
  
 });
 
@@ -304,12 +314,12 @@ else
    
   
 });
-  $('#ccavenue').click(function(){
+ /* $('#ccavenue').click(function(){
     
     $("#ccavenue_button").click();
     
   
-});
+});*/
  });
 
 
@@ -397,7 +407,7 @@ else
                <!--  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
                  <a href="#!" id="cancel" class="modal-action modal-close btn btn-danger">Go Back</a>
                 <a href="#!" id="razorpay" class="modal-action modal-close btn btn-primary">Pay With RazorPay</a>
-                 <a href="#!" id="ccavenue" class="modal-action modal-close btn btn-success">Pay With CCAvenue</a>
+                 <!-- <a href="#!" id="ccavenue" class="modal-action modal-close btn btn-success">Pay With CCAvenue</a> -->
             </div>
         </div>
     </div>
@@ -518,7 +528,7 @@ else
 		    	
 				<?php 
 				$attributes = array('onsubmit' => 'return subject_d_func()','name'=>'reg_form','id'=>'reg_form');
-				echo form_open("crest/reg_form",$attributes); ?>
+				echo form_open("unicus/reg_form",$attributes); ?>
 					
 					<div class="row">
 						 
@@ -1027,7 +1037,7 @@ else
             
 				    
 				    <li>
-						To know about the exam and answer key dates, Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a> Page.
+						To know about the exam and answer key dates, Please check the <a href="<?php echo base_url(); ?>exam-dates" target="_blank">exam dates</a> Page.
 					</li>
 				 
 					<li>
@@ -1127,8 +1137,8 @@ fees once paid is non-refundable. For any queries or suggestions, do write to us
             
               <button class="btn col s6 register-pay" id="razorpay_button"  type="submit" style="margin-right: 1px;">Pay With RazorPay
               <i class="material-icons right">send</i></button>
-              <button class="btn col s6 register-pay" id="ccavenue_button" type="submit">Pay With CCAvenue
-              <i class="material-icons right">send</i></button>
+              <!-- <button class="btn col s6 register-pay" id="ccavenue_button" type="submit">Pay With CCAvenue -->
+             <!--  <i class="material-icons right">send</i></button> -->
                
             </div>
           </div>
@@ -1482,7 +1492,7 @@ $("#state_name").hide();
 
     jQuery.ajax({
         type:'post',
-        url:'<?php echo base_url()?>crest/checkUserEmail',
+        url:'<?php echo base_url()?>unicus/checkUserEmail',
         data:{email:email,'<?php echo $this->security->get_csrf_token_name();?>' : '<?php echo $this->security->get_csrf_hash();?>'},
         dataType:'json',
         async:false,
@@ -1567,7 +1577,7 @@ else
 
 });
 
-$("#ccavenue_button").on("click",function(){
+/*$("#ccavenue_button").on("click",function(){
 
 ga('send','event','Register','Register','User-Registration');
 
@@ -1590,7 +1600,7 @@ else
 }
 
 });
-
+*/
 
 
 </script>

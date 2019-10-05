@@ -1,5 +1,5 @@
 <div class="fuild-container" id="esid">
-    <h1 class="center-align">Exam Schedule</h1>
+    <h1 class="center-align">Exam Dates</h1>
     <p><strong>Unicus Olympiads Fee Structure</strong></p>
     <p>The fee per subject per student is Rs. 225 for students studying and residing in India. It is $10 (USD) per subject per student for students studying and residing outside India.</p>
     <p><strong>Unicus Olympiads exam schedule is as follows: </strong></p>
@@ -20,7 +20,7 @@
 <td align="center-align" style="color: #075b7e;
     font-size: larger;"><strong>Practice 2</strong><br><strong style="font-size:14px">(Answer Key Dates)<sup>4</sup></strong></td> -->
 <td align="center-align" style="color: #075b7e;
-    font-size: 15px;padding-left: 15px;color:#000"><strong>Main Exam</strong><br><strong style="font-size:13px">(Answer Key Dates)<sup>4</sup></strong></td>
+    font-size: 15px;padding-left: 15px;color:#000"><strong>Main Exam</strong><br><strong style="font-size:13px">(Answer Key Dates)<sup>6</sup></strong></td>
 
 </tr>
 <tr>

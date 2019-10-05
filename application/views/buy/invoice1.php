@@ -14,7 +14,7 @@ if($this_user->country != 'India'){
 		<!-- <h1>Invoice</h1> -->
 		<!-- <h2></h2> -->
 		<div class="card-panel red darken-4 white-text">
-			<p class="flow-test">We thank you for submitting your name for Summer Olympiads. But, this is to inform you that we have stopped taking payments for new registrations. <br> Once we start accepting registrations for 2020, we will get in touch with you.</p>
+			<p class="flow-test">Thank you for submitting your name. We have stopped taking payments for new registrations. <br> Once we start accepting registrations for 2019, we will get in touch with you.</p>
 		</div>
 	</div>
 	<div class="row contact">
@@ -47,28 +47,15 @@ if($this_user->country != 'India'){
 			<!-- <p>Total Amount: Rs.<?php echo $this->session->userdata('amount'); ?></p> -->
 			<br><br>
 			<div class="card-panel teal darken-4 white-text">
-				<p class="center"><strong>Please read the below instructions carefully</strong></p>
+				<p class="center"><strong>Important Instructions to Parents and Students</strong></p>
 				<br>
 				<ul>
-				<li><i class="material-icons">keyboard_arrow_right</i><p>Unicus Olympiads will be conducted either online (for individual applicants and school registrations) or pen/paper (for school registrations only).</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>In case of online exams, the students will have to take the exams from their residence or any other place where they have access to computer with good Internet (2 Mbps or more) connectivity and latest version of the browser (preferably Google Chrome).</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>The online exam can't be taken using Mobile device.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>The schools who have subscribed to these exams, may decide to conduct these exams using their computer lab. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>As all the online exams will be proctored through a webcam, hence, it is compulsory to have webcam on your system.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>Unicus Olympiads brings progressive thinking and hence, is quite different from traditional Olympiad exams. Click <a href="https://www.unicusolympiads.com/about" target="_blank">here</a> to know more.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>We take preparation seriously. Hence, there would be one mock test, provided complimentary. The student can appear for this mock test 3 times. He/she can view the performance too on his/her dashboard.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>The main exam will be based on the syllabus of the last 2 classes the student studied. This will be valid for classes 3-10 only. For classes 1 and 2, questions from their respective class' syllabus will come.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i><p>Visit the <a href="https://www.unicusolympiads.com/exam-dates" target="_blank">exam dates</a> page to know about the Summer Olympiad exam schedule.</p></li>
-
-				<li><i class="material-icons">keyboard_arrow_right</i> <p>Please make payment only after reading the above statements. For any queries, do write to us at <a href="mailto:infor@unicusolympiads.com">info@unicusolympiads.com</a>.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i><p>CREST Olympiads will be conducted <strong>online</strong> and the student will have to take the exams from their residence or any other place where they have access to computer with good internet connectivity. Schools, subscribing to these exams, may decide to conduct these exams using their computer lab.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i><p> CREST Olympiads brings progressive thinking and hence, quite different from traditional Olympiad exams. Click <a href="<?=base_url();?>about-us#traditional-vs-crest-olympiads" target="_blank">here</a> to know more.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i><p> It&rsquo;s in the best interest of students not to use any unfair means while attempting these exams. These exams are just a first step for a much bigger goal of appearing for competitive exams that are being conducted online.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i><p> Level 1 exams will be conducted from last week of November till last week of December. At the time of issuing &lsquo;Access Card&rsquo;, students will have an option to select preferred dates for the exams. Please <a href="<?=base_url();?>exam-dates" target="_blank">visit</a> for more details.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i> <p>We take preparation seriously. Hence, there would be two (2) practice exams, provided complimentary in the months of October and November.</p></li>
+				<li><i class="material-icons">keyboard_arrow_right</i> <p>Please make payment only after reading the above statements. For any queries, do write to us at <a href="mailto:infor@crestolympiads.com">info@crestolympiads.com</a>.</p></li>
 				</ul>
 				<br>
 				<!-- <p>
@@ -91,7 +78,7 @@ if($this_user->country != 'India'){
 		if( $("input[name=accept_ins]:checked").length < 1 ){
 			return false;
 		}
-        // window.location.href = "<?php echo base_url() ?>unicus/payment/ccavenue/";
+        // window.location.href = "<?php echo base_url() ?>crest/payment/ccavenue/";
 	});
 	$("#accept_ins").on("click",function(){
 		if( $("input[name=accept_ins]:checked").length < 1 ){

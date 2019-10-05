@@ -18,7 +18,7 @@ if($subject == 'umo'){ ?>
 					 
 		    <a href="<?php echo base_url(); ?>umo/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>umo/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -222,7 +222,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>uso/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>uso/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -428,7 +428,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>ueo/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>ueo/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -633,7 +633,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>ugko/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>ugko/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -842,7 +842,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>uco/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>uco/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -1053,7 +1053,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>ucto/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>ucto/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -1255,7 +1255,7 @@ display:none;
 					 
 		    <a href="<?php echo base_url(); ?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 

@@ -17,7 +17,7 @@
 					 
 		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+		<!-- 	<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -196,7 +196,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 
 		    <a href="<?php echo base_url().$category['slug']; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$category['slug']; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn">Preparation Material <i class="right matertarget="_blank"ial-icons">description</i> --></li></a> 
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 
@@ -219,7 +219,17 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 				foreach ($categories as $syllabus) {
 					 if($syllabus['name'] != ucfirst($category['name'])) {
 					?>
-             <a href="<?php echo base_url().$syllabus['slug'].'/syllabus'; ?>"><div class="col s12 m4 alllinks"><?php echo $syllabus['name']; ?></div></a> 
+
+            
+               <div class="col s12 m4 alllinks">
+                <div class="card">
+						<div class="card-content white-text center-align">
+              <a href="<?php echo base_url().$syllabus['slug'].'/syllabus'; ?>"><h5><?php echo $syllabus['name'].' Syllabus'; ?></h5></a> 
+             		
+                  </div>
+             </div>
+
+             	</div>
 					<?php 
 			      }
 				/*$i++;*/
@@ -228,7 +238,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 				 
 			</div>
 		</div>  
-		 <div class="row">
+		<!--  <div class="row">
 			<?php
 			foreach ($categories as $syllabus) { 
                if($syllabus['name'] == $category['name']){
@@ -244,7 +254,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 			}
 			}
 			?>
-		</div>  
+		</div>   -->
 	</div> 
 </div>
 </div>
@@ -369,7 +379,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 		    <a href="<?php echo base_url(); ?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
 			
-			<a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn">Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="https://www.olympiadsuccess.com/"><li class="btn">Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		 

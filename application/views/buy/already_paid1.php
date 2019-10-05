@@ -14,7 +14,7 @@
 			
 				<div class="text-warning text-center col s12">
 					<br><br>
-					<p>Kindly note that you have already paid and are registered with this email Id: <strong><?=$this_user->email;?></strong>. Please find below the details and the subjects you have selected:</p>
+					<p>You have already paid and are registered with email Id: <strong><?=$this_user->email;?></strong>. These are the details and the subjects you have selected:</p>
 					<p>Student Name: <?=$this_user->username;?></p>
 					<p>Class: <?=$this_user->class;?></p>
 					<p>School: <?=$this_user->school;?></p>
@@ -51,7 +51,7 @@
 
 							<?php 
 							$attributes = array('onsubmit' => 'return subject_d_func()','name'=>'reg_form','id'=>'reg_form');
-							echo form_open("unicus/buy_more_subjects",$attributes); ?>
+							echo form_open("crest/buy_more_subjects",$attributes); ?>
 							<p>Would you like to purchase more subjects?</p>
 								<input id="user_id" name="user_id" type="hidden" value="<?=$this_user->id?>">
 								<input id="country" name="country" type="hidden" value="<?=$this_user->country?>">

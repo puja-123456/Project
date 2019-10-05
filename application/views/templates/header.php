@@ -535,15 +535,25 @@ ul:not(.browser-default)>li
   {
     font-size: 14px;
     line-height: 3px;
-    padding: 10px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
     list-style-type: none;
   }
   .droopmenu li ul li a {
     display: block; 
    padding: 6px 10px 6px -1px !important;
 }
-.droopmenu li ul {
-    padding: 5px 0 !important;
+li.droopmenu-tabs.droopmenu-tabs-vertical.dmopener {
+    padding: 0px !important;
+
+}
+ul#firstdroopmenu li ul {
+    padding: 0px 0 !important;
+}
+/*.dmfade .droopmenu li>ul {
+	padding: 4px 0px !important;
+}*/
+ul#firstdroopmenu li ul#seconsmallmenu {
+    padding: 0px 0 !important;
 }
 
 	</style>
@@ -813,7 +823,7 @@ li.droopmenu-parent .material-icons {
                     <a href="#" class="droopmenu-toggle"></a>                
                 </div><!-- droopmenu-header -->
                 <div class="droopmenu-nav">
-                    <ul class="droopmenu"> 
+                    <ul class="droopmenu"  id="firstdroopmenu"> 
                         
                         <li><a href="#">Subjects<i class="material-icons">arrow_drop_down</i></a>
                             <ul class="droopmenu-grid droopmenu-grid-9">
@@ -868,7 +878,7 @@ li.droopmenu-parent .material-icons {
                                                    
                                                 </ul> -->
                                                  <ul class="droopmenu-col droopmenu-col3"> 
-                                                    <li><a href="<?php echo base_url().'exam-schedule'; ?>" style="font-size: 16px"><b>Exam Date:</b></a>
+                                                    <li><a href="<?php echo base_url().'exam-dates'; ?>" style="font-size: 16px"><b>Exam Date:</b></a>
                                                      <?php 
 			                                       $mainexamdates = $this->config->item('main_examdates'); 
 			                                       foreach ($mainexamdates as $key => $examdate) { 
@@ -876,7 +886,7 @@ li.droopmenu-parent .material-icons {
 			                                       	if($category[1] == $examdate[1]){
 			                                         	?> 
 			                                       
-                                                      <li><a href="<?php echo base_url().'exam-schedule'; ?>"><?php echo $examdate[2]; ?></a></li>
+                                                      <li><a href="<?php echo base_url().'exam-dates'; ?>"><?php echo $examdate[2]; ?></a></li>
                                                         <?php }}?>
                                                     </li> 
                                                    
@@ -903,14 +913,14 @@ li.droopmenu-parent .material-icons {
                             </ul><!-- droopmenu-grid -->
                         </li>
                          <li>
-                          <a href="<?=base_url()?>exam-schedule">Exam Schedule</a>
+                          <a href="<?=base_url()?>exam-dates">Exam Dates</a>
                              
                         </li>
                          <li>
                           <a href="#">
                              Quick Links<i class="material-icons">arrow_drop_down</i>
                             </a>
-                            <ul>
+                            <ul id="seconsmallmenu">
                       <li class="yellow"><a href="<?php echo base_url(); ?>faqs">FAQs</li></a>  
 	                <!--   <li class="yellow" ><a  href="<?php// echo base_url(); ?>marking-scheme">Marking Scheme</a></li>  -->
 	                  <li class="yellow"><a  href="<?php echo base_url(); ?>register-school">School Registration</a></li>

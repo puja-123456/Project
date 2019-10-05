@@ -44,7 +44,19 @@ function autoplay() {
 	}
 	#student_form .dropdown-content li>a, .dropdown-content li>span{
 		padding: 8px 16px;
+		font-size: 13px;
 	}
+	.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 13px; 
+    line-height: 0px;
+    
+}
+	input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea { 
+    font-size: 13px; 
+    }
+    .input-field>label:not(.label-icon).active {
+    display: none;
+}
 	@media screen and (min-width:600px) and (max-width:767px) 
 	{
 .row .col.m8
@@ -193,10 +205,10 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 
 			<div id="slider" class="sl-slider-wrapper">
 				<div class="sl-slider"> 
-			     <a href="<?php echo base_url();?>pre-registration" target="_blank">
+			    <!--  <a href="<?php echo base_url();?>pre-registration" target="_blank"> -->
 				  <img class="hide-on-small-only" src="<?php echo base_url().'assets/images/img/unicus_banner.jpg';?>" width="100%" height="470px">
 				  <img class="hide-on-med-and-up" src="<?php echo base_url().'assets/images/img/unicus_banner.jpg';?>" width="100%" height="470px">
-				</a> 
+				<!-- </a>  -->
 				</div> 
 			</div>
  
@@ -386,7 +398,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 <style type="text/css">
 
 </style>
-<br/><br/><br/><br/>
+<br/><br/><br/>
 <div class="row">
 	<div class="col-md-12 aboutclass">
 		<h3 style="font-weight: bold;margin-left:26px;text-align: center;">About Olympiads</h3>
@@ -1053,10 +1065,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 		<i class="medium material-icons" style="padding: 10px;color: #f7cb4f;">assignment</i>
 		 </div>
 			<div class="service__details">
-			<h6><a href="<?php echo base_url(); ?>exam-schedule">Fees and Exam Schedule</a></h6>
-			<p>The fee per subject per student is Rs. 225 for students studying</p>
+			<h6><a href="<?php echo base_url(); ?>exam-dates">Fees and Exam Dates</a></h6>
+			<p>The fee per subject per student is Rs. 225 for students studying and residing in India. It is $10 </p>
 			<div class="service__btn">
-			<a class="dcare__btn" href="<?php echo base_url().'exam-schedule'; ?>">Read More</a>
+			<a class="dcare__btn" href="<?php echo base_url().'exam-dates'; ?>">Read More</a>
 			</div></div>  
 	   </div>
   </div>
@@ -1095,10 +1107,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 			<i class="medium material-icons" style="padding: 10px;color: #b1c642;">subject</i>  
 		 </div>
 			<div class="service__details">
-			<h6><a href="<?php echo base_url(); ?>syallbus">Syallbus</a></h6>
+			<h6><a href="<?php echo base_url(); ?>syallbus">Syllabus</a></h6>
 			<p>Unicus Olympiads syllabus is carefully designed by our intellectual team of subject matter experts.</p>
 			<div class="service__btn">
-			<a class="dcare__btn" href="<?php echo base_url().'syallbus'; ?>">Read More</a>
+			<a class="dcare__btn" href="<?php echo base_url().'syllabus'; ?>">Read More</a>
 			</div></div>  
 	   </div>
 	</div>
@@ -1168,7 +1180,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 <br/><br/>
 <!-------------------->
  
-
+<!-- 
 	<div class="fuild-container image-slider">
 		<div class="row">
 <div class="carousel">
@@ -1185,7 +1197,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     <p class="img__description">This image looks super neat.</p></a>
   </div>
 </div>
-</div>
+</div> -->
 <style type="text/css">
 @media only screen and (min-width: 768px){
 .image-slider{
@@ -1278,37 +1290,37 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
      <tr style="border: solid 2px #bbb;">
       <th scope="row">Science</th>
        <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uso/syllabus">See here</a></td>
-      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uso/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uso/sample-papers">See here</a></td>
+      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uso/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="https://www.olympiadsuccess.com/">See here</a></td>
     </tr>
     <tr style="border: solid 2px #bbb;">
       <th scope="row">English</th> 
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ueo/syllabus">See here</a></td>
-      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ueo/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ueo/sample-papers">See here</a></td>
+      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ueo/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="https://www.olympiadsuccess.com/">See here</a></td>
     </tr> 
    
     <tr style="border: solid 2px #bbb;">
-      <th scope="row">Gk</th>
+      <th scope="row">GK</th>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ugko/syllabus">See here</a></td>
-      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ugko/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ugko/sample-papers">See here</a></td>
+      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ugko/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="https://www.olympiadsuccess.com/">See here</a></td>
     </tr>
     <tr style="border: solid 2px #bbb;">
       <th scope="row">Cyber</th>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uco/syllabus">See here</a></td>
-      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uco/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uco/sample-papers">See here</a></td>
+      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>uco/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="https://www.olympiadsuccess.com/">See here</a></td>
     </tr>
     <tr style="border: solid 2px #bbb;">
       <th scope="row">Critical Thinking</th>
        <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ucto/syllabus">See here</a></td>
-      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ucto/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ucto/sample-papers">See here</a></td>
+      <td style="border: solid 2px #bbb;"><a href="<?php echo base_url(); ?>ucto/marking-scheme">See here</a></td>
       <td style="border: solid 2px #bbb;"><a href="https://www.olympiadsuccess.com/">See here</a></td>
     </tr>
     

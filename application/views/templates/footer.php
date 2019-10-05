@@ -82,7 +82,7 @@ ul:not(.browser-default)>li
 				<!-- <h5 class="white-text">Links</h5> -->
 				<ul>
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>marking-scheme">Marking Scheme</a></li>
-					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>exam-schedule">Exam Schedule</a></li>
+					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>exam-dates">Exam Schedule</a></li>
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>cut-off-and-rankings">Cut-Offs & Ranking Criteria</a></li>
 					<li><a class="white-text text-lighten-3" href="<?php echo base_url(); ?>awards">Awards &amp; Recognition</a></li>
 					<li><a class="white-text text-lighten-3" target="_blank" href="https://www.olympiadsuccess.com/">Olympiad Preparation</a></li>
@@ -116,7 +116,7 @@ ul:not(.browser-default)>li
 					<div class="row">
 						<div class="input-field col s12 m8">
 							<i class="material-icons prefix">account_circle</i>
-							<input id="newsletter_email" type="email" class="validate" required>
+							<input id="newsletter_email" type="email" class="validate" style="color:#fff" required>
 							<label for="newsletter_email">Email</label>
 						</div>
 						<div class="input-field col s12 m4" id="subscribe_newsletter" >
@@ -545,18 +545,19 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 }
 
 .tooltip .tooltiptext {
+  margin-left: -15px;
   visibility: hidden;
   width: 180px;
-  background-color: black;
+ /* background-color: black;*/
   color: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
   padding: 5px 0;
 
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  top:-10px;
+  top: -23px;
 }
 
 .tooltip:hover .tooltiptext {

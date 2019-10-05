@@ -8,8 +8,8 @@
           <tbody>
             <tr>
               <td width="100%" style="text-align:center">
-                <a href="http://www.crestolympiads.com" target="_blank">
-                <img src="http://www.crestolympiads.com/assets/images/logo/logo.png" width="150" alt="CREST Olympiads" height="90" style="margin:6px;text-align:center"></a>
+                <a href="<?php echo base_url(); ?>" target="_blank">
+                <img src="<?php echo base_url(); ?>assets/images/logo/logo.png" width="150" alt="Unicus Olympiads" height="90" style="margin:6px;text-align:center"></a>
               </td>
             </tr>    
           </tbody>
@@ -84,33 +84,33 @@
           //if($subj[1] == $this_cus_sub){
             //echo "<li><strong>".$subj[2]."</strong></li>";
             
-            if($this_cus_sub=="CMO")
+            if($this_cus_sub=="UMO")
             {
-                $subject="CREST Mathematics Olympiad";
+                $subject="Unicus Mathematics Olympiad";
             }
-            else if($this_cus_sub=="CRO") {
+            else if($this_cus_sub=="UCTO") {
                 
-                 $subject="CREST Reasoning Olympiad";
-                
-            }
-            else if($this_cus_sub=="CCO") {
-                
-                 $subject="CREST Cyber Olympiad";
+                 $subject="Unicus Critical Thinking Olympiad";
                 
             }
-            else if($this_cus_sub=="CEO") {
+            else if($this_cus_sub=="UCO") {
                 
-                 $subject="CREST English Olympiad";
-                
-            }
-            else if($this_cus_sub=="CSO") {
-                
-                 $subject="CREST Science Olympiad";
+                 $subject="Unicus Cyber Olympiad";
                 
             }
-            else if($this_cus_sub=="CFO") {
+            else if($this_cus_sub=="UEO") {
                 
-                 $subject="CREST French Olympiad";
+                 $subject="Unicus English Olympiad";
+                
+            }
+            else if($this_cus_sub=="USO") {
+                
+                 $subject="Unicus Science Olympiad";
+                
+            }
+            else if($this_cus_sub=="CGKO") {
+                
+                 $subject="Unicus General Knowledge Olympiad";
                 
             }
             
@@ -147,66 +147,60 @@
         <!-- <p><strong>Important Points:</strong></p> -->
         <ul style="padding: 20px 20px 0px 20px;">
          
-          <li style="text-align:center;list-style:none;padding-left:1px;height:25px;margin-left:5px;color:#000;font-size:16px;margin-bottom:5px;margin-top:15px"> <strong>Important Instructions to Parents and Students</strong></li>
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">CREST Olympiads will be conducted online and the student will have to take the exams from their residence or any other place where they have access to computer with good internet connectivity. Schools, subscribing to these exams, may decide to conduct these exams using their computer lab. The exam can't be taken using Mobile device. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.</li><br/>
+          <li style="text-align:center;list-style:none;padding-left:1px;height:25px;margin-left:5px;color:#000;font-size:16px;margin-bottom:5px;margin-top:15px"> <strong>Please read the below instructions carefully</strong></li>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Unicus Olympiads will be conducted either online (for individual applicants and school registrations) or pen/paper (for school registrations only).</li><br/>
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">CREST Olympiads brings progressive thinking and hence, quite different from traditional Olympiad exams. Click <a href="<?=base_url();?>about-us#traditional-vs-crest-olympiads" target="_blank">here</a> to know more.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">In case of online exams, the students will have to take the exams from their residence or any other place where they have access to computer with good Internet (2 Mbps or more) connectivity and latest version of the browser (preferably Google Chrome).</li><br/>
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;"> It&rsquo;s in the best interest of students not to use any unfair means while attempting these exams. These exams are just a first step for a much bigger goal of appearing for competitive exams that are being conducted online.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">The online exam can't be taken using Mobile device.</li><br/>
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;"> Please check the <a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a>. We will provide flexibility to the students to select preferred dates for Level 1 exam.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">The schools who have subscribed to these exams, may decide to conduct these exams using their computer lab. Hence, the student should have access to a good laptop/desktop with latest version of the browser (preferably Google Chrome) and 2 Mbps Internet connectivity.</li><br/>
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">We take preparation seriously. Hence, there would be two (2) practice exams, provided complimentary as per exam schedule (<a href="https://www.crestolympiads.com/exam-schedule" target="_blank">exam schedule</a>) mentioned.</li><br>
-
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Please make sure that you book the slots in Slot/Access section of your dashboard before the exam dates to avoid missing the practice papers and main exam.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">As all the online exams will be proctored through a webcam, hence, it is compulsory to have webcam on your system.</li><br/>
 
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Do read the Frequently Asked Questions (<a href="https://www.crestolympiads.com/faqs" target="_blank">FAQs</a>) thoroughly.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Unicus Olympiads brings progressive thinking and hence, is quite different from traditional Olympiad exams. Click <a href="https://www.unicusolympiads.com/about" target="_blank">here</a> to know more.</li><br/>
 
-          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Please remember to add <a href="mailto:info@crestolympiads.com" target="_blank">info@crestolympiads.com</a>  to your primary inbox, else you may miss important updates on Online Olympiad Exams.</li><br/>
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">We take preparation seriously. Hence, there would be one mock test, provided complimentary. The student can appear for this mock test 3 times. He/she can view the performance too on his/her dashboard.</li><br/>
+
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">The main exam will be based on the syllabus of the last 2 classes the student studied. This will be valid for classes 3-10 only. For classes 1 and 2, questions from their respective class' syllabus will come.</li><br/>
+
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Visit the <a href="https://www.unicusolympiads.com/exam-dates" target="_blank">exam dates</a> page to know about the Summer Olympiad exam schedule.</li><br>
+
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Please make sure that you book the slots in the 'Book Slot' section of your dashboard before the exam dates to avoid missing the main exam.</li><br/>
+
+
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Do read the Frequently Asked Questions (<a href="https://www.unicusolympiads.com/faqs" target="_blank">FAQs</a>) thoroughly.</li><br/>
+
+          <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;margin-left: 20px;color: #0e5d26;font-size: 16px;">Please remember to add <a href="mailto:info@unicusolympiads.com" target="_blank">info@unicusolympiads.com</a> to your primary inbox, else you may miss important updates on Online Summer Olympiad Exams.</li><br/>
 
         </ul><br>
       </td>  
     </tr>
 
 
-    <tr>
-      <td style="font-size:22px;text-align:center;color:#000;padding:10px;font-weight:bold;">
-       <div style="color:#505050;font-family:'Times New Roman','serif';background:#fff;border:7px double #cb2027 ;padding:5px;width:80%;margin:0px auto;text-align: left">
-       <br>&nbsp;
-       What do we do next?
-
-        <ul style="padding: 0px 20px 0px 20px;">
-        <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;color: #000;font-size: 16px;float: left">Please mark this mail as 'Important' so that you don't miss any important information.</li>
-        <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;color: #000;font-size: 16px;">Start preparing for the Olympiad Exams. You may wish to practice from Olympiad Success (<a href="https://www.olympiadsuccess.com" target="_blank">www.olympiadsuccess.com</a>), India's largest preparation platform for Olympiad preparation. Apply '<strong>CREST20</strong>' to avail 20% off.</li>
-       <!--  <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;color: #000;font-size: 16px;">You would get '<strong>Access Card</strong>' with username and password in the month of October</li>
-        <li style="list-style: url(https://www.olympiadsuccess.com/assets/designs/images/circle-icon1.png);padding-left: 6px;background-size: 8px 8px;line-height:23px;color: #000;font-size: 16px;">Remember that there are <strong>3 practice tests</strong> (not mandatory) in October/November </li> -->
-      </ul>
-     </td>
-   </tr>
-
   <tr>
     <td>
       <div style="float:left;width:32px;height:32px;margin:15px 5px 15px 15px">
         <img style="height:inherit;width:inherit" src="https://www.olympiadsuccess.com/assets/designs/images/mailer/p_logo.png">
       </div>
-      <div style="float:left;width:auto;height:32px;margin-top:17px;color:#fb7e1d;font-size:12px"><?php echo $this->config->item('support_phone');?><br>CREST Olympiads Support
+      <div style="float:left;width:auto;height:32px;margin-top:17px;color:#fb7e1d;font-size:12px"><?php echo $this->config->item('support_phone');?><br>Unicus Olympiads Support
       </div>
       <div style="float:right;width:auto;height:32px;margin:17px 5px 15px 5px;color:#fb7e1d;font-size:12px">
-       Tower B4, Spaze i-Tech Park, <br>Sohna Road, Gurgaon 
+       B-1003, BPTP Freedom Park, <br>Sector 57, Gurugram
      </div>
      <div style="float:left;margin:15px 5px 15px 75px">
-       <a style="width:32px;height:32px;" href="https://www.facebook.com/crestolympiads/"><img style="height:inherit;width:inherit" src="https://www.olympiadsuccess.com/assets/designs/images/mailer/fb.png"></a>
+       <a style="width:32px;height:32px;" href="https://www.facebook.com/unicusolympiads/"><img style="height:inherit;width:inherit" src="https://www.olympiadsuccess.com/assets/designs/images/mailer/fb.png"></a>
      </div>
      <div style="float:left;margin:15px 5px 15px 5px">
-       <a style="width:32px;height:32px;" href="https://www.linkedin.com/company/crestolympiads/"><img style="height:inherit;width:inherit" src="https://www.olympiadsuccess.com/assets/designs/images/mailer/li.png"></a>
+       <a style="width:32px;height:32px;" href="https://www.linkedin.com/company/unicusolympiads/"><img style="height:inherit;width:inherit" src="https://www.olympiadsuccess.com/assets/designs/images/mailer/li.png"></a>
      </div>
    </td>
 
  </tr>
  <tr>
   <td align="center" valign="bottom" style="color:#145452;border-top:1px solid #e7e7e7;background:#e7e7e7;font-size:12px;height:22px;line-height:22px;padding-bottom:3px;margin-top:0px">    
-      <div style="height:22px;line-height:22px;text-align: left;padding-left:18px;">Powered by: CREST Olympiads
+      <div style="height:22px;line-height:22px;text-align: left;padding-left:18px;">Powered by: Unicus Olympiads
       </div>
   </td>
 </tr>

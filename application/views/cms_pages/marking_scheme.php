@@ -16,7 +16,7 @@
 					 
 		    <a href="<?php echo base_url();?>sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url(); ?>cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-			<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+			<!-- <a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 	 
@@ -297,7 +297,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 					 
 		    <a href="<?php echo base_url().$slugsubject; ?>/sample-papers"><li class="btn">Sample Papers<!-- <i class="right material-icons">description</i> --></li></a>
 			<a href="<?php echo base_url().$slugsubject; ?>/cut-off-and-rankings"><li class="btn">Cut Off<!-- <i class="right material-icons">description</i> --></li></a>
-		<a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material<!-- <i class="right matertarget="_blank"ial-icons">description</i> --></li></a>
+		<!-- <a target="_blank" href="<?php echo $this->config->item('main_site_link'); ?>courses/crest-olympiads/<?php echo strtolower(str_replace(" ","-",$category['name'])); ?>"><li class="btn"><?=strtoupper($category['slug']); ?> Preparation Material</li></a> -->
 			<!-- <li><a href="">Paritcipate in Olympiad Exam</a></li> --> 		
 		</ul>
 		
@@ -312,7 +312,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 <div class="col m9 s12">
 	<p>&nbsp;</p>
 	<h1 class="left-align">Marking Scheme</h1>
-    
+    <?php echo $ultitle; ?>
     <div> 
 	<!-- <p class="hidden-sm">&nbsp;</p> -->
 	<!-- <div class="col-md-12 col-sm-12 inner-menu-school"> --> 
@@ -330,7 +330,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 	 
 	<div class="col s12 m12">
 		<div class="row">
-	 <?php echo $ultitle; ?>
+	 
 		<!-- 	<h4>Level 1 Exam Pattern and Marking Scheme</h4>  -->
 			<?php //echo $detailsoflevel1; ?> 
 
@@ -436,7 +436,7 @@ ul.droopmenu-col.droopmenu-col3 h5 {
 			 
 		</div>
 
-		<p>&nbsp;</p>x
+		<p>&nbsp;</p>
 	</div>
 </div>
  
@@ -508,7 +508,7 @@ li.btn {
 @media only screen and (min-width: 768px){
 	.syllabus-menu{
 		margin-top: 135px;
-		position: fixed;
+		position: absolute;
 		padding: 0px 10px;
 		width: inherit;
 		/*top:145px;*/
